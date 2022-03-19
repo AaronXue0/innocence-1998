@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game
+namespace Old
 {
     enum StateSelector
     {
@@ -10,32 +10,52 @@ namespace Game
     }
     public class DialougeInteract : MonoBehaviour
     {
-        [SerializeField] string msg;
+        [SerializeField] string[] msg;
         [SerializeField] float duration, displaySecs, fadeoutDuration;
         [SerializeField] StateSelector toDoAfterAnimationDone;
         bool isLocked = false;
         bool isPlaying = false;
+        bool ableToClick = true;
+        byte msgIndex = 0;
 
-        public void PlayText(string msg, float duration, float displaySecs, float fadeoutDuration) => GameManager.instance.DoText(msg, duration, displaySecs, fadeoutDuration);
+        public void PlayText(string msg, System.Action callback) => GameManager.instance.DoText(msg, callback);
         public void PlayText(string msg, float duration, float displaySecs, float fadeoutDuration, System.Action callback) => GameManager.instance.DoText(msg, duration, displaySecs, fadeoutDuration, callback);
 
         public void SetLocked() => isLocked = true;
         public void AnimationDone() => isPlaying = false;
 
+        public void SetAbleToClick() => ableToClick = true;
+
+        public void ClickDelay()
+        {
+            ableToClick = false;
+            Invoke("SetAbleToClick", 0.1f);
+        }
+
 
         private void OnMouseDown()
         {
-            if (isLocked)
+            if (isLocked || ableToClick == false)
             {
                 return;
             }
+            // Debug.Log(toDoAfterAnimationDone);
 
-            if (toDoAfterAnimationDone == StateSelector.FoceToDone && isPlaying)
+            string msg = this.msg[msgIndex];
+
+            ClickDelay();
+
+            if (msgIndex > msg.Length)
             {
+                SetLocked();
                 return;
             }
 
-            Debug.Log(toDoAfterAnimationDone);
+            if (isPlaying)
+            {
+                PlayText(msg, AnimationDone);
+                return;
+            }
 
             isPlaying = true;
 
@@ -44,13 +64,12 @@ namespace Game
                 case StateSelector.FoceToDone:
                     PlayText(msg, duration, displaySecs, fadeoutDuration, AnimationDone);
                     break;
-                case StateSelector.Lock:
-                    PlayText(msg, duration, displaySecs, fadeoutDuration, SetLocked);
-                    break;
                 case StateSelector.ShowDirectly:
                     PlayText(msg, 0, displaySecs, fadeoutDuration, AnimationDone);
                     break;
             }
+
+            msgIndex++;
         }
     }
 }
