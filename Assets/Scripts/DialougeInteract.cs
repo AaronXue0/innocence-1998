@@ -6,7 +6,7 @@ namespace Game
 {
     enum StateSelector
     {
-        FoceToDone, Lock
+        FoceToDone, Lock, ShowDirectly,
     }
     public class DialougeInteract : MonoBehaviour
     {
@@ -16,8 +16,8 @@ namespace Game
         bool isLocked = false;
         bool isPlaying = false;
 
-        public void PlayText() => GameManager.instance.DoText(msg, duration, displaySecs, fadeoutDuration);
-        public void PlayText(System.Action callback) => GameManager.instance.DoText(msg, duration, displaySecs, fadeoutDuration, callback);
+        public void PlayText(string msg, float duration, float displaySecs, float fadeoutDuration) => GameManager.instance.DoText(msg, duration, displaySecs, fadeoutDuration);
+        public void PlayText(string msg, float duration, float displaySecs, float fadeoutDuration, System.Action callback) => GameManager.instance.DoText(msg, duration, displaySecs, fadeoutDuration, callback);
 
         public void SetLocked() => isLocked = true;
         public void AnimationDone() => isPlaying = false;
@@ -42,11 +42,13 @@ namespace Game
             switch (toDoAfterAnimationDone)
             {
                 case StateSelector.FoceToDone:
-                    PlayText(AnimationDone);
+                    PlayText(msg, duration, displaySecs, fadeoutDuration, AnimationDone);
                     break;
                 case StateSelector.Lock:
-                    SetLocked();
-                    PlayText();
+                    PlayText(msg, duration, displaySecs, fadeoutDuration, SetLocked);
+                    break;
+                case StateSelector.ShowDirectly:
+                    PlayText(msg, 0, displaySecs, fadeoutDuration, AnimationDone);
                     break;
             }
         }
