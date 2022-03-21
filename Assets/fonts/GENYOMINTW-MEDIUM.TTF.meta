@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 641f8073e2de17c478a92662a510b996
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: GenYoMin TW TTF
+  fontNames:
+  - GenYoMin TW TTF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2213e0624f073b243af294fa542b559d, type: 3}
+  - {fileID: 12800000, guid: 34458555313ef5c4eb27d630d3361fb5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
