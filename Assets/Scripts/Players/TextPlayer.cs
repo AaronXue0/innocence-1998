@@ -17,6 +17,9 @@ namespace Game
         bool IsPlaying { get; set; }
         bool IsFading { get; set; }
         bool IsAppearing { get; set; }
+        bool AutoPlay { get; set; }
+
+        private float autoPlayDuration = 0;
 
         private void Awake()
         {
@@ -38,6 +41,20 @@ namespace Game
             broadcast.text = msg;
         }
 
+        public void HideText()
+        {
+            broadcast.text = "";
+            broadcast.color = new Color(1, 1, 1, 1);
+        }
+
+        #region GamePlay
+        public void TimelinePlay(DialogueItem item, float duration)
+        {
+            AutoPlay = true;
+            CurrentItem = item;
+            autoPlayDuration = duration;
+            StartCoroutine(PlayCoroutine(CurrentItem));
+        }
         public void Play(DialogueItem item)
         {
             if (CurrentItem)
@@ -58,7 +75,6 @@ namespace Game
                 StartCoroutine(PlayCoroutine(CurrentItem));
             }
         }
-
         IEnumerator PlayCoroutine(DialogueItem item)
         {
             IsPlaying = true;
@@ -78,7 +94,10 @@ namespace Game
             IsPlaying = false;
 
             item.DoneCallback();
+
+            AutoPlay = false;
         }
+        #endregion
 
         IEnumerator DialogueCoroutine(string[] msg, float appearGap)
         {
@@ -98,11 +117,15 @@ namespace Game
                 WaitForContinue = true;
                 while (WaitForContinue)
                 {
+                    if (AutoPlay)
+                    {
+                        yield return new WaitForSeconds(autoPlayDuration);
+                        break;
+                    }
                     yield return null;
                 }
             }
         }
-
         IEnumerator TextAppearCoroutine(string msg, float appearGap)
         {
             IsAppearing = true;
@@ -120,7 +143,6 @@ namespace Game
             }
             IsAppearing = false;
         }
-
         IEnumerator FadeoutCoroutine(float fadeoutDuration)
         {
             IsFading = true;

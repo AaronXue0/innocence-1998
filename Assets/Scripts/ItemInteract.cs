@@ -4,16 +4,21 @@ using UnityEngine;
 
 namespace Game
 {
-    public class DialogueInteract : MonoBehaviour
+    public class ItemInteract : MonoBehaviour
     {
-        [SerializeField] DialogueItem item;
-
+        public int id;
         public bool locked = false;
+        [SerializeField] ObjectData data;
+        private DialogueItem item;
+
         bool ableToClick = true;
         public void AbleToClick() => ableToClick = true;
 
         private void Awake()
         {
+            int state = data.currentState;
+            item = data.items[state].dialogues;
+
             TextAnimationCallbackSelector mode = item.GetAnimationSelector;
             switch (mode)
             {
@@ -25,13 +30,11 @@ namespace Game
                     break;
             }
         }
-        void None()
+        private void None()
         {
-            Debug.Log("None");
         }
-        void GetItem()
+        private void GetItem()
         {
-            Debug.Log("GetItem");
             locked = true;
         }
         private void OnMouseDown()
