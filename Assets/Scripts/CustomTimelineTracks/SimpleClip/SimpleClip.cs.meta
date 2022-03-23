@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 7862fe56aa24641c79cc55221eab9175
+guid: 70f1ea8a058d84782aa9405478f57cda
+labels:
+- Demo
+timeCreated: 1504270994
+licenseType: Pro
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

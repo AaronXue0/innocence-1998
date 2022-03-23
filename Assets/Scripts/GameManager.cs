@@ -2,106 +2,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.Playables;
 
 namespace Game
 {
     public class GameManager : MonoBehaviour
     {
         public static GameManager instance;
-        [SerializeField] TMP_Text broadcast;
 
-        bool isAnimationPlaying = false;
-
-        public void DoText(string msg, float duration, float displaySecs, float fadeoutDuration)
-        {
-            if (isAnimationPlaying)
-                return;
-
-            isAnimationPlaying = true;
-            StopAllCoroutines();
-            StartCoroutine(DoTextCoroutine(msg, duration, displaySecs, fadeoutDuration));
-        }
-        public void DoText(string msg, float duration, float displaySecs, float fadeoutDuration, Action animationDone)
-        {
-            if (isAnimationPlaying)
-                return;
-
-            isAnimationPlaying = true;
-            StopAllCoroutines();
-            StartCoroutine(DoTextCoroutine(msg, duration, displaySecs, fadeoutDuration, animationDone));
-        }
+        TextPlayer textPlayer;
+        TimelinePlayer timelinePlayer;
 
         private void Awake()
         {
-            if (instance != null)
+            if (instance)
             {
                 Destroy(gameObject);
             }
             else
             {
                 instance = this;
-                if (broadcast == null)
-                {
-                    broadcast = GetComponentInChildren<TMP_Text>();
-                }
+                textPlayer = GetComponent<TextPlayer>();
+                timelinePlayer = GetComponent<TimelinePlayer>();
             }
         }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                StartCoroutine(DoTextCoroutine("外面風雨很大,我最好先待在室內", 0.1f, 3, 1.5f));
-            }
-        }
+        public void PauseTimeline(PlayableDirector director) => timelinePlayer.PauseTimeline(director);
 
-        IEnumerator DoTextCoroutine(string msg, float duration, float displaySecs, float fadeoutDuration)
-        {
-            broadcast.text = "";
-            broadcast.color = new Color(1, 1, 1, 1);
 
-            foreach (char c in msg)
-            {
-                broadcast.text += c;
-                yield return new WaitForSeconds(duration);
-            }
-
-            yield return new WaitForSeconds(displaySecs);
-
-            float elapsedTime = 0f;
-            while (elapsedTime < fadeoutDuration)
-            {
-                elapsedTime += Time.deltaTime;
-                broadcast.color = Color.Lerp(new Color(1, 1, 1, 1), new Color(1, 1, 1, 0), elapsedTime / fadeoutDuration);
-                yield return null;
-            }
-
-            isAnimationPlaying = false;
-        }
-        IEnumerator DoTextCoroutine(string msg, float duration, float displaySecs, float fadeoutDuration, Action animationDone)
-        {
-            broadcast.text = "";
-            broadcast.color = new Color(1, 1, 1, 1);
-
-            foreach (char c in msg)
-            {
-                broadcast.text += c;
-                yield return new WaitForSeconds(duration);
-            }
-
-            yield return new WaitForSeconds(displaySecs);
-
-            float elapsedTime = 0f;
-            while (elapsedTime < fadeoutDuration)
-            {
-                elapsedTime += Time.deltaTime;
-                broadcast.color = Color.Lerp(new Color(1, 1, 1, 1), new Color(1, 1, 1, 0), elapsedTime / fadeoutDuration);
-                yield return null;
-            }
-
-            animationDone();
-            isAnimationPlaying = false;
-        }
+        public void HideText() => textPlayer.HideText();
+        public void PlayText(DialogueItem item) => textPlayer.Play(item);
+        public void TimelinePlay(DialogueItem item, float duration) => textPlayer.TimelinePlay(item, duration);
     }
 }
