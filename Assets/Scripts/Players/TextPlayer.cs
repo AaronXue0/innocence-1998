@@ -36,6 +36,17 @@ namespace Game
             broadcast.text = "";
         }
 
+        private void Update()
+        {
+            if (WaitForContinue)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    WaitForContinue = false;
+                }
+            }
+        }
+
         public void DisplayMsg(string msg)
         {
             broadcast.text = msg;
@@ -117,6 +128,7 @@ namespace Game
                 WaitForContinue = true;
                 while (WaitForContinue)
                 {
+                    GameManager.instance.PauseTimeline();
                     if (AutoPlay)
                     {
                         yield return new WaitForSeconds(autoPlayDuration);
@@ -124,6 +136,7 @@ namespace Game
                     }
                     yield return null;
                 }
+                GameManager.instance.ResumeeTimeline();
             }
         }
         IEnumerator TextAppearCoroutine(string msg, float appearGap)

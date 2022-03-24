@@ -27,7 +27,11 @@ namespace Game
             }
         }
 
+        public void SetupDirector(PlayableDirector director) => timelinePlayer.SetupDirector(director);
+        public void PauseTimeline() => timelinePlayer.PauseTimeline();
+        public void ResumeeTimeline() => timelinePlayer.ResumeTimeline();
         public void PauseTimeline(PlayableDirector director) => timelinePlayer.PauseTimeline(director);
+        public void ResumeeTimeline(PlayableDirector director) => timelinePlayer.ResumeTimeline(director);
 
 
         public void HideText() => textPlayer.HideText();

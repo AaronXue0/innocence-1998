@@ -10,6 +10,7 @@ namespace Game
     {
         public DialogueItem dialogueItem;
         public float duration;
+        public bool isAuatoPlay;
 
         public bool hasToPause = false;
 
@@ -27,8 +28,11 @@ namespace Game
             if (!clipPlayed
                 && info.weight > 0f)
             {
-                // UIManager.Instance.SetDialogue(characterName, dialogueLine, dialogueSize);
-                GameManager.instance.TimelinePlay(dialogueItem, duration);
+                GameManager.instance.SetupDirector(director);
+                if (isAuatoPlay)
+                    GameManager.instance.TimelinePlay(dialogueItem, duration);
+                else
+                    GameManager.instance.PlayText(dialogueItem);
 
                 if (Application.isPlaying)
                 {
