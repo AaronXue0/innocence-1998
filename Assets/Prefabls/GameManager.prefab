@@ -64,10 +64,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\u300C\u597D\u50CF\u662F\u5ABD\u5ABD\u5DE5\u4F5C\u7684\u5C0F\u5403\u90E8...\u300D
+    \u25BC"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
-  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 03d589b6b2fcc4ac68fa9c191860eddf, type: 2}
+  m_sharedMaterial: {fileID: 1804306232901500315, guid: 03d589b6b2fcc4ac68fa9c191860eddf,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -143,6 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8330359160941266543}
   - component: {fileID: 8330359160941266542}
+  - component: {fileID: 1178250289067851716}
   - component: {fileID: 8330359160941266540}
   - component: {fileID: 8330359160941266547}
   m_Layer: 0
@@ -177,6 +180,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7862fe56aa24641c79cc55221eab9175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1178250289067851716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330359160941266541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 578192048071b435a80285d8588c440a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &8330359160941266540

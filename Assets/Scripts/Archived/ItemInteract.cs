@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game
+namespace Archived
 {
     public class ItemInteract : MonoBehaviour
     {
         public int id;
         public bool locked = false;
-        [SerializeField] ObjectData data;
+        [SerializeField] Game.ObjectData data;
         private DialogueItem item;
 
         bool ableToClick = true;
@@ -17,7 +17,7 @@ namespace Game
         private void Awake()
         {
             int state = data.currentState;
-            item = data.items[state].dialogues;
+            item = data.states[state].dialogues;
 
             TextAnimationCallbackSelector mode = item.GetAnimationSelector;
             switch (mode)
@@ -45,7 +45,7 @@ namespace Game
                 return;
 
             DelayClick();
-            GameManager.instance.PlayText(item);
+            Game.GameManager.instance.PlayText(item);
         }
         private void DelayClick()
         {

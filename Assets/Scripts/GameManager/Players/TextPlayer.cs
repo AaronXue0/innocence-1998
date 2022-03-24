@@ -18,6 +18,8 @@ namespace Game
         bool IsFading { get; set; }
         bool IsAppearing { get; set; }
         bool AutoPlay { get; set; }
+        bool IsTimelinePlaying { get; set; }
+
 
         private float autoPlayDuration = 0;
 
@@ -28,6 +30,7 @@ namespace Game
             IsAppearing = false;
             IsFading = false;
             WaitForContinue = false;
+            IsTimelinePlaying = false;
 
             if (broadcast == null)
             {
@@ -61,6 +64,7 @@ namespace Game
         #region GamePlay
         public void TimelinePlay(DialogueItem item, float duration)
         {
+            IsTimelinePlaying = true;
             AutoPlay = true;
             CurrentItem = item;
             autoPlayDuration = duration;
@@ -83,11 +87,13 @@ namespace Game
             else
             {
                 CurrentItem = item;
+                IsTimelinePlaying = false;
                 StartCoroutine(PlayCoroutine(CurrentItem));
             }
         }
         IEnumerator PlayCoroutine(DialogueItem item)
         {
+            Movement.isLocked = true;
             IsPlaying = true;
             string[] msg = item.GetMsg;
             float appearGap = item.GetAppearGap;
@@ -107,6 +113,8 @@ namespace Game
             item.DoneCallback();
 
             AutoPlay = false;
+            IsTimelinePlaying = false;
+            Movement.isLocked = false;
         }
         #endregion
 
@@ -128,7 +136,8 @@ namespace Game
                 WaitForContinue = true;
                 while (WaitForContinue)
                 {
-                    GameManager.instance.PauseTimeline();
+                    if (IsTimelinePlaying)
+                        GameManager.instance.PauseTimeline();
                     if (AutoPlay)
                     {
                         yield return new WaitForSeconds(autoPlayDuration);
@@ -136,7 +145,8 @@ namespace Game
                     }
                     yield return null;
                 }
-                GameManager.instance.ResumeeTimeline();
+                if (IsTimelinePlaying)
+                    GameManager.instance.ResumeeTimeline();
             }
         }
         IEnumerator TextAppearCoroutine(string msg, float appearGap)

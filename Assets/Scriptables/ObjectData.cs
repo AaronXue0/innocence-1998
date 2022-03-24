@@ -7,12 +7,18 @@ namespace Game
     {
         public int id;
         public int currentState;
-        public ObjectContainer[] items;
+        public ObjectContainer[] states;
     }
     [System.Serializable]
     public class ObjectContainer
     {
+        public bool playOnce;
         public Sprite sprite;
+
         public DialogueItem dialogues;
+        public int currentDialogueIndex;
+
+        public int targetTimelineID;
+        public bool missionFinished;
     }
 }
