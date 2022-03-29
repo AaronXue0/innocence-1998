@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
+using UnityEngine.SceneManagement;
 
-namespace Game
+namespace Innocence
 {
     public class GameManager : MonoBehaviour
     {
         public static GameManager instance;
 
-        GameDatas gameDatas;
-        TextPlayer textPlayer;
-        TimelinePlayer timelinePlayer;
+        private GameDataManager gameData;
+        private TimelinePlayer timeplyer;
+        private TextPlayer textPlayer;
 
         private void Awake()
         {
@@ -24,32 +22,46 @@ namespace Game
             else
             {
                 instance = this;
-                gameDatas = GetComponent<GameDatas>();
+                DontDestroyOnLoad(gameObject);
+
+                gameData = GetComponent<GameDataManager>();
+                gameData.onProgressChanged = OnProgressChanged;
+                timeplyer = GetComponent<TimelinePlayer>();
                 textPlayer = GetComponent<TextPlayer>();
-                timelinePlayer = GetComponent<TimelinePlayer>();
+                textPlayer.Init(Pause, Resume);
             }
         }
 
-        #region Item
-        public ObjectData GetItemWithID(int id) => gameDatas.GetItemWithID(id);
-        public bool CheckItemClicked(int id) => gameDatas.CheckItemClicked(id);
-        public TimelineAsset GetTimelineAssetWithID(int id) => gameDatas.GetTimelineAssetWithClipID(id);
+        #region Listener
+        public void OnProgressChanged(int newProgress)
+        {
+
+        }
+        #endregion
+
+        #region GameData
+        public int GetProgress { get { return gameData.GetProgress; } }
+        public GameItem GetGameItem(int id) => gameData.GetGameItem(id);
+        public ItemContent GetItemContent(int id) => gameData.GetItemContent(id);
+        public Dialogues GetDialogues(int id) => gameData.GetDialogues(id);
+        public void ItemDialoguesFinished(int id) => gameData.ItemDialoguesFinished(id);
         #endregion
 
         #region Timeline
-        public void PlayNewAssetWithClipID(int id) => timelinePlayer.PlayWithAsset(GetTimelineAssetWithID(id));
-        public void SetupDirector(PlayableDirector director) => timelinePlayer.SetupDirector(director);
-        public void SetupAsset(TimelineAsset asset) => timelinePlayer.SetupAsset(asset);
-        public void PauseTimeline() => timelinePlayer.PauseTimeline();
-        public void ResumeeTimeline() => timelinePlayer.ResumeTimeline();
-        public void PauseTimeline(PlayableDirector director) => timelinePlayer.PauseTimeline(director);
-        public void ResumeeTimeline(PlayableDirector director) => timelinePlayer.ResumeTimeline(director);
+        public void SetMainDirector() => timeplyer.SetMainDirector();
+        public void Play() => timeplyer.Play();
+        public void Play(TimelineAsset timelineAsset) => timeplyer.Play(timelineAsset);
+        public void Pause() => timeplyer.Pause();
+        public void Pause(PlayableDirector director) => timeplyer.Pause(director);
+        public void Resume() => timeplyer.Resume();
+        public void Resume(PlayableDirector director) => timeplyer.Resume(director);
         #endregion
 
-        #region Dialogue
-        public void HideText() => textPlayer.HideText();
-        public void PlayText(DialogueItem item) => textPlayer.Play(item);
-        public void TimelinePlay(DialogueItem item, float duration) => textPlayer.TimelinePlay(item, duration);
+        #region Text
+        public void SetTimelinePlaying() => textPlayer.SetTimelinePlaying();
+        public void DisplayDialogues(int id, System.Action result) => textPlayer.DisplayDialogues(GetDialogues(id), result);
+        public void DisplayDialogues(Dialogues dialogues) => textPlayer.DisplayDialogues(dialogues);
+        public void DisplayText(string msg) => textPlayer.DisplayText(msg);
         #endregion
     }
 }

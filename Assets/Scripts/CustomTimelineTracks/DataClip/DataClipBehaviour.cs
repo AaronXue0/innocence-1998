@@ -6,11 +6,10 @@ using UnityEngine.Timeline;
 namespace Game
 {
     [Serializable]
-    public class DialogueBehaviour : PlayableBehaviour
+    public class DataClipBehaviour : PlayableBehaviour
     {
-        public DialogueItem dialogueItem;
-        public float duration;
-        public bool isAuatoPlay;
+        [SerializeField] int newProgress;
+        [SerializeField] DataClipContainer[] dataClipContainers;
 
         public bool hasToPause = false;
 
@@ -30,8 +29,11 @@ namespace Game
             {
                 if (GameManager.instance != null)
                 {
-                    GameManager.instance.SetupDirector(director);
-                    GameManager.instance.TimelinePlay(dialogueItem, duration, isAuatoPlay);
+                    foreach (DataClipContainer clip in dataClipContainers)
+                    {
+                        GameManager.instance.SetItemState(clip.targetData.id, clip.setNewState);
+                    }
+                    GameManager.instance.SetProgress(newProgress);
                 }
 
                 if (Application.isPlaying)
@@ -51,18 +53,21 @@ namespace Game
             if (pauseScheduled)
             {
                 pauseScheduled = false;
-
-                if (GameManager.instance != null)
-                    GameManager.instance.PauseTimeline(director);
+                // GameManager.instance.PauseTimeline(director);
             }
             else
             {
-                if (GameManager.instance != null)
-                    GameManager.instance.HideText();
+                // GameManager.instance.HideText();
             }
 
             clipPlayed = false;
         }
     }
 
+    [System.Serializable]
+    public class DataClipContainer
+    {
+        public ObjectData targetData;
+        public int setNewState = 0;
+    }
 }

@@ -67,8 +67,8 @@ MonoBehaviour:
   m_text: "\u300C\u597D\u50CF\u662F\u5ABD\u5ABD\u5DE5\u4F5C\u7684\u5C0F\u5403\u90E8...\u300D
     \u25BC"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 03d589b6b2fcc4ac68fa9c191860eddf, type: 2}
-  m_sharedMaterial: {fileID: 1804306232901500315, guid: 03d589b6b2fcc4ac68fa9c191860eddf,
+  m_fontAsset: {fileID: 11400000, guid: 8982eae7a95a24630a09f2890a898496, type: 2}
+  m_sharedMaterial: {fileID: -1490315042876784220, guid: 8982eae7a95a24630a09f2890a898496,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7862fe56aa24641c79cc55221eab9175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTestMode: 1
 --- !u!114 &1178250289067851716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +195,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578192048071b435a80285d8588c440a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gmData: {fileID: 11400000, guid: b730250153a0f4a54a0b6db7c90429a0, type: 2}
+  items:
+  - {fileID: 11400000, guid: db35861b80ae244a5b6369087da8fb9d, type: 2}
+  - {fileID: 11400000, guid: 95bce16849eb548beb30b6b9d868a795, type: 2}
+  - {fileID: 11400000, guid: 6a547636c3c4d47f999198a91194982e, type: 2}
+  - {fileID: 11400000, guid: f1e6e7c3a441041e1858c4aeb28a430f, type: 2}
+  timelineClips:
+  - {fileID: 11400000, guid: c3adba7432a7e4183888599a76225f4d, type: 2}
+  - {fileID: 11400000, guid: e2b2b9391cfb54be0b657db3543eb962, type: 2}
+  itemGameObjects: []
 --- !u!114 &8330359160941266540
 MonoBehaviour:
   m_ObjectHideFlags: 0
