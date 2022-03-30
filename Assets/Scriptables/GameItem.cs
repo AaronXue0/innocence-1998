@@ -7,9 +7,9 @@ namespace Innocence
     {
         public int id;
         public int currentState;
-        [SerializeField] ItemContent[] stateContainers;
+        public ItemContent[] stateContents;
 
-        public ItemContent GetContent { get { return stateContainers[currentState]; } }
+        public ItemContent GetContent { get { return stateContents[currentState]; } }
     }
     [System.Serializable]
     public class ItemContent
@@ -17,6 +17,7 @@ namespace Innocence
         [Header("GameObject")]
         public Sprite sprite = null;
         public bool isActive = true;
+        public bool isClickAble = true;
 
         [Header("Dialogues")]
         public Dialogues dialogues = null;

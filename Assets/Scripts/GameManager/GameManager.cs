@@ -8,6 +8,7 @@ namespace Innocence
     public class GameManager : MonoBehaviour
     {
         public static GameManager instance;
+        [SerializeField] bool isTestMode = false;
 
         private GameDataManager gameData;
         private TimelinePlayer timeplyer;
@@ -31,11 +32,31 @@ namespace Innocence
                 textPlayer.Init(Pause, Resume);
             }
         }
+        void OnEnable()
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+        private void Update()
+        {
+            if (isTestMode && Input.GetKeyDown(KeyCode.R))
+            {
+                gameData.Reset(() => SceneManager.LoadScene(0));
+            }
+        }
+        void OnDisable()
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
 
         #region Listener
         public void OnProgressChanged(int newProgress)
         {
-
+            //Do Something
+        }
+        void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            Debug.Log("Loaded");
+            gameData.SetAllItemsStateInScene();
         }
         #endregion
 

@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Refactor.unity
+    guid: fa098b7aa906a4b1fac8cef37d9716ff
   m_configObjects: {}

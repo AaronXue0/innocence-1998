@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb85e32d909a446fbba2f6f9ffce487e, type: 3}
   m_Name: GameDatas
   m_EditorClassIdentifier: 
+  chapter: 0
+  progress: 2

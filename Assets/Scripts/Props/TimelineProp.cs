@@ -34,7 +34,6 @@ namespace Innocence
             TimelinePropContent content = timelineContents.ToList().Find(x => x.requiredProgress == progress);
             if (content != null)
             {
-                Debug.Log(content.requiredProgress + " , " + progress);
                 if (content.conition == TimelineCondition.Awake)
                     Invoke(content.asset);
             }
