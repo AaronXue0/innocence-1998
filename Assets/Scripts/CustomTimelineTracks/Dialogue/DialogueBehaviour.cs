@@ -3,14 +3,12 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
-namespace Game
+namespace Innocence
 {
     [Serializable]
     public class DialogueBehaviour : PlayableBehaviour
     {
-        public DialogueItem dialogueItem;
-        public float duration;
-        public bool isAuatoPlay;
+        public Dialogues dialogues;
 
         public bool hasToPause = false;
 
@@ -30,8 +28,8 @@ namespace Game
             {
                 if (GameManager.instance != null)
                 {
-                    GameManager.instance.SetupDirector(director);
-                    GameManager.instance.TimelinePlay(dialogueItem, duration, isAuatoPlay);
+                    GameManager.instance.SetTimelinePlaying();
+                    GameManager.instance.DisplayDialogues(dialogues);
                 }
 
                 if (Application.isPlaying)
@@ -53,12 +51,7 @@ namespace Game
                 pauseScheduled = false;
 
                 if (GameManager.instance != null)
-                    GameManager.instance.PauseTimeline(director);
-            }
-            else
-            {
-                if (GameManager.instance != null)
-                    GameManager.instance.HideText();
+                    GameManager.instance.Pause(director);
             }
 
             clipPlayed = false;

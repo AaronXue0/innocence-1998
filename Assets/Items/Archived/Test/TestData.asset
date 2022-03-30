@@ -14,8 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   currentState: 0
-  items:
-  - sprite: {fileID: 21300000, guid: 9429cc2f8b38ab948ab0412e9380b152, type: 3}
-    dialogues: {fileID: 11400000, guid: 9cbbff35e984f42ea9d829bf389d1bca, type: 2}
-  - sprite: {fileID: 21300000, guid: 217b207aae8068e41a705a475ee03034, type: 3}
-    dialogues: {fileID: 11400000, guid: 80929eff97239481ab6e2714d31b8c45, type: 2}
+  states:
+  - playOnce: 0
+    sprite: {fileID: 0}
+    isActive: 0
+    dialogues: {fileID: 0}
+    targetTimelineID: 0
+    finishedResult: 0
+    nestItems: 
+    currentDialogueIndex: 0
+    missionFinished: 0
+  - playOnce: 0
+    sprite: {fileID: 0}
+    isActive: 0
+    dialogues: {fileID: 0}
+    targetTimelineID: 0
+    finishedResult: 0
+    nestItems: 
+    currentDialogueIndex: 0
+    missionFinished: 0

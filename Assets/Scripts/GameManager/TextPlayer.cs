@@ -51,6 +51,7 @@ namespace Innocence
         public void DisplayDialogues(Dialogues dialogues, Action result)
         {
             this.Result = result;
+            DisplayDialogues(dialogues);
         }
         public void DisplayDialogues(Dialogues dialogues)
         {
@@ -90,7 +91,9 @@ namespace Innocence
             float displaySec = dialogues.GetDisplaySec;
             float fadeoutDuration = dialogues.GetFadeoutDuration;
 
+            yield return StartCoroutine(DialoguingCoroutine(msg, appearGap));
             yield return new WaitForSeconds(displaySec);
+            yield return StartCoroutine(FadeoutCoroutine(fadeoutDuration));
 
             if (Result != null)
                 Result();
@@ -100,7 +103,6 @@ namespace Innocence
             IsTimelinePlaying = false;
             EnablePlayerInteractWithScene();
         }
-
         private IEnumerator DialoguingCoroutine(string[] msg, float appearGap)
         {
             foreach (string str in msg)
@@ -120,7 +122,9 @@ namespace Innocence
                 while (WaitForContinue)
                 {
                     if (IsTimelinePlaying)
+                    {
                         Pause();
+                    }
 
                     yield return null;
                 }

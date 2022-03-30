@@ -27,10 +27,14 @@ namespace Innocence
         }
         private void Start()
         {
-            int progress = gm.GetProgress;
+            if (gm == null)
+                gm = GameManager.instance;
+
+            int progress = GameManager.instance.Progress;
             TimelinePropContent content = timelineContents.ToList().Find(x => x.requiredProgress == progress);
             if (content != null)
             {
+                Debug.Log(content.requiredProgress + " , " + progress);
                 if (content.conition == TimelineCondition.Awake)
                     Invoke(content.asset);
             }

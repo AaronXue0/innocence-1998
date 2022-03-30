@@ -40,7 +40,9 @@ namespace Innocence
         #endregion
 
         #region GameData
-        public int GetProgress { get { return gameData.GetProgress; } }
+        public int Progress { get { return gameData.progress; } }
+        public void SetProgress(int progress) => gameData.progress = progress;
+        public void SetItemState(int id, int state) => gameData.SetItemState(id, state);
         public GameItem GetGameItem(int id) => gameData.GetGameItem(id);
         public ItemContent GetItemContent(int id) => gameData.GetItemContent(id);
         public Dialogues GetDialogues(int id) => gameData.GetDialogues(id);

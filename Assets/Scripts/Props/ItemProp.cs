@@ -8,8 +8,6 @@ namespace Innocence
     {
         public int id;
 
-        private GameManager gm = GameManager.instance;
-        private bool ableToClick = true;
         private bool isPlaying = false;
 
         private void OnMouseDown()
@@ -17,19 +15,21 @@ namespace Innocence
             if (isPlaying)
                 return;
 
+            Debug.Log("Item Clicked");
             ClickEvent();
         }
 
         private void ClickEvent()
         {
             isPlaying = true;
-            gm.DisplayDialogues(id, DialoguesFinished);
+            GameManager.instance.DisplayDialogues(id, DialoguesFinished);
         }
 
         private void DialoguesFinished()
         {
+            Debug.Log("oaspfj");
             isPlaying = false;
-            gm.ItemDialoguesFinished(id);
+            GameManager.instance.ItemDialoguesFinished(id);
         }
     }
 }

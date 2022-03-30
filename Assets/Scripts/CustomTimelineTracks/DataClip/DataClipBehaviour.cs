@@ -3,13 +3,13 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
-namespace Game
+namespace Innocence
 {
     [Serializable]
     public class DataClipBehaviour : PlayableBehaviour
     {
         [SerializeField] int newProgress;
-        [SerializeField] DataClipContainer[] dataClipContainers;
+        [SerializeField] DataClipContent[] dataClipContents;
 
         public bool hasToPause = false;
 
@@ -29,7 +29,7 @@ namespace Game
             {
                 if (GameManager.instance != null)
                 {
-                    foreach (DataClipContainer clip in dataClipContainers)
+                    foreach (DataClipContent clip in dataClipContents)
                     {
                         GameManager.instance.SetItemState(clip.targetData.id, clip.setNewState);
                     }
@@ -65,9 +65,9 @@ namespace Game
     }
 
     [System.Serializable]
-    public class DataClipContainer
+    public class DataClipContent
     {
-        public ObjectData targetData;
+        public GameItem targetData;
         public int setNewState = 0;
     }
 }

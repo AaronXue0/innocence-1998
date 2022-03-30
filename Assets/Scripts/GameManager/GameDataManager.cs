@@ -7,6 +7,7 @@ namespace Innocence
     {
         [SerializeField] GameDatas gameDatas;
         [SerializeField] GameItem[] gameItems;
+        [HideInInspector]
         [SerializeField] ItemProp[] itemProps;
 
         public System.Action<int> onProgressChanged;
@@ -27,11 +28,27 @@ namespace Innocence
             }
         }
 
-        public int GetProgress { get { return progress; } }
-
+        public ItemProp GetItemProp(int id) => itemProps.ToList().Find(x => x.id == id);
         public GameItem GetGameItem(int id) => gameItems.ToList().Find(x => x.id == id);
         public ItemContent GetItemContent(int id) => gameItems.ToList().Find(x => x.id == id).GetContent;
         public Dialogues GetDialogues(int id) => gameItems.ToList().Find(x => x.id == id).GetContent.dialogues;
+
+        public void SetItemState(int id, int state)
+        {
+            GameItem item = GetGameItem(id);
+            ItemProp prop = GetItemProp(id);
+            GameObject go = prop.gameObject;
+
+            item.currentState = state;
+            ItemContent content = item.GetContent;
+
+            go.SetActive(content.isActive);
+
+            if (content.sprite)
+            {
+                go.GetComponent<SpriteRenderer>().sprite = content.sprite;
+            }
+        }
 
         public void ItemDialoguesFinished(int id)
         {
