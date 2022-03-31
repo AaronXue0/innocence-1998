@@ -55,7 +55,6 @@ namespace Innocence
         }
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            Debug.Log("Loaded");
             gameData.SetAllItemsStateInScene();
         }
         #endregion
