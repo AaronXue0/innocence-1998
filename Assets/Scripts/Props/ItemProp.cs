@@ -15,7 +15,6 @@ namespace Innocence
             if (isPlaying)
                 return;
 
-            Debug.Log("Item Clicked");
             ClickEvent();
         }
 
@@ -27,7 +26,6 @@ namespace Innocence
 
         private void DialoguesFinished()
         {
-            Debug.Log("oaspfj");
             isPlaying = false;
             GameManager.instance.ItemDialoguesFinished(id);
         }

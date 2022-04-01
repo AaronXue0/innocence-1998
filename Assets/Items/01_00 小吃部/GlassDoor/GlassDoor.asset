@@ -14,11 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   currentState: 0
-  stateContainers:
+  stateContents:
   - sprite: {fileID: 21300000, guid: 9961a3bce7e42654c9259ae06dcca988, type: 3}
     isActive: 1
+    isClickAble: 1
     dialogues: {fileID: 11400000, guid: 4fea626e28f6a4fb4b36a58020e329e8, type: 2}
     finishedResult: 1
+    nestItemsID: 000000000100000003000000
+    awardItemsID: 
+    completed: 0
+  - sprite: {fileID: 21300000, guid: 9961a3bce7e42654c9259ae06dcca988, type: 3}
+    isActive: 1
+    isClickAble: 0
+    dialogues: {fileID: 11400000, guid: 4fea626e28f6a4fb4b36a58020e329e8, type: 2}
+    finishedResult: 0
     nestItemsID: 000000000100000003000000
     awardItemsID: 
     completed: 0
