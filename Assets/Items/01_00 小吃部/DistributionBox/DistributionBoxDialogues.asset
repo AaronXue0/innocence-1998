@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4867d570212304ed68b1b9077fe79069, type: 3}
-  m_Name: 777
+  m_Name: DistributionBoxDialogues
   m_EditorClassIdentifier: 
-  msg: []
+  msg:
+  - "\u300C\u592A\u9AD8\u4E86\u6406\u4E0D\u5230\u3002\u300D \u25BC "
   appaerGap: 0.1
   displaySecs: 1
   fadeoutDuration: 0.5
