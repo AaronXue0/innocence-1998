@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0db39359815e8439a984a7c2eb22bd76, type: 3}
   m_Name: DistributionBox
   m_EditorClassIdentifier: 
-  id: 0
+  id: 4
   currentState: 0
   stateContents:
   - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
