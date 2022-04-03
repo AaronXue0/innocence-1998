@@ -10,10 +10,9 @@ namespace Innocence
 
         public void SetMainDirector()
         {
-            PlayableDirector mainDirector = currentDirector = GameObject.FindWithTag("MainDirector").GetComponent<PlayableDirector>();
-            if (mainDirector != null)
+            if (GameObject.FindWithTag("MainDirector").GetComponent<PlayableDirector>() != null)
             {
-                currentDirector = mainDirector;
+                currentDirector = GameObject.FindWithTag("MainDirector").GetComponent<PlayableDirector>();
             }
             else
             {
