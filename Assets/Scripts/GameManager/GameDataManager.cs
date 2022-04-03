@@ -72,13 +72,13 @@ namespace Innocence
             foreach (ItemProp prop in itemProps)
             {
                 int id = prop.id;
-                Debug.Log(id + ", " + prop.name);
 
                 ItemContent content = GetItemContent(id);
                 GameObject go = prop.gameObject;
 
                 go.SetActive(content.isActive);
                 go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;
+                Debug.Log(id + ", " + prop.name + ", " + go.GetComponent<BoxCollider2D>().enabled);
 
                 if (content.sprite)
                     go.GetComponent<SpriteRenderer>().sprite = content.sprite;

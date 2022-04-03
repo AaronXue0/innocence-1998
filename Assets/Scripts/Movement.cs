@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game
+namespace Innocence
 {
     public class Movement : MonoBehaviour
     {
@@ -13,10 +13,13 @@ namespace Game
         bool moving;
         Animator animWalk;
 
-        public void AbleToInput(bool state)
+        public void StopMoving(bool state)
         {
             isLocked = state;
-            Debug.Log(isLocked);
+            if (isLocked)
+            {
+                targetPos = transform.position;
+            }
         }
 
         void Start()
@@ -46,7 +49,6 @@ namespace Game
                 }
             }
 
-
             if (moving && (Vector2)transform.position != targetPos)
             {
                 float step = speed * Time.deltaTime;
@@ -56,16 +58,11 @@ namespace Game
                     animWalk.SetBool("move", false);
                 }
             }
-
             else
             {
-
                 moving = false;
-
             }
-
         }
-
     }
 
 
