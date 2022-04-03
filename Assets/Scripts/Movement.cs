@@ -29,7 +29,14 @@ namespace Innocence
         private void Update()
         {
             if (isLocked)
+            {
+                if (moving)
+                {
+                    animWalk.SetBool("move", false);
+                    targetPos = transform.position;
+                }
                 return;
+            }
 
             // Debug.Log(transform.localScale);
             if (Input.GetMouseButtonDown(0))

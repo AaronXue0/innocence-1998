@@ -10,6 +10,7 @@ namespace Innocence
     {
         [SerializeField] int newProgress;
         [SerializeField] DataClipContent[] dataClipContents;
+        [SerializeField] LightClipContent[] lightClipContents;
 
         public bool hasToPause = false;
 
@@ -32,6 +33,10 @@ namespace Innocence
                     foreach (DataClipContent clip in dataClipContents)
                     {
                         GameManager.instance.SetItemState(clip.targetData.id, clip.setNewState);
+                    }
+                    foreach (LightClipContent clip in lightClipContents)
+                    {
+                        GameManager.instance.SetLightState(clip.lightData.id, clip.setNewState);
                     }
                     GameManager.instance.SetProgress(newProgress);
                 }
@@ -68,6 +73,12 @@ namespace Innocence
     public class DataClipContent
     {
         public GameItem targetData;
+        public int setNewState = 0;
+    }
+    [System.Serializable]
+    public class LightClipContent
+    {
+        public LightData lightData;
         public int setNewState = 0;
     }
 }

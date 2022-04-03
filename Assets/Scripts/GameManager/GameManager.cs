@@ -55,7 +55,7 @@ namespace Innocence
         }
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            gameData.SetAllItemsStateInScene();
+            gameData.SetAllStatesInScene();
         }
         #endregion
 
@@ -67,6 +67,8 @@ namespace Innocence
         public ItemContent GetItemContent(int id) => gameData.GetItemContent(id);
         public Dialogues GetDialogues(int id) => gameData.GetDialogues(id);
         public void ItemDialoguesFinished(int id) => gameData.ItemDialoguesFinished(id);
+        public void SetLightState(int id, int state) => gameData.SetLightState(id, state);
+        public LightData GetLightData(int id) => gameData.GetLightData(id);
         #endregion
 
         #region Timeline

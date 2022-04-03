@@ -150,7 +150,7 @@ PlayableDirector:
   m_GameObject: {fileID: 5832162}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 167ae206b114b4177ab86754302df58c, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: e3937e7e070334f1aaf89c9d49acbce3, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -171,6 +171,8 @@ PlayableDirector:
   - key: {fileID: -5332020531036381356, guid: 167ae206b114b4177ab86754302df58c, type: 2}
     value: {fileID: 0}
   - key: {fileID: 8892074820122451456, guid: e3937e7e070334f1aaf89c9d49acbce3, type: 2}
+    value: {fileID: 5832166}
+  - key: {fileID: 7165689042936763056, guid: 167ae206b114b4177ab86754302df58c, type: 2}
     value: {fileID: 5832166}
   m_ExposedReferences:
     m_References: []
@@ -794,6 +796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 362164323}
   - component: {fileID: 362164324}
+  - component: {fileID: 362164325}
   m_Layer: 0
   m_Name: Lights
   m_TagString: Untagged
@@ -838,6 +841,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &362164325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362164322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daabd8529f638457ea3b67413ac5cf78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 100
 --- !u!1 &364471357
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,6 +3240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1464018917162359131, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
+      propertyPath: lightDatas.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464018917162359131, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
       propertyPath: gameItems.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: d2b58735e71ca804a89541d62723dad7,
@@ -3233,6 +3254,12 @@ PrefabInstance:
       propertyPath: gameItems.Array.data[4]
       value: 
       objectReference: {fileID: 11400000, guid: 12cf9ab0c91c242178d856e47ebbb55e,
+        type: 2}
+    - target: {fileID: 1464018917162359131, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: lightDatas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: fdd560d9308364c669195236a1156b2a,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
