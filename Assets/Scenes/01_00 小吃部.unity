@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -902,7 +902,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.696825, y: 1.6197, z: -10}
+  m_LocalPosition: {x: 8.6168995, y: 1.6198475, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -1452,6 +1452,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+  isPlaying: 0
+  ableToClick: 0
   hintSR: {fileID: 1442121188}
   distance: 3
 --- !u!61 &552484789
@@ -2219,6 +2221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4
+  isPlaying: 0
+  ableToClick: 0
   hintSR: {fileID: 1004533497}
   distance: 5
 --- !u!61 &999354274
@@ -2558,7 +2562,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0020828247, y: 1.1263514, z: 0}
+  m_LocalPosition: {x: 0.002008438, y: 1.086204, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -2884,7 +2888,7 @@ SpriteRenderer:
   m_SortingLayerID: -980178345
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a2e8e7c55df01354c9bec29112c15aa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 009e84c179e1c7f43807a7785c734662, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2903,8 +2907,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454403566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.7, y: -0.08000004, z: 0}
-  m_LocalScale: {x: 0.38, y: 0.38, z: 1}
+  m_LocalPosition: {x: 8.62, y: -0.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1660515095}
   m_Father: {fileID: 0}
@@ -3017,6 +3021,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
+  isPlaying: 0
+  ableToClick: 0
   hintSR: {fileID: 1767091416}
   distance: 5
 --- !u!61 &1554064509
@@ -3594,6 +3600,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  isPlaying: 0
+  ableToClick: 0
   hintSR: {fileID: 140698354}
   distance: 5
 --- !u!61 &1716322653
@@ -4058,6 +4066,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  isPlaying: 0
+  ableToClick: 0
   hintSR: {fileID: 783747210}
   distance: 7
 --- !u!61 &1856178090
@@ -4133,6 +4143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 24
+  isPlaying: 0
+  ableToClick: 0
   hintSR: {fileID: 175481589}
   distance: 3
 --- !u!61 &1860479356
