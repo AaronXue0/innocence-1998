@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -194,6 +194,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -3198549879514562084, guid: 786d085d8102744a59d676aea134bc62, type: 2}
     value: {fileID: 362164324}
+  - key: {fileID: 6172383425265633947, guid: e3937e7e070334f1aaf89c9d49acbce3, type: 2}
+    value: {fileID: 1660515097}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &5832164
@@ -902,7 +904,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.6168995, y: 1.6198475, z: -10}
+  m_LocalPosition: {x: 8.604579, y: 1.6198708, z: -10.01414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -2562,7 +2564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.002008438, y: 1.086204, z: 0}
+  m_LocalPosition: {x: 0.00018692017, y: 0.10158825, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -3279,6 +3281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1660515095}
   - component: {fileID: 1660515096}
+  - component: {fileID: 1660515097}
   m_Layer: 0
   m_Name: Point Light 2D
   m_TagString: Untagged
@@ -3341,6 +3344,25 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!95 &1660515097
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660515094}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1710274874
 GameObject:
   m_ObjectHideFlags: 0
