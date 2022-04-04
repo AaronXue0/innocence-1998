@@ -83,23 +83,31 @@ namespace Innocence
 
         private IEnumerator PlayTextCorotuine(Dialogues dialogues)
         {
+
             if (IsTimelinePlaying == false)
                 Movement.isLocked = true;
 
-            IsPlaying = true;
-            DisablePlayerInteractWithScene();
+            if (dialogues != null)
+            {
+                IsPlaying = true;
+                DisablePlayerInteractWithScene();
 
-            string[] msg = dialogues.GetMsg;
-            float appearGap = dialogues.GetAppearGap;
-            float displaySec = dialogues.GetDisplaySec;
-            float fadeoutDuration = dialogues.GetFadeoutDuration;
+                string[] msg = dialogues.GetMsg;
+                float appearGap = dialogues.GetAppearGap;
+                float displaySec = dialogues.GetDisplaySec;
+                float fadeoutDuration = dialogues.GetFadeoutDuration;
 
-            yield return StartCoroutine(DialoguingCoroutine(msg, appearGap));
-            yield return new WaitForSeconds(displaySec);
-            yield return StartCoroutine(FadeoutCoroutine(fadeoutDuration));
+                yield return StartCoroutine(DialoguingCoroutine(msg, appearGap));
+                yield return new WaitForSeconds(displaySec);
+                yield return StartCoroutine(FadeoutCoroutine(fadeoutDuration));
+
+            }
 
             if (Result != null)
+            {
+                Debug.Log(Result);
                 Result();
+            }
 
             if (IsTimelinePlaying == false)
             {

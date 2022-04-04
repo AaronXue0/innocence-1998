@@ -88,6 +88,7 @@ namespace Innocence
                     int id = prop.id;
 
                     ItemContent content = GetItemContent(id);
+                    prop.SetHintSprite(content.hintSprite);
                     GameObject go = prop.gameObject;
 
                     go.SetActive(content.isActive);
@@ -97,7 +98,6 @@ namespace Innocence
                     if (content.sprite)
                         go.GetComponent<SpriteRenderer>().sprite = content.sprite;
                 }
-
             }
 
             lightProps = FindObjectsOfType<LightProp>();
@@ -141,10 +141,10 @@ namespace Innocence
             ItemContent content = GetItemContent(id);
             content.completed = true;
 
+            Debug.Log("Item Dialogue Finished");
             switch (content.finishedResult)
             {
                 case FinishedResult.CheckForTimeline:
-                    Debug.Log("CheckForTimeline");
                     CheckCurrentTimelineCondition(content);
                     break;
                 case FinishedResult.GetItem:

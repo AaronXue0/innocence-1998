@@ -4,72 +4,76 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
-public class TimeMachineMixerBehaviour : PlayableBehaviour
+namespace Innocence
 {
-    public Dictionary<string, double> markerClips;
-    private PlayableDirector director;
-
-    public override void OnPlayableCreate(Playable playable)
+    public class TimeMachineMixerBehaviour : PlayableBehaviour
     {
-        director = (playable.GetGraph().GetResolver() as PlayableDirector);
-    }
+        public Dictionary<string, double> markerClips;
+        private PlayableDirector director;
 
-    public override void ProcessFrame(Playable playable, FrameData info, object playerData)
-    {
-        //ScriptPlayable<TimeMachineBehaviour> inputPlayable = (ScriptPlayable<TimeMachineBehaviour>)playable.GetInput(i);
-        //Debug.Log(PlayableExtensions.GetTime<ScriptPlayable<TimeMachineBehaviour>>(inputPlayable));
-
-        if (!Application.isPlaying)
+        public override void OnPlayableCreate(Playable playable)
         {
-            return;
+            director = (playable.GetGraph().GetResolver() as PlayableDirector);
         }
 
-        int inputCount = playable.GetInputCount();
-
-        for (int i = 0; i < inputCount; i++)
+        public override void ProcessFrame(Playable playable, FrameData info, object playerData)
         {
-            float inputWeight = playable.GetInputWeight(i);
-            ScriptPlayable<TimeMachineBehaviour> inputPlayable = (ScriptPlayable<TimeMachineBehaviour>)playable.GetInput(i);
-            TimeMachineBehaviour input = inputPlayable.GetBehaviour();
+            //ScriptPlayable<TimeMachineBehaviour> inputPlayable = (ScriptPlayable<TimeMachineBehaviour>)playable.GetInput(i);
+            //Debug.Log(PlayableExtensions.GetTime<ScriptPlayable<TimeMachineBehaviour>>(inputPlayable));
 
-            if (inputWeight > 0f)
+            if (!Application.isPlaying)
             {
-                if (!input.clipExecuted)
-                {
-                    switch (input.action)
-                    {
-                        case TimeMachineBehaviour.TimeMachineAction.Pause:
-                            if (input.ConditionMet())
-                            {
-                                // GameManager.Instance.PauseTimeline(director);
-                                input.clipExecuted = true; //this prevents the command to be executed every frame of this clip
-                            }
-                            break;
+                return;
+            }
 
-                        case TimeMachineBehaviour.TimeMachineAction.JumpToTime:
-                        case TimeMachineBehaviour.TimeMachineAction.JumpToMarker:
-                            if (input.ConditionMet())
-                            {
-                                //Rewind
-                                if (input.action == TimeMachineBehaviour.TimeMachineAction.JumpToTime)
+            int inputCount = playable.GetInputCount();
+
+            for (int i = 0; i < inputCount; i++)
+            {
+                float inputWeight = playable.GetInputWeight(i);
+                ScriptPlayable<TimeMachineBehaviour> inputPlayable = (ScriptPlayable<TimeMachineBehaviour>)playable.GetInput(i);
+                TimeMachineBehaviour input = inputPlayable.GetBehaviour();
+
+                if (inputWeight > 0f)
+                {
+                    if (!input.clipExecuted)
+                    {
+                        switch (input.action)
+                        {
+                            case TimeMachineBehaviour.TimeMachineAction.Pause:
+                                if (input.ConditionMet())
                                 {
-                                    //Jump to time
-                                    (playable.GetGraph().GetResolver() as PlayableDirector).time = (double)input.timeToJumpTo;
+                                    GameManager.instance.Pause();
+                                    input.clipExecuted = true; //this prevents the command to be executed every frame of this clip
                                 }
-                                else
+                                break;
+
+                            case TimeMachineBehaviour.TimeMachineAction.JumpToTime:
+                            case TimeMachineBehaviour.TimeMachineAction.JumpToMarker:
+                                if (input.ConditionMet())
                                 {
-                                    //Jump to marker
-                                    double t = markerClips[input.markerToJumpTo];
-                                    (playable.GetGraph().GetResolver() as PlayableDirector).time = t;
+                                    //Rewind
+                                    if (input.action == TimeMachineBehaviour.TimeMachineAction.JumpToTime)
+                                    {
+                                        //Jump to time
+                                        (playable.GetGraph().GetResolver() as PlayableDirector).time = (double)input.timeToJumpTo;
+                                    }
+                                    else
+                                    {
+                                        //Jump to marker
+                                        double t = markerClips[input.markerToJumpTo];
+                                        (playable.GetGraph().GetResolver() as PlayableDirector).time = t;
+                                    }
+                                    input.clipExecuted = false; //we want the jump to happen again!
                                 }
-                                input.clipExecuted = false; //we want the jump to happen again!
-                            }
-                            break;
+                                break;
+
+                        }
 
                     }
-
                 }
             }
         }
     }
+
 }
