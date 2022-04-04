@@ -12,6 +12,7 @@ namespace Innocence
         [SerializeField] ItemProp[] itemProps;
         [HideInInspector]
         [SerializeField] LightProp[] lightProps;
+        [SerializeField] PlayerData playerData;
 
         public System.Action<int> onProgressChanged;
         public int progress { get { return gameDatas.progress; } set { gameDatas.progress = value; } }
@@ -31,6 +32,8 @@ namespace Innocence
             }
         }
 
+        public PlayerData GetPlayerData() => playerData;
+
         #region Item
         public ItemProp GetItemProp(int id) => itemProps.ToList().Find(x => x.id == id);
         public GameItem GetGameItem(int id) => gameItems.ToList().Find(x => x.id == id);
@@ -46,6 +49,7 @@ namespace Innocence
         #region APIs
         public void Reset()
         {
+            playerData.lastAnimator = "";
             foreach (GameItem item in gameItems)
             {
                 item.currentState = 0;
@@ -65,6 +69,7 @@ namespace Innocence
         }
         public void Reset(System.Action callback)
         {
+            playerData.lastAnimator = "";
             foreach (GameItem item in gameItems)
             {
                 item.currentState = 0;

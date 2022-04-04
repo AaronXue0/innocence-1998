@@ -71,6 +71,7 @@ namespace Innocence
 
         #region GameData
         public int Progress { get { return gameData.progress; } }
+        public PlayerData GetPlayerData() => gameData.GetPlayerData();
         public void SetProgress(int progress) => gameData.progress = progress;
         public void SetItemState(int id, int state) => gameData.SetItemState(id, state);
         public GameItem GetGameItem(int id) => gameData.GetGameItem(id);

@@ -531,6 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTestMode: 1
+  timeSpeed: 1
 --- !u!114 &1464018917162359131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,10 +550,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 63c6e14f6a4db46fa9651bc460929451, type: 2}
   - {fileID: 11400000, guid: 12cf9ab0c91c242178d856e47ebbb55e, type: 2}
   - {fileID: 11400000, guid: d2b58735e71ca804a89541d62723dad7, type: 2}
+  - {fileID: 11400000, guid: d90932e4432b747f9add3617683eafd6, type: 2}
   lightDatas:
   - {fileID: 11400000, guid: fdd560d9308364c669195236a1156b2a, type: 2}
   itemProps: []
   lightProps: []
+  playerData: {fileID: 11400000, guid: 5cca9b0cb3b9e45f49344b9af43a3a65, type: 2}
 --- !u!114 &1464018917162359124
 MonoBehaviour:
   m_ObjectHideFlags: 0
