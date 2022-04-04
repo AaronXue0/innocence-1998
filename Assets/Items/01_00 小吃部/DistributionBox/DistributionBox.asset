@@ -40,7 +40,7 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 1
-    nestItemsID: 
+    nestItemsID: 02000000
     targetSceneName: "01_01 \u914D\u96FB\u7BB1\u5167\u90E8"
     awardItemsID: 
     hintSprite: {fileID: 0}

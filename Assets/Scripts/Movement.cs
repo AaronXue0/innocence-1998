@@ -14,6 +14,8 @@ namespace Innocence
         bool moving;
         Animator animWalk;
 
+        [SerializeField] PlayerData playerData;
+
         private void Awake()
         {
             if (instance != null)
@@ -22,6 +24,17 @@ namespace Innocence
             }
 
             instance = this;
+
+            animWalk = GetComponent<Animator>();
+
+            if (playerData.lastAnimator != "")
+                animWalk.SetTrigger(playerData.lastAnimator);
+        }
+
+        public void SetTrigger(string name)
+        {
+            playerData.lastAnimator = name;
+            animWalk.SetTrigger(name);
         }
 
         public void StopMoving(bool state)
@@ -33,10 +46,6 @@ namespace Innocence
             }
         }
 
-        void Start()
-        {
-            animWalk = GetComponent<Animator>();
-        }
         private void Update()
         {
             if (isLocked)

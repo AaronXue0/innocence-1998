@@ -129,7 +129,14 @@ namespace Innocence
             prop.SetHintSprite(content.hintSprite);
 
             go.SetActive(content.isActive);
-            go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;
+            if (content.isActive == false)
+            {
+                content.completed = true;
+            }
+            else
+            {
+                go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;
+            }
 
             if (content.sprite)
             {

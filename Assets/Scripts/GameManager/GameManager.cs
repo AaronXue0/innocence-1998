@@ -9,6 +9,7 @@ namespace Innocence
     {
         public static GameManager instance;
         [SerializeField] bool isTestMode = false;
+        [SerializeField] float timeSpeed = 1f;
 
         private GameDataManager gameData;
         private TimelinePlayer timeplyer;
@@ -17,6 +18,7 @@ namespace Innocence
 
         private void Awake()
         {
+            Time.timeScale = timeSpeed;
             if (instance)
             {
                 Destroy(gameObject);
