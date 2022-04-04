@@ -47,6 +47,7 @@ namespace Innocence
 
         #region APIs
         public void SetTimelinePlaying() => IsTimelinePlaying = true;
+        public void StopTimelinePlaying() => IsTimelinePlaying = false;
         public void DisplayText(string msg) => display.text = msg;
         public void DisplayDialogues(Dialogues dialogues, Action result)
         {
@@ -83,7 +84,6 @@ namespace Innocence
 
         private IEnumerator PlayTextCorotuine(Dialogues dialogues)
         {
-
             if (IsTimelinePlaying == false)
                 Movement.isLocked = true;
 

@@ -89,6 +89,7 @@ namespace Innocence
 
         #region Text
         public void SetTimelinePlaying() => textPlayer.SetTimelinePlaying();
+        public void StopTimelinePlaying() => textPlayer.StopTimelinePlaying();
         public void DisplayDialogues(int id, System.Action result) => textPlayer.DisplayDialogues(GetDialogues(id), result);
         public void DisplayDialogues(Dialogues dialogues) => textPlayer.DisplayDialogues(dialogues);
         public void DisplayText(string msg) => textPlayer.DisplayText(msg);

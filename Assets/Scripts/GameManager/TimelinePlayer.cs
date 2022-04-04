@@ -13,10 +13,20 @@ namespace Innocence
             if (GameObject.FindWithTag("MainDirector").GetComponent<PlayableDirector>() != null)
             {
                 currentDirector = GameObject.FindWithTag("MainDirector").GetComponent<PlayableDirector>();
+                currentDirector.stopped += OnPlayableDirectorStopped;
             }
             else
             {
                 Debug.Log("MainDirector is missing in current scene, \ncheckout if director's tag is attached");
+            }
+        }
+
+        void OnPlayableDirectorStopped(PlayableDirector aDirector)
+        {
+            if (currentDirector == aDirector)
+            {
+                GameManager.instance.StopTimelinePlaying();
+                Debug.Log("PlayableDirector named " + aDirector.name + " is now stopped.");
             }
         }
 

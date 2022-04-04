@@ -25,3 +25,13 @@ MonoBehaviour:
     awardItemsID: 
     hintSprite: {fileID: 0}
     completed: 0
+  - sprite: {fileID: 21300000, guid: 217b207aae8068e41a705a475ee03034, type: 3}
+    isActive: 1
+    isClickAble: 0
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    nestItemsID: 
+    targetSceneName: 
+    awardItemsID: 
+    hintSprite: {fileID: 0}
+    completed: 0
