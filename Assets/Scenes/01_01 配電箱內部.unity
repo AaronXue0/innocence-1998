@@ -262,18 +262,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
---- !u!114 &64578359 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1296121716, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-    type: 3}
-  m_PrefabInstance: {fileID: 64578358}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b71fbae7d32649c682fe2743dbefb8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &279507486
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +446,7 @@ GameObject:
   - component: {fileID: 802841933}
   - component: {fileID: 802841932}
   - component: {fileID: 802841931}
+  - component: {fileID: 802841934}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -528,7 +517,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 64578359}
+      - m_Target: {fileID: 802841934}
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
@@ -576,6 +565,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802841929}
   m_CullTransparentMesh: 0
+--- !u!114 &802841934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802841929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f74f15c69d044eab3815152fcbf887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &810823644
 GameObject:
   m_ObjectHideFlags: 0
