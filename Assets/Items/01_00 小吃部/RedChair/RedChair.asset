@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RedChair
   m_EditorClassIdentifier: 
   id: 2
-  currentState: 2
+  currentState: 1
   stateContents:
   - sprite: {fileID: 21300000, guid: 217b207aae8068e41a705a475ee03034, type: 3}
     isActive: 1
@@ -24,12 +24,12 @@ MonoBehaviour:
     targetSceneName: 
     awardItemsID: 
     hintSprite: {fileID: 0}
-    completed: 0
+    completed: 1
   - sprite: {fileID: 21300000, guid: 217b207aae8068e41a705a475ee03034, type: 3}
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
-    finishedResult: 0
+    finishedResult: 1
     nestItemsID: 02000000
     targetSceneName: 
     awardItemsID: 
@@ -44,4 +44,4 @@ MonoBehaviour:
     targetSceneName: 
     awardItemsID: 
     hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
-    completed: 1
+    completed: 0
