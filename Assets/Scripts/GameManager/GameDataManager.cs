@@ -13,6 +13,7 @@ namespace Innocence
         [HideInInspector]
         [SerializeField] LightProp[] lightProps;
         [SerializeField] PlayerData playerData;
+        [SerializeField] Vector2[] spawnPoints;
 
         public System.Action<int> onProgressChanged;
         public int progress { get { return gameDatas.progress; } set { gameDatas.progress = value; } }
@@ -33,6 +34,7 @@ namespace Innocence
         }
 
         public PlayerData GetPlayerData() => playerData;
+        public Vector2 GetPlayerPos() => spawnPoints[gameDatas.progress];
 
         #region Item
         public ItemProp GetItemProp(int id) => itemProps.ToList().Find(x => x.id == id);
@@ -122,6 +124,7 @@ namespace Innocence
             GameItem item = GetGameItem(id);
             ItemProp prop = GetItemProp(id);
             GameObject go = null;
+
             if (prop != null)
                 go = prop.gameObject;
             else

@@ -57,7 +57,6 @@ namespace Innocence
         #region Listener
         public void OnProgressChanged(int newProgress)
         {
-            Debug.Log("Progress is on: " + newProgress);
         }
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
@@ -80,6 +79,7 @@ namespace Innocence
         public void ItemDialoguesFinished(int id) => gameData.ItemDialoguesFinished(id);
         public void SetLightState(int id, int state) => gameData.SetLightState(id, state);
         public LightData GetLightData(int id) => gameData.GetLightData(id);
+        public Vector2 GetPlayerPos() => gameData.GetPlayerPos();
         #endregion
 
         #region Timeline

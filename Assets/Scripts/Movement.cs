@@ -33,6 +33,16 @@ namespace Innocence
                 animWalk.SetTrigger(playerData.lastAnimator);
         }
 
+        private void OnEnable()
+        {
+            SetPosition(GameManager.instance.GetPlayerPos());
+        }
+
+        public void SetPosition(Vector2 position)
+        {
+            transform.position = position;
+        }
+
         public void SetTrigger(string name)
         {
             playerData.lastAnimator = name;
@@ -69,7 +79,6 @@ namespace Innocence
                 if (targetPos.x > transform.localPosition.x)
                 {
                     transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x * 1), transform.localScale.y * 1);
-
                 }
                 else
                 {
@@ -92,11 +101,4 @@ namespace Innocence
             }
         }
     }
-
-
-
-
-
-
-
 }

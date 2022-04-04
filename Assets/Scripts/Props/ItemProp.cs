@@ -62,7 +62,6 @@ namespace Innocence
 
         private void OnMouseDown()
         {
-            Debug.Log("Mouse Down");
             if (isPlaying)
                 return;
 
