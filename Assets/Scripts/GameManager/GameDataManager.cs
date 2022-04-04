@@ -126,6 +126,7 @@ namespace Innocence
 
             item.currentState = state;
             ItemContent content = item.GetContent;
+            prop.SetHintSprite(content.hintSprite);
 
             go.SetActive(content.isActive);
             go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;

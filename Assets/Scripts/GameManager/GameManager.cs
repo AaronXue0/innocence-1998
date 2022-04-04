@@ -13,6 +13,7 @@ namespace Innocence
         private GameDataManager gameData;
         private TimelinePlayer timeplyer;
         private TextPlayer textPlayer;
+        private SceneTransition sceneTransition;
 
         private void Awake()
         {
@@ -30,6 +31,7 @@ namespace Innocence
                 timeplyer = GetComponent<TimelinePlayer>();
                 textPlayer = GetComponent<TextPlayer>();
                 textPlayer.Init(Pause, Resume);
+                sceneTransition = GetComponent<SceneTransition>();
             }
         }
         void OnEnable()
@@ -51,12 +53,16 @@ namespace Innocence
         #region Listener
         public void OnProgressChanged(int newProgress)
         {
-            //Do Something
+            Debug.Log("Progress is on: " + newProgress);
         }
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             gameData.SetAllStatesInScene();
         }
+        #endregion
+
+        #region Scene
+        public void ChangeScene(string name) => sceneTransition.ChangeScene(name);
         #endregion
 
         #region GameData

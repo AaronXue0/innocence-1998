@@ -23,10 +23,14 @@ namespace Innocence
         public Dialogues dialogues = null;
         public FinishedResult finishedResult;
         public int[] nestItemsID;
+        public string targetSceneName;
         public int[] awardItemsID;
+
+        [Header("UI")]
+        public Sprite hintSprite;
 
         [Header("Game Storage")]
         public bool completed = false;
     }
-    public enum FinishedResult { None, CheckForTimeline, GetItem }
+    public enum FinishedResult { None, CheckForTimeline, ChangeScene, GetItem }
 }

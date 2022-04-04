@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShopLight
   m_EditorClassIdentifier: 
   id: 100
-  currentState: 1
+  currentState: 0
   stateContents:
   - isActive: 1
   - isActive: 0

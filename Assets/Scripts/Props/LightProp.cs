@@ -15,12 +15,6 @@ namespace Innocence
         {
             anim = GetComponent<Animator>();
         }
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-            }
-        }
         public void LightSwitch(bool isActive)
         {
             switch (isActive)

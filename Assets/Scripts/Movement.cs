@@ -6,12 +6,23 @@ namespace Innocence
 {
     public class Movement : MonoBehaviour
     {
+        public static Movement instance;
         public static bool isLocked = false;
 
         Vector2 targetPos;
         public float speed = 2.5f;
         bool moving;
         Animator animWalk;
+
+        private void Awake()
+        {
+            if (instance != null)
+            {
+                Destroy(instance.gameObject);
+            }
+
+            instance = this;
+        }
 
         public void StopMoving(bool state)
         {

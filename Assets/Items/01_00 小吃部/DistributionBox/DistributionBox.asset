@@ -13,13 +13,35 @@ MonoBehaviour:
   m_Name: DistributionBox
   m_EditorClassIdentifier: 
   id: 4
-  currentState: 0
+  currentState: 1
   stateContents:
   - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
-    isActive: 0
+    isActive: 1
     isClickAble: 0
     dialogues: {fileID: 11400000, guid: 0e1fd682afec7d64d80c1c31f62c7ae0, type: 2}
     finishedResult: 0
     nestItemsID: 
+    targetSceneName: 
     awardItemsID: 
+    hintSprite: {fileID: 0}
+    completed: 0
+  - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 11400000, guid: 0e1fd682afec7d64d80c1c31f62c7ae0, type: 2}
+    finishedResult: 0
+    nestItemsID: 
+    targetSceneName: "01_01 \u914D\u96FB\u7BB1\u5167\u90E8"
+    awardItemsID: 
+    hintSprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
+    completed: 1
+  - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 2
+    nestItemsID: 
+    targetSceneName: "01_01 \u914D\u96FB\u7BB1\u5167\u90E8"
+    awardItemsID: 
+    hintSprite: {fileID: 0}
     completed: 0
