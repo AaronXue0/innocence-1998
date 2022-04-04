@@ -9,6 +9,7 @@ namespace Innocence
         public int id;
 
         private bool isPlaying = false;
+        private bool ableToClick = false;
 
         [Header("Hint")]
         [SerializeField] SpriteRenderer hintSR;
@@ -35,14 +36,17 @@ namespace Innocence
                 if (Vector2.Distance(transform.position, Movement.instance.transform.position) < distance)
                 {
                     hintSR.gameObject.SetActive(true);
+                    ableToClick = true;
                 }
                 else
                 {
+                    ableToClick = false;
                     hintSR.gameObject.SetActive(false);
                 }
             }
             else if (boxCollider2D.enabled == false && hintSR != null)
             {
+                ableToClick = false;
                 hintSR.gameObject.SetActive(false);
             }
         }
@@ -61,7 +65,8 @@ namespace Innocence
             if (isPlaying)
                 return;
 
-            ClickEvent();
+            if (ableToClick)
+                ClickEvent();
         }
 
         private void ClickEvent()
