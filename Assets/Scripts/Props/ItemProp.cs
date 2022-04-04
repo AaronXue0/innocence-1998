@@ -8,8 +8,8 @@ namespace Innocence
     {
         public int id;
 
-        private bool isPlaying = false;
-        private bool ableToClick = false;
+        [SerializeField] bool isPlaying = false;
+        [SerializeField] bool ableToClick = false;
 
         [Header("Hint")]
         [SerializeField] SpriteRenderer hintSR;
@@ -62,6 +62,7 @@ namespace Innocence
 
         private void OnMouseDown()
         {
+            Debug.Log("Mouse Down");
             if (isPlaying)
                 return;
 
