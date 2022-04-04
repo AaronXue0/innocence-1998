@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DistributionBox
   m_EditorClassIdentifier: 
   id: 4
-  currentState: 1
+  currentState: 2
   stateContents:
   - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
     isActive: 1
@@ -39,7 +39,7 @@ MonoBehaviour:
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
-    finishedResult: 2
+    finishedResult: 1
     nestItemsID: 
     targetSceneName: "01_01 \u914D\u96FB\u7BB1\u5167\u90E8"
     awardItemsID: 

@@ -8,6 +8,12 @@ namespace Innocence
     {
         PlayableDirector currentDirector;
 
+        public void StopPlaying()
+        {
+            if (currentDirector != null)
+                currentDirector.Stop();
+        }
+
         public void SetMainDirector()
         {
             if (GameObject.FindWithTag("MainDirector").GetComponent<PlayableDirector>() != null)

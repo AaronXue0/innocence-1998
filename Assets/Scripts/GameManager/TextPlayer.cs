@@ -48,6 +48,15 @@ namespace Innocence
         #region APIs
         public void SetTimelinePlaying() => IsTimelinePlaying = true;
         public void StopTimelinePlaying() => IsTimelinePlaying = false;
+        public void StopTextPlaying()
+        {
+            StopAllCoroutines();
+            DisplayText("");
+            EnablePlayerInteractWithScene();
+            CurrentDialogues = null;
+            IsPlaying = false;
+            IsTimelinePlaying = false;
+        }
         public void DisplayText(string msg) => display.text = msg;
         public void DisplayDialogues(Dialogues dialogues, Action result)
         {
