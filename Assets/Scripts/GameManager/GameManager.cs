@@ -42,7 +42,9 @@ namespace Innocence
         {
             if (isTestMode && Input.GetKeyDown(KeyCode.R))
             {
-                gameData.Reset(() => SceneManager.LoadScene(0));
+                timeplyer.StopPlaying();
+                textPlayer.StopTextPlaying();
+                gameData.Reset(() => sceneTransition.ChangeScene("01_00 小吃部"));
             }
         }
         void OnDisable()
