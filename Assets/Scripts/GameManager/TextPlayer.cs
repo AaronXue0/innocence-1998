@@ -83,7 +83,9 @@ namespace Innocence
 
         private IEnumerator PlayTextCorotuine(Dialogues dialogues)
         {
-            Movement.isLocked = true;
+            if (IsTimelinePlaying == false)
+                Movement.isLocked = true;
+
             IsPlaying = true;
             DisablePlayerInteractWithScene();
 
@@ -99,10 +101,13 @@ namespace Innocence
             if (Result != null)
                 Result();
 
+            if (IsTimelinePlaying == false)
+            {
+                Movement.isLocked = false;
+            }
             CurrentDialogues = null;
             IsPlaying = false;
             IsTimelinePlaying = false;
-            Movement.isLocked = false;
             EnablePlayerInteractWithScene();
         }
         private IEnumerator DialoguingCoroutine(string[] msg, float appearGap)
