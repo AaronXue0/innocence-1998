@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -150,7 +150,7 @@ PlayableDirector:
   m_GameObject: {fileID: 5832162}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 167ae206b114b4177ab86754302df58c, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 786d085d8102744a59d676aea134bc62, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -181,6 +181,8 @@ PlayableDirector:
   - key: {fileID: 2072417659561668053, guid: 786d085d8102744a59d676aea134bc62, type: 2}
     value: {fileID: 5832166}
   - key: {fileID: 6610384731177950793, guid: 167ae206b114b4177ab86754302df58c, type: 2}
+    value: {fileID: 362164324}
+  - key: {fileID: -2455791350958608931, guid: 786d085d8102744a59d676aea134bc62, type: 2}
     value: {fileID: 362164324}
   m_ExposedReferences:
     m_References: []
@@ -806,7 +808,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.3747835, y: 1.5180285, z: -10}
+  m_LocalPosition: {x: 6.4031553, y: 1.51845, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -2491,7 +2493,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.554125, y: -0.0019769669, z: 0}
+  m_LocalPosition: {x: 5.525753, y: -0.002398491, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -3166,10 +3168,10 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 59.44
-  m_PointLightOuterAngle: 59.44
-  m_PointLightInnerRadius: 4.94
-  m_PointLightOuterRadius: 13.81
+  m_PointLightInnerAngle: 0
+  m_PointLightOuterAngle: 267
+  m_PointLightInnerRadius: 3.54
+  m_PointLightOuterRadius: 13.56
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -3597,10 +3599,10 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 59.44
-  m_PointLightOuterAngle: 59.44
-  m_PointLightInnerRadius: 4.94
-  m_PointLightOuterRadius: 13.81
+  m_PointLightInnerAngle: 0
+  m_PointLightOuterAngle: 267
+  m_PointLightInnerRadius: 3.54
+  m_PointLightOuterRadius: 13.56
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -4174,10 +4176,10 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 59.44
-  m_PointLightOuterAngle: 59.44
-  m_PointLightInnerRadius: 4.94
-  m_PointLightOuterRadius: 13.81
+  m_PointLightInnerAngle: 0
+  m_PointLightOuterAngle: 267
+  m_PointLightInnerRadius: 3.54
+  m_PointLightOuterRadius: 13.56
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5

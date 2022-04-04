@@ -18,6 +18,6 @@ MonoBehaviour:
   - "\u300C\u597D\u50CF\u662F\u5ABD\u5ABD\u5DE5\u4F5C\u7684\u5C0F\u5403\u90E8...\u300D
     \u25BC"
   appaerGap: 0.1
-  displaySecs: 1
-  fadeoutDuration: 0.5
+  displaySecs: 0.5
+  fadeoutDuration: 0.1
   animationSelector: 0
