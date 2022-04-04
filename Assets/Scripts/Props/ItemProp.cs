@@ -73,11 +73,15 @@ namespace Innocence
         {
             isPlaying = true;
 
+            Debug.Log("Result: " + item.finishedResult);
+
             switch (item.finishedResult)
             {
                 case FinishedResult.ChangeScene:
                     GameManager.instance.ChangeScene(item.targetSceneName);
                     break;
+                case FinishedResult.None:
+                case FinishedResult.CheckForTimeline:
                 default:
                     GameManager.instance.DisplayDialogues(id, DialoguesFinished);
                     break;

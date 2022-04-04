@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -232,7 +232,7 @@ MonoBehaviour:
   - requiredProgress: 4
     asset: {fileID: 11400000, guid: 786d085d8102744a59d676aea134bc62, type: 2}
     conition: 0
-  - requiredProgress: 5
+  - requiredProgress: 6
     asset: {fileID: 11400000, guid: 787d8ce772966498ba802947d84f5450, type: 2}
     conition: 0
 --- !u!95 &5832166
@@ -902,7 +902,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4031553, y: 1.51845, z: -10}
+  m_LocalPosition: {x: 8.495107, y: 1.5175421, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -2558,7 +2558,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.525753, y: -0.002398491, z: 0}
+  m_LocalPosition: {x: 3.4338017, y: -0.001490593, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -2902,7 +2902,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454403566}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.93, y: -1.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2936,7 +2936,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 6da7f0e90d0bcfc49b19efe850ff3583, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -2957,6 +2957,7 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 2ab3be5d9e14e4f318ecb1ee4f56e1a7, type: 2}
+    - {fileID: 11400000, guid: da8e7884617fd4ce18fe3ebd5c613a95, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -2969,6 +2970,19 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: carry
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1454403569}
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: exit
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1554064507
@@ -3827,6 +3841,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464018917162359130, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: timeSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1464018917162359131, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}

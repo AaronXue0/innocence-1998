@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 2.033333333333333
+  m_Time: 2.0166666666666666
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 2ab3be5d9e14e4f318ecb1ee4f56e1a7, type: 2}
@@ -891,7 +891,7 @@ MonoBehaviour:
     newProgress: 5
     dataClipContents:
     - targetData: {fileID: 11400000, guid: d90932e4432b747f9add3617683eafd6, type: 2}
-      setNewState: 1
+      setNewState: 2
     - targetData: {fileID: 11400000, guid: d2b58735e71ca804a89541d62723dad7, type: 2}
       setNewState: 2
     lightClipContents: []

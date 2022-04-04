@@ -70,6 +70,7 @@ namespace Innocence
         public void Reset(System.Action callback)
         {
             playerData.lastAnimator = "";
+
             foreach (GameItem item in gameItems)
             {
                 item.currentState = 0;
@@ -153,7 +154,7 @@ namespace Innocence
             ItemContent content = GetItemContent(id);
             content.completed = true;
 
-            Debug.Log("Item Dialogue Finished");
+            Debug.Log("Item Dialogue Finished, id: " + id);
             switch (content.finishedResult)
             {
                 case FinishedResult.CheckForTimeline:
