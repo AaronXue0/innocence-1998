@@ -16,6 +16,9 @@ namespace Innocence
         private Image mask;
         private List<string> openedAdditiveScene = new List<string>();
 
+        AsyncOperation closeupSceneAsync;
+        Scene mainScene;
+
         private void Awake()
         {
             mask = screenTransitionPanel.GetComponent<Image>();
@@ -25,9 +28,35 @@ namespace Innocence
         {
             Fade(() => SceneManager.LoadScene(sceneName), delegate { });
         }
+        public void ChangeSceneAdditive(string mainScene, string closeupScene)
+        {
+            Fade(() => LoadSceneAdditive(mainScene, closeupScene), delegate { });
+        }
 
-        #region LoadLoadingSceneFirst
+        #region LoadSceneAdditive
+        private void LoadSceneAdditive(string mainScene, string closeupScene)
+        {
+            StartCoroutine(WaitForFade(mainScene, closeupScene));
+        }
+        IEnumerator WaitForFade(string mainScene, string closeupScene)
+        {
+            this.mainScene = SceneManager.GetSceneByName(mainScene);
 
+            yield return null;
+
+            //Begin to load the Scene you specify
+            this.closeupSceneAsync = SceneManager.LoadSceneAsync(closeupScene);
+            closeupSceneAsync.allowSceneActivation = false;
+            while (!closeupSceneAsync.isDone)
+            {
+                if (closeupSceneAsync.progress >= 0.9f)
+                {
+                    closeupSceneAsync.allowSceneActivation = true;
+                }
+
+                yield return null;
+            }
+        }
         #endregion
 
 
