@@ -904,7 +904,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.6168995, y: 1.6198475, z: -10}
+  m_LocalPosition: {x: 8.616903, y: 1.6218026, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -1458,6 +1458,17 @@ MonoBehaviour:
   ableToClick: 0
   hintSR: {fileID: 1442121188}
   distance: 3
+  item:
+    sprite: {fileID: 0}
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    nestItemsID: 
+    targetSceneName: 
+    awardItemsID: 
+    hintSprite: {fileID: 0}
+    completed: 0
 --- !u!61 &552484789
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2227,6 +2238,17 @@ MonoBehaviour:
   ableToClick: 0
   hintSR: {fileID: 1004533497}
   distance: 5
+  item:
+    sprite: {fileID: 0}
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    nestItemsID: 
+    targetSceneName: 
+    awardItemsID: 
+    hintSprite: {fileID: 0}
+    completed: 0
 --- !u!61 &999354274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2564,7 +2586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.002008438, y: 1.086204, z: 0}
+  m_LocalPosition: {x: 0.0020046234, y: 1.084249, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -3138,6 +3160,17 @@ MonoBehaviour:
   ableToClick: 0
   hintSR: {fileID: 1767091416}
   distance: 5
+  item:
+    sprite: {fileID: 0}
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    nestItemsID: 
+    targetSceneName: 
+    awardItemsID: 
+    hintSprite: {fileID: 0}
+    completed: 0
 --- !u!61 &1554064509
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3737,6 +3770,17 @@ MonoBehaviour:
   ableToClick: 0
   hintSR: {fileID: 140698354}
   distance: 5
+  item:
+    sprite: {fileID: 0}
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    nestItemsID: 
+    targetSceneName: 
+    awardItemsID: 
+    hintSprite: {fileID: 0}
+    completed: 0
 --- !u!61 &1716322653
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3925,8 +3969,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
       propertyPath: m_fontSize
-      value: 24
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
@@ -3936,8 +3985,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
+      propertyPath: m_fontSizeMax
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
       propertyPath: m_fontSizeBase
-      value: 24
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
@@ -3948,12 +4007,107 @@ PrefabInstance:
     - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_enableAutoSizing
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011395360335691, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011395360335691, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 577011395360335691, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 50
+      value: -375.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945912, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945912, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945912, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945912, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945913, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945918, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945918, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945918, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945918, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945918, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945918, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945918, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945918, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945918, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945918, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945918, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011396729945918, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1464018917162359126, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
@@ -4215,6 +4369,17 @@ MonoBehaviour:
   ableToClick: 0
   hintSR: {fileID: 783747210}
   distance: 7
+  item:
+    sprite: {fileID: 0}
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    nestItemsID: 
+    targetSceneName: 
+    awardItemsID: 
+    hintSprite: {fileID: 0}
+    completed: 0
 --- !u!61 &1856178090
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4292,6 +4457,17 @@ MonoBehaviour:
   ableToClick: 0
   hintSR: {fileID: 175481589}
   distance: 3
+  item:
+    sprite: {fileID: 0}
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    nestItemsID: 
+    targetSceneName: 
+    awardItemsID: 
+    hintSprite: {fileID: 0}
+    completed: 0
 --- !u!61 &1860479356
 BoxCollider2D:
   m_ObjectHideFlags: 0
