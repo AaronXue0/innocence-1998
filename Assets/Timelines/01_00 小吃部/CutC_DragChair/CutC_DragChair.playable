@@ -430,11 +430,7 @@ MonoBehaviour:
   - {fileID: 2072417659561668053}
   - {fileID: -159287085674766340}
   - {fileID: 4829314333171611162}
-<<<<<<< HEAD
-  - {fileID: -2455791350958608931}
-=======
   - {fileID: -8352908592955069743}
->>>>>>> 4bddbbf818abbf9d01786b9fa4ea610e0f4d4d6e
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
