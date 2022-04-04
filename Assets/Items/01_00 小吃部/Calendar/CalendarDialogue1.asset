@@ -19,5 +19,5 @@ MonoBehaviour:
   - "\u300C...\u300D \u25BC"
   appaerGap: 0.1
   displaySecs: 1
-  fadeoutDuration: 0.5
+  fadeoutDuration: 0.1
   animationSelector: 0
