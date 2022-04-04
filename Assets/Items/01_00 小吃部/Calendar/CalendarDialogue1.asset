@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: CalendarDialogue1
   m_EditorClassIdentifier: 
   msg:
-  - "\u300C\u4ECA\u5929\u662F\u6211\u7684\u5341\u6B72\u751F\u65E5,\u300D \u25BC "
-  - "\u300C\u8DDF\u5ABD\u5ABD\u7D04\u597D\u4E86\u8981\u4E00\u8D77\u5403\u86CB\u7CD5\u3001\u5439\u881F\u71ED...\u300D
-    \u25BC "
-  - "\u300C...\u300D \u25BC"
+  - "\u4ECA\u5929\u662F\u6211\u7684\u5341\u6B72\u751F\u65E5\uFF0C        \u25BC"
+  - "\u8DDF\u5ABD\u5ABD\u7D04\u597D\u4E86\u8981\u4E00\u8D77...        \u25BC"
+  - "\u5403\u86CB\u7CD5\u3001\u5439\u881F\u71ED...        \u25BC"
   appaerGap: 0.1
   displaySecs: 1
   fadeoutDuration: 0.1

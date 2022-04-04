@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GlassDoorDialogue1
   m_EditorClassIdentifier: 
   msg:
-  - "\u300C\u5916\u9762\u98A8\u96E8\u5F88\u5927,\u6211\u6700\u597D\u5148\u5F85\u5728\u5BA4\u5167\u300D"
+  - "\u5916\u9762\u98A8\u96E8\u5F88\u5927\uFF0C        \u25BC"
+  - "\u6211\u6700\u597D\u5148\u5F85\u5728\u5BA4\u5167\u3002        \u25BC"
   appaerGap: 0.1
   displaySecs: 1
   fadeoutDuration: 0.5

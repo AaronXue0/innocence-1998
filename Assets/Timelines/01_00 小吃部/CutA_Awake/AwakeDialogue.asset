@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: AwakeDialogue
   m_EditorClassIdentifier: 
   msg:
-  - "\u300C\u9019\u88E1\u662F...?\u300D \u25BC "
-  - "\u300C...\u300D \u25BC "
-  - "\u300C\u597D\u50CF\u662F\u5ABD\u5ABD\u5DE5\u4F5C\u7684\u5C0F\u5403\u90E8...\u300D
+  - "\u9019\u88E1\u662F...\uFF1F        \u25BC "
+  - "...        \u25BC"
+  - "\u597D\u50CF\u662F\u5ABD\u5ABD\u5DE5\u4F5C\u7684\u5C0F\u5403\u90E8\u3002       
     \u25BC"
   appaerGap: 0.1
   displaySecs: 0.1
