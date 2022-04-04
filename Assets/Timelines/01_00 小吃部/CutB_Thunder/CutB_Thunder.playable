@@ -23,6 +23,8 @@ MonoBehaviour:
       setNewState: 1
     - targetData: {fileID: 11400000, guid: d2b58735e71ca804a89541d62723dad7, type: 2}
       setNewState: 1
+    - targetData: {fileID: 11400000, guid: d90932e4432b747f9add3617683eafd6, type: 2}
+      setNewState: 1
     lightClipContents:
     - lightData: {fileID: 11400000, guid: fdd560d9308364c669195236a1156b2a, type: 2}
       setNewState: 1

@@ -49,7 +49,6 @@ namespace Innocence
                 return;
             }
 
-            // Debug.Log(transform.localScale);
             if (Input.GetMouseButtonDown(0))
             {
                 Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);

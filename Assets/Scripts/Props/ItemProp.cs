@@ -50,7 +50,10 @@ namespace Innocence
         public void SetHintSprite(Sprite sprite)
         {
             if (hintSR != null && sprite != null)
+            {
                 hintSR.sprite = sprite;
+                Debug.Log("Change sprite");
+            }
         }
 
         private void OnMouseDown()
