@@ -86,6 +86,11 @@ namespace Innocence
                 }
             }
 
+            foreach (LightData lightData in lightDatas)
+            {
+                lightData.currentState = 0;
+            }
+
             gameDatas.progress = 0;
             gameDatas.chapter = 0;
             callback();
