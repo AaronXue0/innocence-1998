@@ -15,7 +15,9 @@ namespace Innocence
         private TimelinePlayer timeplyer;
         private TextPlayer textPlayer;
         private SceneTransition sceneTransition;
+        private AudioPlayer audioPlayer;
 
+        #region Unity APIs
         private void Awake()
         {
             Time.timeScale = timeSpeed;
@@ -53,6 +55,7 @@ namespace Innocence
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
+        #endregion
 
         #region Listener
         public void OnProgressChanged(int newProgress)
@@ -66,6 +69,18 @@ namespace Innocence
 
         #region Scene
         public void ChangeScene(string name) => sceneTransition.ChangeScene(name);
+        #endregion
+
+        #region Menu
+        public void NewGame()
+        {
+            gameData.Reset();
+            sceneTransition.ChangeScene("01_00 小吃部");
+        }
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
         #endregion
 
         #region GameData
@@ -83,6 +98,7 @@ namespace Innocence
         #endregion
 
         #region Timeline
+        public bool IsTimelinePlaying { get { return textPlayer.IsTimelinePlaying; } }
         public void SetMainDirector() => timeplyer.SetMainDirector();
         public void Play() => timeplyer.Play();
         public void Play(TimelineAsset timelineAsset) => timeplyer.Play(timelineAsset);
@@ -93,6 +109,7 @@ namespace Innocence
         #endregion
 
         #region Text
+        public bool IsDialoguePlaying { get { return textPlayer.IsPlaying; } }
         public void SetTimelinePlaying() => textPlayer.SetTimelinePlaying();
         public void StopTimelinePlaying() => textPlayer.StopTimelinePlaying();
         public void DisplayDialogues(int id, System.Action result) => textPlayer.DisplayDialogues(GetDialogues(id), result);

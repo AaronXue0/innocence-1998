@@ -49,6 +49,16 @@ namespace Innocence
             animWalk.SetTrigger(name);
         }
 
+        public void StopMovingInPos()
+        {
+            targetPos = transform.position;
+        }
+
+
+        /// <summary>
+        /// Call by singnals
+        /// </summary>
+        /// <param name="state"></param>
         public void StopMoving(bool state)
         {
             isLocked = state;
