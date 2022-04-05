@@ -30,6 +30,8 @@ namespace Innocence
         }
         public void ChangeBGM(AudioClip newClip)
         {
+            if (newClip == bgmSource.clip)
+                return;
             StartCoroutine(ChangeBGMCoroutine(newClip));
         }
 
