@@ -31,24 +31,33 @@ namespace Innocence
 
         public void DetectHint()
         {
+            if (GameManager.instance.IsTimelinePlaying || GameManager.instance.IsDialoguePlaying)
+            {
+                SetClickable(false);
+                return;
+            }
+
             if (boxCollider2D.enabled && hintSR != null)
             {
                 if (Vector2.Distance(transform.position, Movement.instance.transform.position) < distance)
                 {
-                    hintSR.gameObject.SetActive(true);
-                    ableToClick = true;
+                    SetClickable(true);
                 }
                 else
                 {
-                    ableToClick = false;
-                    hintSR.gameObject.SetActive(false);
+                    SetClickable(false);
                 }
             }
             else if (boxCollider2D.enabled == false && hintSR != null)
             {
-                ableToClick = false;
-                hintSR.gameObject.SetActive(false);
+                SetClickable(false);
             }
+        }
+
+        public void SetClickable(bool state)
+        {
+            ableToClick = state;
+            hintSR.gameObject.SetActive(state);
         }
 
         public void SetHintSprite(Sprite sprite)
@@ -71,6 +80,7 @@ namespace Innocence
 
         private void ClickEvent()
         {
+            Movement.instance.StopMovingInPos();
             isPlaying = true;
 
             Debug.Log("Result: " + item.finishedResult);
