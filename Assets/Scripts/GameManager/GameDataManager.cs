@@ -41,6 +41,7 @@ namespace Innocence
         #endregion
 
         #region Item
+        public bool IsItemComplete(int id) => GetItemContent(id).completed;
         public ItemProp GetItemProp(int id) => itemProps.ToList().Find(x => x.id == id);
         public GameItem GetGameItem(int id) => gameItems.ToList().Find(x => x.id == id);
         public ItemContent GetItemContent(int id) => gameItems.ToList().Find(x => x.id == id).GetContent;
@@ -129,6 +130,11 @@ namespace Innocence
                     prop.LightSwitch(content.GetContent.isActive);
                 }
             }
+        }
+        public void SetItemComplete(int id)
+        {
+            ItemContent item = GetItemContent(id);
+            item.completed = true;
         }
         public void SetItemState(int id, int state)
         {

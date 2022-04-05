@@ -7,6 +7,8 @@ namespace Innocence
     public class ItemProp : MonoBehaviour
     {
         public int id;
+        public bool isGameplayItem = false;
+
         [HideInInspector]
         public ItemContent item;
 
@@ -71,7 +73,7 @@ namespace Innocence
 
         private void OnMouseDown()
         {
-            if (isPlaying)
+            if (isGameplayItem || isPlaying)
                 return;
 
             if (ableToClick)

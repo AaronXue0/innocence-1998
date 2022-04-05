@@ -25,17 +25,5 @@ MonoBehaviour:
     targetSceneName: 
     awardItemsID: 
     hintSprite: {fileID: 0}
-    soundClip: {fileID: 8300000, guid: 3f789948b4cd5974398735b5b909aad9, type: 3}
-    completed: 0
-  - sprite: {fileID: 21300000, guid: ea2724e55e708694c9b473bf66999402, type: 3}
-    animtorTriggerName: down
-    isActive: 1
-    isClickAble: 1
-    dialogues: {fileID: 0}
-    finishedResult: 0
-    nestItemsID: 
-    targetSceneName: 
-    awardItemsID: 
-    hintSprite: {fileID: 0}
-    soundClip: {fileID: 8300000, guid: 3f789948b4cd5974398735b5b909aad9, type: 3}
+    soundClip: {fileID: 8300000, guid: f727eadffef22dc4cad732e46f943822, type: 3}
     completed: 0
