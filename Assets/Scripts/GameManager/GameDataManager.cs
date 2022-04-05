@@ -33,8 +33,11 @@ namespace Innocence
             }
         }
 
+        #region Getter
+        #region PlayerData
         public PlayerData GetPlayerData() => playerData;
         public Vector2 GetPlayerPos() => spawnPoints[gameDatas.progress];
+        #endregion
 
         #region Item
         public ItemProp GetItemProp(int id) => itemProps.ToList().Find(x => x.id == id);
@@ -46,6 +49,7 @@ namespace Innocence
         #region Light
         public LightData GetLightData(int id) => lightDatas.ToList().Find(x => x.id == id);
         public LightProp GetLightProp(int id) => lightProps.ToList().Find(x => x.id == id);
+        #endregion
         #endregion
 
         #region APIs
@@ -181,6 +185,7 @@ namespace Innocence
         }
         #endregion
 
+        #region Private
         private void CheckCurrentTimelineCondition(ItemContent content)
         {
             foreach (int id in content.nestItemsID)
@@ -194,5 +199,6 @@ namespace Innocence
             Debug.Log("ProgressAdded");
             TimelineProp.instance.Invoke(progress);
         }
+        #endregion
     }
 }
