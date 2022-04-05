@@ -36,6 +36,7 @@ namespace Innocence
                 textPlayer = GetComponent<TextPlayer>();
                 textPlayer.Init(Pause, Resume);
                 sceneTransition = GetComponent<SceneTransition>();
+                audioPlayer = GetComponent<AudioPlayer>();
             }
         }
         void OnEnable()
@@ -60,9 +61,12 @@ namespace Innocence
         #region Listener
         public void OnProgressChanged(int newProgress)
         {
+            audioPlayer.ChangeMusicDectector(newProgress);
         }
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+            Debug.Log("Scene loaded: " + scene.name);
+            audioPlayer.ChangeMusicDectector(scene.name);
             gameData.SetAllStatesInScene();
         }
         #endregion
