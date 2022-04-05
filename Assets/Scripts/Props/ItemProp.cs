@@ -7,21 +7,18 @@ namespace Innocence
     public class ItemProp : MonoBehaviour
     {
         public int id;
-
         [HideInInspector]
-        [SerializeField] bool isPlaying = false;
-        [HideInInspector]
-        [SerializeField] bool ableToClick = false;
+        public ItemContent item;
 
         [Header("Hint")]
         [SerializeField] SpriteRenderer hintSR;
         [SerializeField] float distance;
         BoxCollider2D boxCollider2D;
 
-        // private bool neverExited;
+        private bool isPlaying = false;
+        private bool ableToClick = false;
 
-        [HideInInspector]
-        public ItemContent item;
+        // private bool neverExited;
 
         private void Awake()
         {

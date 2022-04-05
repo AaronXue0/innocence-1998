@@ -54,6 +54,7 @@ namespace Innocence
         #endregion
 
         #region APIs
+        #region Reset
         public void Reset()
         {
             StartCoroutine(ResetCoroutine());
@@ -88,6 +89,7 @@ namespace Innocence
             if (callback != null)
                 callback();
         }
+        #endregion
         public void SetAllStatesInScene()
         {
             itemProps = FindObjectsOfType<ItemProp>();
@@ -96,21 +98,24 @@ namespace Innocence
                 foreach (ItemProp prop in itemProps)
                 {
                     int id = prop.id;
+                    int state = GetGameItem(id).currentState;
+                    SetItemState(id, state);
+                    /*
+                        ItemContent content = GetItemContent(id);
+                        prop.SetHintSprite(content.hintSprite);
+                        GameObject go = prop.gameObject;
 
-                    ItemContent content = GetItemContent(id);
-                    prop.SetHintSprite(content.hintSprite);
-                    GameObject go = prop.gameObject;
+                        go.SetActive(content.isActive);
+                        go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;
+                        if (content.animtorTriggerName != "")
+                            go.GetComponent<Animator>().SetTrigger(content.animtorTriggerName);
 
-                    go.SetActive(content.isActive);
-                    go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;
-                    if (content.animtorTriggerName != "")
-                    {
-                        go.GetComponent<Animator>().SetTrigger(content.animtorTriggerName);
-                    }
-                    Debug.Log(id + ", " + prop.name + ", " + go.GetComponent<BoxCollider2D>().enabled);
+                        if (content.sprite)
+                            go.GetComponent<SpriteRenderer>().sprite = content.sprite;
 
-                    if (content.sprite)
-                        go.GetComponent<SpriteRenderer>().sprite = content.sprite;
+                        if (content.soundClip)
+                            go.GetComponent<AudioSource>().clip = content.soundClip;
+                        */
                 }
             }
 
@@ -146,23 +151,18 @@ namespace Innocence
 
             go.SetActive(content.isActive);
             if (content.isActive == false)
-            {
                 content.completed = true;
-            }
             else
-            {
                 go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;
-            }
 
             if (content.animtorTriggerName != "")
-            {
                 go.GetComponent<Animator>().SetTrigger(content.animtorTriggerName);
-            }
 
             if (content.sprite)
-            {
                 go.GetComponent<SpriteRenderer>().sprite = content.sprite;
-            }
+
+            if (content.soundClip)
+                go.GetComponent<AudioSource>().clip = content.soundClip;
         }
         public void ItemDialoguesFinished(int id)
         {

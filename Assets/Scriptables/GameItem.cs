@@ -30,6 +30,9 @@ namespace Innocence
         [Header("UI")]
         public Sprite hintSprite;
 
+        [Header("Sound")]
+        public AudioClip soundClip;
+
         [Header("Game Storage")]
         public bool completed = false;
     }
