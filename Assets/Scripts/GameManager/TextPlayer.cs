@@ -11,13 +11,14 @@ namespace Innocence
         [SerializeField] TMP_Text display;
         [SerializeField] GameObject raycastIsolation;
 
+        public bool IsPlaying { get; set; }
+        public bool IsTimelinePlaying { get; set; }
+
         Dialogues CurrentDialogues { get; set; }
         bool ForceToDone { get; set; }
         bool WaitForContinue { get; set; }
-        bool IsPlaying { get; set; }
         bool IsFading { get; set; }
         bool IsAppearing { get; set; }
-        bool IsTimelinePlaying { get; set; }
         Action Pause, Resume, Result;
 
         public void Init(Action Pause, Action Resume)
