@@ -13,6 +13,7 @@ namespace Innocence
         [HideInInspector]
         [SerializeField] LightProp[] lightProps;
         [SerializeField] PlayerData playerData;
+        [SerializeField] Vector2[] spawnPoints;
 
         public System.Action<int> onProgressChanged;
         public int progress { get { return gameDatas.progress; } set { gameDatas.progress = value; } }
@@ -32,7 +33,11 @@ namespace Innocence
             }
         }
 
+        #region Getter
+        #region PlayerData
         public PlayerData GetPlayerData() => playerData;
+        public Vector2 GetPlayerPos() => spawnPoints[gameDatas.progress];
+        #endregion
 
         #region Item
         public ItemProp GetItemProp(int id) => itemProps.ToList().Find(x => x.id == id);
@@ -44,6 +49,7 @@ namespace Innocence
         #region Light
         public LightData GetLightData(int id) => lightDatas.ToList().Find(x => x.id == id);
         public LightProp GetLightProp(int id) => lightProps.ToList().Find(x => x.id == id);
+        #endregion
         #endregion
 
         #region APIs
@@ -78,6 +84,11 @@ namespace Innocence
                 {
                     content.completed = false;
                 }
+            }
+
+            foreach (LightData lightData in lightDatas)
+            {
+                lightData.currentState = 0;
             }
 
             gameDatas.progress = 0;
@@ -122,6 +133,7 @@ namespace Innocence
             GameItem item = GetGameItem(id);
             ItemProp prop = GetItemProp(id);
             GameObject go = null;
+
             if (prop != null)
                 go = prop.gameObject;
             else
@@ -132,6 +144,7 @@ namespace Innocence
 
             item.currentState = state;
             ItemContent content = item.GetContent;
+            prop.item = content;
             prop.SetHintSprite(content.hintSprite);
 
             go.SetActive(content.isActive);
@@ -177,6 +190,7 @@ namespace Innocence
         }
         #endregion
 
+        #region Private
         private void CheckCurrentTimelineCondition(ItemContent content)
         {
             foreach (int id in content.nestItemsID)
@@ -190,5 +204,6 @@ namespace Innocence
             Debug.Log("ProgressAdded");
             TimelineProp.instance.Invoke(progress);
         }
+        #endregion
     }
 }

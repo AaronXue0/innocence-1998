@@ -16,7 +16,7 @@ namespace Innocence
         [SerializeField] float distance;
         BoxCollider2D boxCollider2D;
 
-        private ItemContent item;
+        public ItemContent item;
 
         private void Awake()
         {
@@ -62,7 +62,6 @@ namespace Innocence
 
         private void OnMouseDown()
         {
-            Debug.Log("Mouse Down");
             if (isPlaying)
                 return;
 

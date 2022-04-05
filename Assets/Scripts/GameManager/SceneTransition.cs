@@ -16,18 +16,19 @@ namespace Innocence
         private Image mask;
         private List<string> openedAdditiveScene = new List<string>();
 
+        AsyncOperation closeupSceneAsync;
+        Scene mainScene;
+
         private void Awake()
         {
             mask = screenTransitionPanel.GetComponent<Image>();
-
         }
         public void ChangeScene(string sceneName)
         {
             Fade(() => SceneManager.LoadScene(sceneName), delegate { });
         }
 
-        #region LoadLoadingSceneFirst
-
+        #region LoadSceneAdditive
         #endregion
 
 
