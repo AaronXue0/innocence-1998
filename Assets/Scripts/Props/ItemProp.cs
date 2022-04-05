@@ -8,7 +8,9 @@ namespace Innocence
     {
         public int id;
 
+        [HideInInspector]
         [SerializeField] bool isPlaying = false;
+        [HideInInspector]
         [SerializeField] bool ableToClick = false;
 
         [Header("Hint")]
@@ -16,6 +18,9 @@ namespace Innocence
         [SerializeField] float distance;
         BoxCollider2D boxCollider2D;
 
+        // private bool neverExited;
+
+        [HideInInspector]
         public ItemContent item;
 
         private void Awake()
@@ -39,14 +44,12 @@ namespace Innocence
 
             if (boxCollider2D.enabled && hintSR != null)
             {
-                if (Vector2.Distance(transform.position, Movement.instance.transform.position) < distance)
-                {
+                float _distance = Vector2.Distance(transform.position, Movement.instance.transform.position);
+
+                if (_distance < this.distance)
                     SetClickable(true);
-                }
                 else
-                {
                     SetClickable(false);
-                }
             }
             else if (boxCollider2D.enabled == false && hintSR != null)
             {

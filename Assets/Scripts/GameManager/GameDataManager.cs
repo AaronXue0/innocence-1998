@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Linq;
 
 namespace Innocence
@@ -55,25 +56,13 @@ namespace Innocence
         #region APIs
         public void Reset()
         {
-            playerData.lastAnimator = "";
-            foreach (GameItem item in gameItems)
-            {
-                item.currentState = 0;
-                foreach (ItemContent content in item.stateContents)
-                {
-                    content.completed = false;
-                }
-            }
-
-            foreach (LightData lightData in lightDatas)
-            {
-                lightData.currentState = 0;
-            }
-
-            gameDatas.progress = 0;
-            gameDatas.chapter = 0;
+            StartCoroutine(ResetCoroutine());
         }
         public void Reset(System.Action callback)
+        {
+            StartCoroutine(ResetCoroutine(callback));
+        }
+        IEnumerator ResetCoroutine(System.Action callback = null)
         {
             playerData.lastAnimator = "";
 
@@ -93,7 +82,11 @@ namespace Innocence
 
             gameDatas.progress = 0;
             gameDatas.chapter = 0;
-            callback();
+
+            yield return null;
+
+            if (callback != null)
+                callback();
         }
         public void SetAllStatesInScene()
         {
@@ -110,6 +103,10 @@ namespace Innocence
 
                     go.SetActive(content.isActive);
                     go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;
+                    if (content.animtorTriggerName != "")
+                    {
+                        go.GetComponent<Animator>().SetTrigger(content.animtorTriggerName);
+                    }
                     Debug.Log(id + ", " + prop.name + ", " + go.GetComponent<BoxCollider2D>().enabled);
 
                     if (content.sprite)
@@ -155,6 +152,11 @@ namespace Innocence
             else
             {
                 go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;
+            }
+
+            if (content.animtorTriggerName != "")
+            {
+                go.GetComponent<Animator>().SetTrigger(content.animtorTriggerName);
             }
 
             if (content.sprite)

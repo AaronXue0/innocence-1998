@@ -884,6 +884,8 @@ GameObject:
   - component: {fileID: 875792101}
   - component: {fileID: 875792102}
   - component: {fileID: 875792104}
+  - component: {fileID: 875792103}
+  - component: {fileID: 875792105}
   m_Layer: 0
   m_Name: "\u628A\u624B\u53F3"
   m_TagString: Untagged
@@ -955,6 +957,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &875792103
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875792100}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62dfa93719f7d473390bb6d00c6911ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &875792104
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -981,6 +1002,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.88, y: 0.73}
   m_EdgeRadius: 0
+--- !u!114 &875792105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875792100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64be0ceb4b00748cc942f1ddec073fee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 6
+  isPlaying: 0
+  ableToClick: 0
+  hintSR: {fileID: 0}
+  distance: 0
+  item:
+    sprite: {fileID: 0}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    nestItemsID: 
+    targetSceneName: 
+    awardItemsID: 
+    hintSprite: {fileID: 0}
+    completed: 0
 --- !u!1 &971723389
 GameObject:
   m_ObjectHideFlags: 0

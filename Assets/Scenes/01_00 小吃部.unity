@@ -150,7 +150,7 @@ PlayableDirector:
   m_GameObject: {fileID: 5832162}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 167ae206b114b4177ab86754302df58c, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 786d085d8102744a59d676aea134bc62, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -199,6 +199,20 @@ PlayableDirector:
   - key: {fileID: 3147458388480650340, guid: e3937e7e070334f1aaf89c9d49acbce3, type: 2}
     value: {fileID: 362164324}
   - key: {fileID: -7000628342419713584, guid: 167ae206b114b4177ab86754302df58c, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7698794215721765645, guid: c6b694ff97ce344178e5579e393c3b55, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 4441272386989880433, guid: c6b694ff97ce344178e5579e393c3b55, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6926066952972113523, guid: c6b694ff97ce344178e5579e393c3b55, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 990281625074865129, guid: c6b694ff97ce344178e5579e393c3b55, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 4864578706283051154, guid: c6b694ff97ce344178e5579e393c3b55, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8004734514555262890, guid: c6b694ff97ce344178e5579e393c3b55, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6925956535159640983, guid: c6b694ff97ce344178e5579e393c3b55, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -908,7 +922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.616903, y: 1.621844, z: -10}
+  m_LocalPosition: {x: 10.043175, y: 1.6191998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -2590,7 +2604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0020046234, y: 1.0842075, z: 0}
+  m_LocalPosition: {x: 2.7457333, y: 0.19685173, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}

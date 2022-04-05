@@ -47,6 +47,7 @@ namespace Innocence
         {
             if (isTestMode && Input.GetKeyDown(KeyCode.R))
             {
+                audioPlayer.bgmSource.clip = null;
                 timeplyer.StopPlaying();
                 textPlayer.StopTextPlaying();
                 gameData.Reset(() => sceneTransition.ChangeScene("01_00 小吃部"));

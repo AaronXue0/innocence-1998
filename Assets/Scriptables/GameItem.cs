@@ -16,6 +16,7 @@ namespace Innocence
     {
         [Header("GameObject")]
         public Sprite sprite = null;
+        public string animtorTriggerName;
         public bool isActive = true;
         public bool isClickAble = true;
 
