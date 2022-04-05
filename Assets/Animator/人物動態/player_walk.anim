@@ -27,13 +27,13 @@ AnimationClip:
       value: {fileID: 21300000, guid: 81eaf45ced72a504c968277e4a5f5cf4, type: 3}
     - time: 0.5
       value: {fileID: 21300000, guid: 71154cb3fd4634448a4a74f507dc500f, type: 3}
-    - time: 0.6666667
+    - time: 0.5833333
       value: {fileID: 21300000, guid: a6e9444a7b1207448b01a41f96940dba, type: 3}
-    - time: 0.8333333
+    - time: 0.75
       value: {fileID: 21300000, guid: ad659d8b2229669429249ba82c0049ca, type: 3}
-    - time: 1
+    - time: 0.9166667
       value: {fileID: 21300000, guid: ebbb12d0d20d43543a75f96a33473578, type: 3}
-    - time: 1.1666666
+    - time: 1.0833334
       value: {fileID: 21300000, guid: 8d22ebbe5abbe54409c3874ede8ba3c8, type: 3}
     attribute: m_Sprite
     path: 
@@ -67,7 +67,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.25
+    m_StopTime: 1.1666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -88,6 +88,13 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
+    functionName: walkSound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
     functionName: walkSound
     data: 
     objectReferenceParameter: {fileID: 0}
