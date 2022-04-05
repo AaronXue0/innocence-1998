@@ -5,6 +5,7 @@ using UnityEngine;
 public class soundEffect : MonoBehaviour
 {
     public AudioSource walk ;
+    public AudioSource thunder ;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +20,9 @@ public class soundEffect : MonoBehaviour
 
     void walkSound(){
         walk.Play();
+    }
+
+     void thunderSound(){
+        thunder.Play();
     }
 }
