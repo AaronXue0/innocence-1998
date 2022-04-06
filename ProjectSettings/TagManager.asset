@@ -45,6 +45,9 @@ TagManager:
   - name: wall
     uniqueID: 2041513077
     locked: 0
+  - name: hint
+    uniqueID: 2543146653
+    locked: 0
   - name: player
     uniqueID: 3314788951
     locked: 0
