@@ -11,6 +11,7 @@ namespace Innocence
         [SerializeField] LightData[] lightDatas;
         [HideInInspector]
         [SerializeField] ItemProp[] itemProps;
+        [SerializeField] Bag bag;
         [HideInInspector]
         [SerializeField] LightProp[] lightProps;
         [SerializeField] PlayerData playerData;
@@ -91,6 +92,23 @@ namespace Innocence
                 callback();
         }
         #endregion
+
+        #region Bag
+        public bool IsItemInBag(int id)
+        {
+            return bag.CheckInStorage(id);
+        }
+        public void ObtainItem(int id)
+        {
+            GameItem item = GetGameItem(id);
+            bag.StoreItem(item);
+        }
+        public void ItemUsage(int id)
+        {
+            GameItem item = GetGameItem(id);
+            bag.RemoveItem(item);
+        }
+        #endregion 
         public void SetAllStatesInScene()
         {
             itemProps = FindObjectsOfType<ItemProp>();
