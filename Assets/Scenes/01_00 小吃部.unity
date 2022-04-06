@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -371,7 +371,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -831960729
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9429cc2f8b38ab948ab0412e9380b152, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -922,7 +922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.043175, y: 1.6191998, z: -10}
+  m_LocalPosition: {x: 8.616903, y: 1.621844, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -1348,7 +1348,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -831960729
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 77c6fd1e482b4f8488a7cf84a0b21187, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1472,12 +1472,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
-  isPlaying: 0
-  ableToClick: 0
-  hintSR: {fileID: 1442121188}
-  distance: 3
+  isGameplayItem: 0
+  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
+    animtorTriggerName: 
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
@@ -1486,7 +1485,10 @@ MonoBehaviour:
     targetSceneName: 
     awardItemsID: 
     hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
     completed: 0
+  hintSR: {fileID: 1442121188}
+  distance: 3
 --- !u!61 &552484789
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2252,12 +2254,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4
-  isPlaying: 0
-  ableToClick: 0
-  hintSR: {fileID: 1004533497}
-  distance: 5
+  isGameplayItem: 0
+  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
+    animtorTriggerName: 
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
@@ -2266,7 +2267,10 @@ MonoBehaviour:
     targetSceneName: 
     awardItemsID: 
     hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
     completed: 0
+  hintSR: {fileID: 1004533497}
+  distance: 5
 --- !u!61 &999354274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2604,7 +2608,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.7457333, y: 0.19685173, z: 0}
+  m_LocalPosition: {x: 0.0020046234, y: 1.0842075, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -2930,7 +2934,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -980178345
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 009e84c179e1c7f43807a7785c734662, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3175,12 +3179,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
-  isPlaying: 0
-  ableToClick: 0
-  hintSR: {fileID: 1767091416}
-  distance: 5
+  isGameplayItem: 0
+  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
+    animtorTriggerName: 
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
@@ -3189,7 +3192,10 @@ MonoBehaviour:
     targetSceneName: 
     awardItemsID: 
     hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
     completed: 0
+  hintSR: {fileID: 1767091416}
+  distance: 5
 --- !u!61 &1554064509
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3785,12 +3791,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  isPlaying: 0
-  ableToClick: 0
-  hintSR: {fileID: 140698354}
-  distance: 5
+  isGameplayItem: 0
+  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
+    animtorTriggerName: 
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
@@ -3799,7 +3804,10 @@ MonoBehaviour:
     targetSceneName: 
     awardItemsID: 
     hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
     completed: 0
+  hintSR: {fileID: 140698354}
+  distance: 5
 --- !u!61 &1716322653
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4076,6 +4084,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1464018917162359131, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: bag
+      value: 
+      objectReference: {fileID: 11400000, guid: 5d8bf7f1c5ebf4461aebbcb0730169d8,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
 --- !u!1 &1810669118
@@ -4256,12 +4270,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  isPlaying: 0
-  ableToClick: 0
-  hintSR: {fileID: 783747210}
-  distance: 7
+  isGameplayItem: 0
+  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
+    animtorTriggerName: 
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
@@ -4270,7 +4283,10 @@ MonoBehaviour:
     targetSceneName: 
     awardItemsID: 
     hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
     completed: 0
+  hintSR: {fileID: 783747210}
+  distance: 7
 --- !u!61 &1856178090
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4344,12 +4360,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 24
-  isPlaying: 0
-  ableToClick: 0
-  hintSR: {fileID: 175481589}
-  distance: 3
+  isGameplayItem: 0
+  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
+    animtorTriggerName: 
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
@@ -4358,7 +4373,10 @@ MonoBehaviour:
     targetSceneName: 
     awardItemsID: 
     hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
     completed: 0
+  hintSR: {fileID: 175481589}
+  distance: 3
 --- !u!61 &1860479356
 BoxCollider2D:
   m_ObjectHideFlags: 0

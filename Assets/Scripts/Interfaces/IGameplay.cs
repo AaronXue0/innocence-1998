@@ -26,7 +26,8 @@ namespace Innocence
 
             yield return null;
 
-            callback();
+            if (callback != null)
+                callback();
         }
     }
 }
