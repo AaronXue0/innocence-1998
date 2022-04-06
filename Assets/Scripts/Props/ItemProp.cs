@@ -8,6 +8,7 @@ namespace Innocence
     {
         public int id;
         public bool isGameplayItem = false;
+        public bool isObtainedItem = false;
 
         [HideInInspector]
         public ItemContent item;
@@ -75,14 +76,17 @@ namespace Innocence
         {
             if (isGameplayItem || isPlaying)
                 return;
+            Debug.Log("onmousedown on: " + name);
 
-            if (ableToClick)
+            if (ableToClick || isObtainedItem)
                 ClickEvent();
         }
 
         private void ClickEvent()
         {
-            Movement.instance.StopMovingInPos();
+            if (Movement.instance != null)
+                Movement.instance.StopMovingInPos();
+
             isPlaying = true;
 
             Debug.Log("Result: " + item.finishedResult);
@@ -93,7 +97,7 @@ namespace Innocence
                     GameManager.instance.ChangeScene(item.targetSceneName);
                     break;
                 case FinishedResult.GetItem:
-                    // GameManager.instance.ObtainItem(id);
+                    GameManager.instance.ObtainItem(id);
                     break;
                 case FinishedResult.None:
                 case FinishedResult.CheckForTimeline:

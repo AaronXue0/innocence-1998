@@ -833,7 +833,6 @@ GameObject:
   m_Component:
   - component: {fileID: 874599516}
   - component: {fileID: 874599515}
-  - component: {fileID: 874599517}
   m_Layer: 0
   m_Name: "\u9470\u5319"
   m_TagString: Untagged
@@ -878,7 +877,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -831960729
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: db14a1f789268934f83b382f582882a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -906,35 +905,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 16.342001, y: -8.505, z: -27.991001}
---- !u!114 &874599517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 874599514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64be0ceb4b00748cc942f1ddec073fee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 13
-  isGameplayItem: 0
-  item:
-    sprite: {fileID: 0}
-    animtorTriggerName: 
-    isActive: 1
-    isClickAble: 1
-    dialogues: {fileID: 0}
-    finishedResult: 0
-    nestItemsID: 
-    targetSceneName: 
-    awardItemsID: 
-    hintSprite: {fileID: 0}
-    soundClip: {fileID: 0}
-    completed: 0
-  hintSR: {fileID: 0}
-  distance: 0
 --- !u!1 &875792100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,6 +1051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 6
   isGameplayItem: 1
+  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
     animtorTriggerName: 

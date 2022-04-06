@@ -86,6 +86,8 @@ namespace Innocence
             gameDatas.progress = 0;
             gameDatas.chapter = 0;
 
+            bag.Reset();
+
             yield return null;
 
             if (callback != null)
@@ -101,7 +103,11 @@ namespace Innocence
         public void ObtainItem(int id)
         {
             GameItem item = GetGameItem(id);
+            item.GetContent.completed = true;
+            item.AddCurrentState();
+            SetItemState(id, item.currentState);
             bag.StoreItem(item);
+            Debug.Log("Get item");
         }
         public void ItemUsage(int id)
         {
@@ -117,6 +123,7 @@ namespace Innocence
                 foreach (ItemProp prop in itemProps)
                 {
                     int id = prop.id;
+                    Debug.Log(id + ", " + prop.name);
                     int state = GetGameItem(id).currentState;
                     SetItemState(id, state);
                 }

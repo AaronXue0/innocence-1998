@@ -682,9 +682,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d90932e4432b747f9add3617683eafd6, type: 2}
   - {fileID: 11400000, guid: 57f53dbc82a999b4e87d078cb0dd25f8, type: 2}
   - {fileID: 11400000, guid: c4056a759b2514ad5872793191dbdd6f, type: 2}
+  - {fileID: 11400000, guid: 5b384ad7f6d144bef987cd5256465055, type: 2}
+  - {fileID: 11400000, guid: 1cee79eb1db5ed54d830071ca808508d, type: 2}
   lightDatas:
   - {fileID: 11400000, guid: fdd560d9308364c669195236a1156b2a, type: 2}
   itemProps: []
+  bag: {fileID: 11400000, guid: 5d8bf7f1c5ebf4461aebbcb0730169d8, type: 2}
   lightProps: []
   playerData: {fileID: 11400000, guid: 5cca9b0cb3b9e45f49344b9af43a3a65, type: 2}
   spawnPoints:

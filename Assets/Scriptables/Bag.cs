@@ -4,10 +4,15 @@ using UnityEngine;
 
 namespace Innocence
 {
-    [CreateAssetMenu(fileName = "Item", menuName = "Innocene/Bag", order = 0)]
-    public class Bag
+    [CreateAssetMenu(fileName = "Bag", menuName = "Innocene/Bag", order = 5)]
+    public class Bag : ScriptableObject
     {
         [SerializeField] List<GameItem> inStorageItem;
+
+        public void Reset()
+        {
+            inStorageItem = new List<GameItem>();
+        }
 
         public void StoreItem(GameItem item)
         {
