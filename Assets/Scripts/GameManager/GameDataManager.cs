@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Linq;
 
 namespace Innocence
@@ -40,6 +41,7 @@ namespace Innocence
         #endregion
 
         #region Item
+        public bool IsItemComplete(int id) => GetItemContent(id).completed;
         public ItemProp GetItemProp(int id) => itemProps.ToList().Find(x => x.id == id);
         public GameItem GetGameItem(int id) => gameItems.ToList().Find(x => x.id == id);
         public ItemContent GetItemContent(int id) => gameItems.ToList().Find(x => x.id == id).GetContent;
@@ -53,28 +55,17 @@ namespace Innocence
         #endregion
 
         #region APIs
+        #region Reset
         public void Reset()
         {
-            playerData.lastAnimator = "";
-            foreach (GameItem item in gameItems)
-            {
-                item.currentState = 0;
-                foreach (ItemContent content in item.stateContents)
-                {
-                    content.completed = false;
-                }
-            }
-
-            foreach (LightData lightData in lightDatas)
-            {
-                lightData.currentState = 0;
-            }
-
-            gameDatas.progress = 0;
-            gameDatas.chapter = 0;
+            StartCoroutine(ResetCoroutine());
         }
         public void Reset(System.Action callback)
         {
+            StartCoroutine(ResetCoroutine(callback));
+        }
+        IEnumerator ResetCoroutine(System.Action callback = null)
+        {
             playerData.lastAnimator = "";
 
             foreach (GameItem item in gameItems)
@@ -93,8 +84,13 @@ namespace Innocence
 
             gameDatas.progress = 0;
             gameDatas.chapter = 0;
-            callback();
+
+            yield return null;
+
+            if (callback != null)
+                callback();
         }
+        #endregion
         public void SetAllStatesInScene()
         {
             itemProps = FindObjectsOfType<ItemProp>();
@@ -103,17 +99,24 @@ namespace Innocence
                 foreach (ItemProp prop in itemProps)
                 {
                     int id = prop.id;
+                    int state = GetGameItem(id).currentState;
+                    SetItemState(id, state);
+                    /*
+                        ItemContent content = GetItemContent(id);
+                        prop.SetHintSprite(content.hintSprite);
+                        GameObject go = prop.gameObject;
 
-                    ItemContent content = GetItemContent(id);
-                    prop.SetHintSprite(content.hintSprite);
-                    GameObject go = prop.gameObject;
+                        go.SetActive(content.isActive);
+                        go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;
+                        if (content.animtorTriggerName != "")
+                            go.GetComponent<Animator>().SetTrigger(content.animtorTriggerName);
 
-                    go.SetActive(content.isActive);
-                    go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;
-                    Debug.Log(id + ", " + prop.name + ", " + go.GetComponent<BoxCollider2D>().enabled);
+                        if (content.sprite)
+                            go.GetComponent<SpriteRenderer>().sprite = content.sprite;
 
-                    if (content.sprite)
-                        go.GetComponent<SpriteRenderer>().sprite = content.sprite;
+                        if (content.soundClip)
+                            go.GetComponent<AudioSource>().clip = content.soundClip;
+                        */
                 }
             }
 
@@ -127,6 +130,11 @@ namespace Innocence
                     prop.LightSwitch(content.GetContent.isActive);
                 }
             }
+        }
+        public void SetItemComplete(int id)
+        {
+            ItemContent item = GetItemContent(id);
+            item.completed = true;
         }
         public void SetItemState(int id, int state)
         {
@@ -149,18 +157,18 @@ namespace Innocence
 
             go.SetActive(content.isActive);
             if (content.isActive == false)
-            {
                 content.completed = true;
-            }
             else
-            {
                 go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;
-            }
+
+            if (content.animtorTriggerName != "")
+                go.GetComponent<Animator>().SetTrigger(content.animtorTriggerName);
 
             if (content.sprite)
-            {
                 go.GetComponent<SpriteRenderer>().sprite = content.sprite;
-            }
+
+            if (content.soundClip)
+                go.GetComponent<AudioSource>().clip = content.soundClip;
         }
         public void ItemDialoguesFinished(int id)
         {

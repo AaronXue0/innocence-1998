@@ -47,6 +47,7 @@ namespace Innocence
         {
             if (isTestMode && Input.GetKeyDown(KeyCode.R))
             {
+                audioPlayer.bgmSource.clip = null;
                 timeplyer.StopPlaying();
                 textPlayer.StopTextPlaying();
                 gameData.Reset(() => sceneTransition.ChangeScene("01_00 小吃部"));
@@ -89,20 +90,27 @@ namespace Innocence
 
         #region GameData
         public int Progress { get { return gameData.progress; } }
-        public PlayerData GetPlayerData() => gameData.GetPlayerData();
+
+        public bool IsItemComplete(int id) => gameData.IsItemComplete(id);
+
         public void SetProgress(int progress) => gameData.progress = progress;
         public void SetItemState(int id, int state) => gameData.SetItemState(id, state);
+        public void ItemDialoguesFinished(int id) => gameData.ItemDialoguesFinished(id);
+        public void SetLightState(int id, int state) => gameData.SetLightState(id, state);
+        public void SetItemComplete(int id) => gameData.SetItemComplete(id);
+
+        public Vector2 GetPlayerPos() => gameData.GetPlayerPos();
+
+        public PlayerData GetPlayerData() => gameData.GetPlayerData();
         public GameItem GetGameItem(int id) => gameData.GetGameItem(id);
         public ItemContent GetItemContent(int id) => gameData.GetItemContent(id);
         public Dialogues GetDialogues(int id) => gameData.GetDialogues(id);
-        public void ItemDialoguesFinished(int id) => gameData.ItemDialoguesFinished(id);
-        public void SetLightState(int id, int state) => gameData.SetLightState(id, state);
         public LightData GetLightData(int id) => gameData.GetLightData(id);
-        public Vector2 GetPlayerPos() => gameData.GetPlayerPos();
         #endregion
 
         #region Timeline
         public bool IsTimelinePlaying { get { return textPlayer.IsTimelinePlaying; } }
+
         public void SetMainDirector() => timeplyer.SetMainDirector();
         public void Play() => timeplyer.Play();
         public void Play(TimelineAsset timelineAsset) => timeplyer.Play(timelineAsset);
@@ -114,6 +122,7 @@ namespace Innocence
 
         #region Text
         public bool IsDialoguePlaying { get { return textPlayer.IsPlaying; } }
+
         public void SetTimelinePlaying() => textPlayer.SetTimelinePlaying();
         public void StopTimelinePlaying() => textPlayer.StopTimelinePlaying();
         public void DisplayDialogues(int id, System.Action result) => textPlayer.DisplayDialogues(GetDialogues(id), result);

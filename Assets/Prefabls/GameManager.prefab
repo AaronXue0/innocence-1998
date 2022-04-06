@@ -681,6 +681,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d2b58735e71ca804a89541d62723dad7, type: 2}
   - {fileID: 11400000, guid: d90932e4432b747f9add3617683eafd6, type: 2}
   - {fileID: 11400000, guid: 57f53dbc82a999b4e87d078cb0dd25f8, type: 2}
+  - {fileID: 11400000, guid: c4056a759b2514ad5872793191dbdd6f, type: 2}
   lightDatas:
   - {fileID: 11400000, guid: fdd560d9308364c669195236a1156b2a, type: 2}
   itemProps: []
@@ -688,13 +689,14 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: 5cca9b0cb3b9e45f49344b9af43a3a65, type: 2}
   spawnPoints:
   - {x: 8.62, y: -0.12}
-  - {x: 8.60586, y: -1.104}
-  - {x: 8.60586, y: -1.104}
-  - {x: 8.60586, y: -1.104}
-  - {x: 8.60586, y: -1.104}
-  - {x: 8.60586, y: -1.104}
-  - {x: 8.60586, y: -1.104}
-  - {x: -3.66, y: -1.104}
+  - {x: 8.60586, y: -1.3}
+  - {x: 8.60586, y: -1.3}
+  - {x: 8.60586, y: -1.3}
+  - {x: 8.60586, y: -1.3}
+  - {x: 8.60586, y: -1.3}
+  - {x: 8.60586, y: -1.3}
+  - {x: -3.66, y: -1.3}
+  - {x: -3.66, y: -1.3}
 --- !u!114 &1464018917162359124
 MonoBehaviour:
   m_ObjectHideFlags: 0
