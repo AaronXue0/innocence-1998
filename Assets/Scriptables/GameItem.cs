@@ -10,6 +10,7 @@ namespace Innocence
         public ItemContent[] stateContents;
 
         public ItemContent GetContent { get { return stateContents[currentState]; } }
+        public void AddCurrentState() { currentState++; }
     }
     [System.Serializable]
     public class ItemContent

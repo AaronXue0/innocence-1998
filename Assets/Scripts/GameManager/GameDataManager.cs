@@ -101,22 +101,6 @@ namespace Innocence
                     int id = prop.id;
                     int state = GetGameItem(id).currentState;
                     SetItemState(id, state);
-                    /*
-                        ItemContent content = GetItemContent(id);
-                        prop.SetHintSprite(content.hintSprite);
-                        GameObject go = prop.gameObject;
-
-                        go.SetActive(content.isActive);
-                        go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;
-                        if (content.animtorTriggerName != "")
-                            go.GetComponent<Animator>().SetTrigger(content.animtorTriggerName);
-
-                        if (content.sprite)
-                            go.GetComponent<SpriteRenderer>().sprite = content.sprite;
-
-                        if (content.soundClip)
-                            go.GetComponent<AudioSource>().clip = content.soundClip;
-                        */
                 }
             }
 
@@ -180,11 +164,6 @@ namespace Innocence
             {
                 case FinishedResult.CheckForTimeline:
                     CheckCurrentTimelineCondition(content);
-                    break;
-                case FinishedResult.GetItem:
-                    break;
-                case FinishedResult.None:
-                default:
                     break;
             }
         }

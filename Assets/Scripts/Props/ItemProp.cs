@@ -92,6 +92,9 @@ namespace Innocence
                 case FinishedResult.ChangeScene:
                     GameManager.instance.ChangeScene(item.targetSceneName);
                     break;
+                case FinishedResult.GetItem:
+                    // GameManager.instance.ObtainItem(id);
+                    break;
                 case FinishedResult.None:
                 case FinishedResult.CheckForTimeline:
                 default:
