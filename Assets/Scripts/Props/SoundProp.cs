@@ -8,6 +8,7 @@ namespace Innocence
     public class SoundProp : MonoBehaviour
     {
         [SerializeField] AudioClip clip;
+        [SerializeField] AudioClip[] clips;
         AudioSource audioSource;
 
         private void Awake()
@@ -18,6 +19,11 @@ namespace Innocence
         }
         public void PlayClip()
         {
+            audioSource.Play();
+        }
+        public void ChoseAndPlayClip(int n)
+        {
+            audioSource.clip = clips[n];
             audioSource.Play();
         }
     }

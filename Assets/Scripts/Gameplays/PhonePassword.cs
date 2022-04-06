@@ -7,10 +7,13 @@ namespace Innocence
     public class PhonePassword : IGameplay
     {
         [SerializeField] List<int> password = new List<int>();
+        [SerializeField] GameObject returnButton;
+        [SerializeField] float dialFailedAnimationDuration, dialingAnimationDuration;
 
         private Animator animator;
         private List<int> dialPassword = new List<int>();
         private bool isPickedUp = false;
+        private bool isInAnimation;
 
         private void Awake()
         {
@@ -20,9 +23,29 @@ namespace Innocence
         private void Start()
         {
             if (IsComplete)
-                GameplaySetup();
-            else
                 isSolved = true;
+            else
+                GameplaySetup();
+        }
+
+        private void Update()
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Vector2.zero);
+            if (hit && Input.GetMouseButtonDown(0) && isPickedUp)
+            {
+                if (hit.collider.name == gameObject.name)
+                    return;
+
+                int num;
+                if (int.TryParse(hit.collider.name, out num))
+                {
+                    Dial(num);
+                }
+                else
+                {
+                    Debug.Log("Not a valid int");
+                }
+            }
         }
 
         public override void GameplaySetup()
@@ -37,7 +60,7 @@ namespace Innocence
 
         private void OnMouseDown()
         {
-            if (isSolved)
+            if (isSolved || isInAnimation)
                 return;
 
             isPickedUp = !isPickedUp;
@@ -58,8 +81,8 @@ namespace Innocence
                 return;
 
             dialPassword.Add(num);
-            // View Update
-            if (dialPassword.Count == 10)
+
+            if (dialPassword.Count == 1)
             {
                 CheckPassword();
             }
@@ -91,7 +114,16 @@ namespace Innocence
         public void PasswordIncorrect()
         {
             //View update
-            dialPassword = new List<int>();
+            dialPassword.Clear();
+            StartCoroutine(DialFailedAnimationCoroutine());
+        }
+
+        IEnumerator DialFailedAnimationCoroutine()
+        {
+            animator.SetTrigger("failed");
+            returnButton.SetActive(false);
+            yield return new WaitForSeconds(dialFailedAnimationDuration);
+            returnButton.SetActive(true);
         }
     }
 }
