@@ -1627,7 +1627,7 @@ GameObject:
   - component: {fileID: 1295501690}
   - component: {fileID: 1295501689}
   m_Layer: 0
-  m_Name: "\u8A71\u7B52"
+  m_Name: "\u8A71\u7B52 Phone Puzzle"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

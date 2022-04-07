@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace Innocence
 {
     public class PhonePassword : IGameplay
     {
         [SerializeField] List<int> password = new List<int>();
+        [SerializeField] TMP_Text phoneDialDisplay;
         [SerializeField] GameObject returnButton;
         [SerializeField] float dialFailedAnimationDuration, dialingAnimationDuration;
 
