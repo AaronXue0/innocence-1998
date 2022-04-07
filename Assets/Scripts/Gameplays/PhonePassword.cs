@@ -38,6 +38,7 @@ namespace Innocence
         {
             animator = GetComponent<Animator>();
             soundProp = GetComponent<SoundProp>();
+            phoneDialDisplay.text = "";
         }
         private void Start()
         {
@@ -48,7 +49,7 @@ namespace Innocence
         }
         private void Update()
         {
-            if (InactiveClick)
+            if (InactiveClick || isInColdDuration)
                 return;
 
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Vector2.zero);
@@ -56,6 +57,7 @@ namespace Innocence
             {
                 if (hit.collider.name == gameObject.name)
                     return;
+                ColdDurationFunc();
 
                 int num;
                 if (int.TryParse(hit.collider.name, out num))
@@ -70,9 +72,10 @@ namespace Innocence
         }
         private void OnMouseDown()
         {
-            if (InactiveClick)
+            if (InactiveClick || isInColdDuration)
                 return;
 
+            ColdDurationFunc();
             PickPhone();
         }
         #endregion
@@ -87,6 +90,7 @@ namespace Innocence
                     break;
                 case false:
                     animator.SetTrigger("down");
+                    ResetPhone();
                     break;
             }
         }
@@ -98,12 +102,18 @@ namespace Innocence
 
             dialPassword.Add(num);
             soundProp.ChoseAndPlayClip(num);
-            Debug.Log(num);
+            phoneDialDisplay.text += num;
 
             if (dialPassword.Count == 10)
             {
                 CheckPassword();
             }
+        }
+
+        public void ResetPhone()
+        {
+            phoneDialDisplay.text = "";
+            dialPassword.Clear();
         }
 
         public void CheckPassword()
@@ -132,7 +142,6 @@ namespace Innocence
         public void PasswordIncorrect()
         {
             //View update
-            dialPassword.Clear();
             StartCoroutine(DialFailedAnimationCoroutine());
         }
 
@@ -157,6 +166,7 @@ namespace Innocence
                 yield return null;
             }
 
+            ResetPhone();
             ableToClick = true;
             returnButton.SetActive(true);
         }

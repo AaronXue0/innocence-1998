@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1721,6 +1721,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a9c9219408230ee40ac9450b8a1287cb, type: 3}
   - {fileID: 8300000, guid: 51f7bad5283b2f143b66b15500ab6b2d, type: 3}
   - {fileID: 8300000, guid: 831d1a5e012dbc74a880217d78adfad9, type: 3}
+  - {fileID: 8300000, guid: 826f1490403167b468c78c501b879973, type: 3}
+  - {fileID: 8300000, guid: 98160455d2997d745ba3b0088b8d9b20, type: 3}
+  - {fileID: 8300000, guid: 2efca22017fae4341a9e7ba6973b09fd, type: 3}
+  - {fileID: 8300000, guid: f3c268b42507e0842a924e0c71aab774, type: 3}
 --- !u!82 &1295501690
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1831,8 +1835,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 20
   completeProgress: 20
+  setItems: []
+  setLights: []
   completeObjectState: -1
   password: 00000000090000000000000000000000000000000800000004000000070000000100000003000000
+  phoneDialDisplay: {fileID: 1830613418}
   returnButton: {fileID: 120241655}
   dialFailedAnimationDuration: 1
   dialingAnimationDuration: 1
