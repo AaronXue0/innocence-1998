@@ -12,10 +12,32 @@ namespace Innocence
         public GampelaySetLights[] setLights;
         protected bool isSolved = false;
         public int completeObjectState;
-        public virtual void PuzzleSolved() { StartCoroutine(PuzzleSolvedCoroutine(PuzzleSolvedCallback)); }
+        public virtual void PuzzleSolved()
+        {
+            StartCoroutine(PuzzleSolvedCoroutine(PuzzleSolvedCallback));
+            StartCoroutine(PuzzleSolvedChangeStates());
+        }
         public virtual void GameplaySetup() { }
         public virtual void PuzzleSolvedCallback() { }
         public virtual bool IsComplete { get { return GameManager.instance.IsItemComplete(id); } }
+
+        public IEnumerator PuzzleSolvedChangeStates()
+        {
+            if (GameManager.instance)
+            {
+                foreach (GampelaySetItems item in setItems)
+                {
+                    GameManager.instance.SetItemState(item.id, item.state);
+                }
+
+                yield return null;
+
+                foreach (GampelaySetLights light in setLights)
+                {
+                    GameManager.instance.SetLightState(light.id, light.state);
+                }
+            }
+        }
 
         public IEnumerator PuzzleSolvedCoroutine(System.Action callback)
         {

@@ -24,17 +24,6 @@ namespace Innocence
         public override void PuzzleSolvedCallback()
         {
             returnButton.SetActive(true);
-            if (GameManager.instance)
-            {
-                foreach (GampelaySetItems item in setItems)
-                {
-                    GameManager.instance.SetItemState(item.id, item.state);
-                }
-                foreach (GampelaySetLights light in setLights)
-                {
-                    GameManager.instance.SetLightState(light.id, light.state);
-                }
-            }
         }
         #endregion
 
