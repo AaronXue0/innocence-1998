@@ -98,6 +98,7 @@ namespace Innocence
         public void ItemDialoguesFinished(int id) => gameData.ItemDialoguesFinished(id);
         public void SetLightState(int id, int state) => gameData.SetLightState(id, state);
         public void SetItemComplete(int id) => gameData.SetItemComplete(id);
+        public void ObtainItem(int id) => gameData.ObtainItem(id);
 
         public Vector2 GetPlayerPos() => gameData.GetPlayerPos();
 

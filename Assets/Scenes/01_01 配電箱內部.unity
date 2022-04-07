@@ -1051,6 +1051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 6
   isGameplayItem: 1
+  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
     animtorTriggerName: 

@@ -11,6 +11,7 @@ namespace Innocence
         [SerializeField] LightData[] lightDatas;
         [HideInInspector]
         [SerializeField] ItemProp[] itemProps;
+        [SerializeField] Bag bag;
         [HideInInspector]
         [SerializeField] LightProp[] lightProps;
         [SerializeField] PlayerData playerData;
@@ -85,12 +86,35 @@ namespace Innocence
             gameDatas.progress = 0;
             gameDatas.chapter = 0;
 
+            bag.Reset();
+
             yield return null;
 
             if (callback != null)
                 callback();
         }
         #endregion
+
+        #region Bag
+        public bool IsItemInBag(int id)
+        {
+            return bag.CheckInStorage(id);
+        }
+        public void ObtainItem(int id)
+        {
+            GameItem item = GetGameItem(id);
+            item.GetContent.completed = true;
+            item.AddCurrentState();
+            SetItemState(id, item.currentState);
+            bag.StoreItem(item);
+            Debug.Log("Get item");
+        }
+        public void ItemUsage(int id)
+        {
+            GameItem item = GetGameItem(id);
+            bag.RemoveItem(item);
+        }
+        #endregion 
         public void SetAllStatesInScene()
         {
             itemProps = FindObjectsOfType<ItemProp>();
@@ -99,24 +123,9 @@ namespace Innocence
                 foreach (ItemProp prop in itemProps)
                 {
                     int id = prop.id;
+                    Debug.Log(id + ", " + prop.name);
                     int state = GetGameItem(id).currentState;
                     SetItemState(id, state);
-                    /*
-                        ItemContent content = GetItemContent(id);
-                        prop.SetHintSprite(content.hintSprite);
-                        GameObject go = prop.gameObject;
-
-                        go.SetActive(content.isActive);
-                        go.GetComponent<BoxCollider2D>().enabled = content.isClickAble;
-                        if (content.animtorTriggerName != "")
-                            go.GetComponent<Animator>().SetTrigger(content.animtorTriggerName);
-
-                        if (content.sprite)
-                            go.GetComponent<SpriteRenderer>().sprite = content.sprite;
-
-                        if (content.soundClip)
-                            go.GetComponent<AudioSource>().clip = content.soundClip;
-                        */
                 }
             }
 
@@ -180,11 +189,6 @@ namespace Innocence
             {
                 case FinishedResult.CheckForTimeline:
                     CheckCurrentTimelineCondition(content);
-                    break;
-                case FinishedResult.GetItem:
-                    break;
-                case FinishedResult.None:
-                default:
                     break;
             }
         }
