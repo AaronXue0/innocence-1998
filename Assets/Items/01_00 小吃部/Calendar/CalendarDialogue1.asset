@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CalendarDialogue1
   m_EditorClassIdentifier: 
   msg:
+  - "\u5341\u6708\u5341\u4E94\u65E5\u3002\u25BC"
   - "\u4ECA\u5929\u662F\u6211\u7684\u5341\u6B72\u751F\u65E5\uFF0C        \u25BC"
   - "\u8DDF\u5ABD\u5ABD\u7D04\u597D\u4E86\u8981\u4E00\u8D77\uFF0E\uFF0E\uFF0E       
     \u25BC"
