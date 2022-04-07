@@ -8,10 +8,13 @@ namespace Innocence
     {
         public int id;
         public int completeProgress;
+        public GampelaySetItems[] setItems;
+        public GampelaySetLights[] setLights;
         protected bool isSolved = false;
         public int completeObjectState;
-        public virtual void PuzzleSolved() { }
+        public virtual void PuzzleSolved() { StartCoroutine(PuzzleSolvedCoroutine(PuzzleSolvedCallback)); }
         public virtual void GameplaySetup() { }
+        public virtual void PuzzleSolvedCallback() { }
         public virtual bool IsComplete { get { return GameManager.instance.IsItemComplete(id); } }
 
         public IEnumerator PuzzleSolvedCoroutine(System.Action callback)
@@ -29,5 +32,18 @@ namespace Innocence
             if (callback != null)
                 callback();
         }
+    }
+
+    [System.Serializable]
+    public class GampelaySetItems
+    {
+        public int id;
+        public int state;
+    }
+    [System.Serializable]
+    public class GampelaySetLights
+    {
+        public int id;
+        public int state;
     }
 }

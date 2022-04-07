@@ -17,13 +17,24 @@ namespace Innocence
         private void SetDelayFinished() => isDelaying = false;
 
         #region Override
-        public override void PuzzleSolved()
-        {
-            StartCoroutine(PuzzleSolvedCoroutine(() => returnButton.SetActive(true)));
-        }
         public override void GameplaySetup()
         {
             returnButton.SetActive(false);
+        }
+        public override void PuzzleSolvedCallback()
+        {
+            returnButton.SetActive(true);
+            if (GameManager.instance)
+            {
+                foreach (GampelaySetItems item in setItems)
+                {
+                    GameManager.instance.SetItemState(item.id, item.state);
+                }
+                foreach (GampelaySetLights light in setLights)
+                {
+                    GameManager.instance.SetLightState(light.id, light.state);
+                }
+            }
         }
         #endregion
 

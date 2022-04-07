@@ -27,9 +27,9 @@ namespace Innocence
             dialPassword = new List<int>();
             ableToClick = true;
         }
-        public override void PuzzleSolved()
+        public override void PuzzleSolvedCallback()
         {
-            StartCoroutine(PuzzleSolvedCoroutine(null));
+
         }
         #endregion
 
