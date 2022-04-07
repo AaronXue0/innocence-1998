@@ -11,15 +11,32 @@ namespace Innocence
         [SerializeField] float dialFailedAnimationDuration, dialingAnimationDuration;
 
         private Animator animator;
+        private SoundProp soundProp;
         private List<int> dialPassword = new List<int>();
-        private bool isPickedUp = false;
-        private bool isInAnimation;
+        private bool ableToClick = true, isPickedUp = false, isInAnimation = false;
 
+        #region Getter/Setter
+        public bool InactiveClick { get { return ableToClick == false || isSolved; } }
+        #endregion
+
+        #region Override
+        public override void GameplaySetup()
+        {
+            dialPassword = new List<int>();
+            ableToClick = true;
+        }
+        public override void PuzzleSolved()
+        {
+            StartCoroutine(PuzzleSolvedCoroutine(null));
+        }
+        #endregion
+
+        #region Unity
         private void Awake()
         {
             animator = GetComponent<Animator>();
+            soundProp = GetComponent<SoundProp>();
         }
-
         private void Start()
         {
             if (IsComplete)
@@ -27,10 +44,9 @@ namespace Innocence
             else
                 GameplaySetup();
         }
-
         private void Update()
         {
-            if (isInAnimation)
+            if (InactiveClick)
                 return;
 
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Vector2.zero);
@@ -50,22 +66,17 @@ namespace Innocence
                 }
             }
         }
-
-        public override void GameplaySetup()
-        {
-            dialPassword = new List<int>();
-        }
-
-        public override void PuzzleSolved()
-        {
-            StartCoroutine(PuzzleSolvedCoroutine(null));
-        }
-
         private void OnMouseDown()
         {
-            if (isSolved || isInAnimation)
+            if (InactiveClick)
                 return;
 
+            PickPhone();
+        }
+        #endregion
+
+        public void PickPhone()
+        {
             isPickedUp = !isPickedUp;
             switch (isPickedUp)
             {
@@ -80,12 +91,14 @@ namespace Innocence
 
         public void Dial(int num)
         {
-            if (isSolved || isPickedUp == false)
+            if (InactiveClick)
                 return;
 
             dialPassword.Add(num);
+            soundProp.ChoseAndPlayClip(num);
+            Debug.Log(num);
 
-            if (dialPassword.Count == 1)
+            if (dialPassword.Count == 10)
             {
                 CheckPassword();
             }
@@ -121,11 +134,28 @@ namespace Innocence
             StartCoroutine(DialFailedAnimationCoroutine());
         }
 
+        public void AnimationFinished()
+        {
+            isInAnimation = false;
+        }
+
         IEnumerator DialFailedAnimationCoroutine()
         {
-            animator.SetTrigger("failed");
+            isInAnimation = true;
+            ableToClick = false;
             returnButton.SetActive(false);
-            yield return new WaitForSeconds(dialFailedAnimationDuration);
+
+            yield return null;
+
+            animator.SetTrigger("failed");
+            isPickedUp = false;
+
+            while (isInAnimation)
+            {
+                yield return null;
+            }
+
+            ableToClick = true;
             returnButton.SetActive(true);
         }
     }
