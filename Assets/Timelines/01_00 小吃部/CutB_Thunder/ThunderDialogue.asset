@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ThunderDialogue
   m_EditorClassIdentifier: 
   msg:
-  - "...        \u25BC"
-  - "\u597D\u6697...        \u25BC "
+  - "\uFF0E\uFF0E\uFF0E        \u25BC"
+  - "\u597D\u6697\uFF0E\uFF0E\uFF0E        \u25BC "
   - "\u4EC0\u9EBC\u90FD\u770B\u4E0D\u5230\uFF0C        \u25BC"
   - "\u8981\u628A\u71C8\u6253\u958B\u624D\u884C\u3002        \u25BC"
   appaerGap: 0.1

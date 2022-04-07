@@ -922,7 +922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.616903, y: 1.621844, z: -10}
+  m_LocalPosition: {x: 8.6168995, y: 1.6206458, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -1473,7 +1473,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   isGameplayItem: 0
-  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
     animtorTriggerName: 
@@ -2255,7 +2254,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   isGameplayItem: 0
-  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
     animtorTriggerName: 
@@ -2608,7 +2606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0020046234, y: 1.0842075, z: 0}
+  m_LocalPosition: {x: 0.75800514, y: 1.0868521, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -3180,7 +3178,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   isGameplayItem: 0
-  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
     animtorTriggerName: 
@@ -3792,7 +3789,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   isGameplayItem: 0
-  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
     animtorTriggerName: 
@@ -3994,6 +3990,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 223721133, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
+      propertyPath: contents.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b575b7dfd1dec4459ba3ff41ca4cd84, type: 3}
+    - target: {fileID: 1970950429, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970950429, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970950429, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_text
@@ -4084,12 +4096,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1464018917162359131, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: bag
-      value: 
-      objectReference: {fileID: 11400000, guid: 5d8bf7f1c5ebf4461aebbcb0730169d8,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
 --- !u!1 &1810669118
@@ -4271,7 +4277,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   isGameplayItem: 0
-  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
     animtorTriggerName: 
@@ -4361,7 +4366,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 24
   isGameplayItem: 0
-  isObtainedItem: 0
   item:
     sprite: {fileID: 0}
     animtorTriggerName: 
