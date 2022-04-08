@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -794,8 +794,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 96.5, y: -80.1}
-  m_SizeDelta: {x: 160, y: 130.24445}
+  m_AnchoredPosition: {x: 65, y: -58}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &414229792
 MonoBehaviour:
@@ -1831,8 +1831,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 20
   completeProgress: 20
+  setItems: []
+  setLights: []
   completeObjectState: -1
   password: 00000000090000000000000000000000000000000800000004000000070000000100000003000000
+  phoneDialDisplay: {fileID: 0}
   returnButton: {fileID: 120241655}
   dialFailedAnimationDuration: 1
   dialingAnimationDuration: 1
