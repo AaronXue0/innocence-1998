@@ -62,6 +62,7 @@ namespace Innocence
         #region Listener
         public void OnProgressChanged(int newProgress)
         {
+            Debug.Log("Progress changed: " + newProgress);
             audioPlayer.ChangeMusicDectector(newProgress);
         }
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)

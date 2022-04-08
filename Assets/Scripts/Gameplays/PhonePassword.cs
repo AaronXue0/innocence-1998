@@ -29,7 +29,8 @@ namespace Innocence
         }
         public override void PuzzleSolvedCallback()
         {
-
+            TimelineProp.instance.Invoke(completeProgress);
+            StartCoroutine(PuzzledAnimationCoroutine());
         }
         #endregion
 
@@ -43,7 +44,15 @@ namespace Innocence
         private void Start()
         {
             if (IsComplete)
+            {
+                Debug.Log("solved");
                 isSolved = true;
+                phoneDialDisplay.text = "";
+                foreach (int num in password)
+                {
+                    phoneDialDisplay.text += num;
+                }
+            }
             else
                 GameplaySetup();
         }
@@ -131,6 +140,7 @@ namespace Innocence
 
             if (isPasswordCorrect)
             {
+                Debug.Log("Correct");
                 PuzzleSolved();
             }
             else
@@ -148,6 +158,20 @@ namespace Innocence
         public void AnimationFinished()
         {
             isInAnimation = false;
+        }
+
+        IEnumerator PuzzledAnimationCoroutine()
+        {
+            isInAnimation = true;
+            returnButton.SetActive(false);
+
+            while (isInAnimation)
+            {
+                yield return null;
+            }
+
+            animator.SetTrigger("down");
+            returnButton.SetActive(true);
         }
 
         IEnumerator DialFailedAnimationCoroutine()

@@ -7,7 +7,6 @@ namespace Innocence
     public class LightSwitch : IGameplay
     {
         [SerializeField] GameObject returnButton;
-        [SerializeField] float coldDuration = 0.5f;
 
         Animator animator;
 

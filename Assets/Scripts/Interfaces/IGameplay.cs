@@ -8,6 +8,7 @@ namespace Innocence
     {
         public int id;
         public int completeProgress;
+        public bool autoComplete = false;
         public int completeObjectState;
         public float coldDuration = 0.5f;
         public GampelaySetItems[] setItems;
@@ -16,6 +17,7 @@ namespace Innocence
 
         public virtual void PuzzleSolved()
         {
+            isSolved = true;
             StartCoroutine(PuzzleSolvedCoroutine(PuzzleSolvedCallback));
             StartCoroutine(PuzzleSolvedChangeStates());
         }
@@ -56,7 +58,11 @@ namespace Innocence
             GameManager.instance.SetItemComplete(id);
 
             if (completeObjectState != -1)
+            {
                 GameManager.instance.SetItemState(id, completeObjectState);
+                if (autoComplete)
+                    GameManager.instance.SetItemComplete(id);
+            }
 
             yield return null;
 
