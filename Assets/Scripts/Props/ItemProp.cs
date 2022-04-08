@@ -60,7 +60,8 @@ namespace Innocence
         public void SetClickable(bool state)
         {
             ableToClick = state;
-            hintSR.gameObject.SetActive(state);
+            if (hintSR != null)
+                hintSR.gameObject.SetActive(state);
         }
 
         public void SetHintSprite(Sprite sprite)

@@ -19,6 +19,30 @@ MonoBehaviour:
     animtorTriggerName: 
     isActive: 1
     isClickAble: 1
+    dialogues: {fileID: 11400000, guid: 703fbe952a3074644a1e746971a0b01f, type: 2}
+    finishedResult: 0
+    nestItemsID: 
+    targetSceneName: 
+    awardItemsID: 
+    hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
+    completed: 0
+  - sprite: {fileID: 0}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    nestItemsID: 
+    targetSceneName: 
+    awardItemsID: 
+    hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
+    completed: 0
+  - sprite: {fileID: 0}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 

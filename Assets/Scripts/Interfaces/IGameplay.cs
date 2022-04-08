@@ -8,18 +8,30 @@ namespace Innocence
     {
         public int id;
         public int completeProgress;
+        public bool autoComplete = false;
+        public int completeObjectState;
+        public float coldDuration = 0.5f;
         public GampelaySetItems[] setItems;
         public GampelaySetLights[] setLights;
-        protected bool isSolved = false;
-        public int completeObjectState;
+        protected bool isSolved = false, isInColdDuration = false, isPlayingDialogue = false;
+        protected int CurrentState { get { return GameManager.instance.GetGameItem(id).currentState; } }
+
         public virtual void PuzzleSolved()
         {
+            isSolved = true;
             StartCoroutine(PuzzleSolvedCoroutine(PuzzleSolvedCallback));
             StartCoroutine(PuzzleSolvedChangeStates());
         }
         public virtual void GameplaySetup() { }
         public virtual void PuzzleSolvedCallback() { }
         public virtual bool IsComplete { get { return GameManager.instance.IsItemComplete(id); } }
+
+        public void ColdDurationFunc()
+        {
+            isInColdDuration = true;
+            Invoke("SetColdDurationFinished", coldDuration);
+        }
+        public void SetColdDurationFinished() => isInColdDuration = false;
 
         public IEnumerator PuzzleSolvedChangeStates()
         {
@@ -47,7 +59,11 @@ namespace Innocence
             GameManager.instance.SetItemComplete(id);
 
             if (completeObjectState != -1)
+            {
                 GameManager.instance.SetItemState(id, completeObjectState);
+                if (autoComplete)
+                    GameManager.instance.SetItemComplete(id);
+            }
 
             yield return null;
 

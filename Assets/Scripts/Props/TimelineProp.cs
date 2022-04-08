@@ -55,6 +55,7 @@ namespace Innocence
         }
         public void Invoke(TimelineAsset asset)
         {
+            Debug.Log("Invoke timeline");
             if (asset != null)
             {
                 director.playableAsset = asset;
