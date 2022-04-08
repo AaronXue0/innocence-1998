@@ -45,7 +45,6 @@ namespace Innocence
         {
             if (IsComplete)
             {
-                Debug.Log("solved");
                 isSolved = true;
                 phoneDialDisplay.text = "";
                 foreach (int num in password)
