@@ -65,17 +65,30 @@ namespace Innocence
             {
                 if (hit.collider.name == gameObject.name)
                     return;
-                ColdDurationFunc();
 
-                int num;
-                if (int.TryParse(hit.collider.name, out num))
+                if (CurrentState == 0)
                 {
-                    Dial(num);
+                    if (isPlayingDialogue == false && isPickedUp)
+                    {
+                        isPlayingDialogue = true;
+                        GameManager.instance.DisplayDialogues(id, () => isPlayingDialogue = false);
+                    }
                 }
                 else
                 {
-                    Debug.Log("Not a valid int");
+                    ColdDurationFunc();
+
+                    int num;
+                    if (int.TryParse(hit.collider.name, out num))
+                    {
+                        Dial(num);
+                    }
+                    else
+                    {
+                        Debug.Log("Not a valid int");
+                    }
                 }
+
             }
         }
         private void OnMouseDown()
@@ -150,7 +163,6 @@ namespace Innocence
 
         public void PasswordIncorrect()
         {
-            //View update
             StartCoroutine(DialFailedAnimationCoroutine());
         }
 

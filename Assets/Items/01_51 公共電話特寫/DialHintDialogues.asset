@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4867d570212304ed68b1b9077fe79069, type: 3}
+  m_Name: DialHintDialogues
+  m_EditorClassIdentifier: 
+  msg:
+  - "\u6C92\u6709\u63D2\u5361\u4E0D\u80FD\u6253\u96FB\u8A71, \u25BC "
+  - "\u6309\u9375\u4E0A\u88AB\u5857\u4E0A\u4E86\u5947\u602A\u7684\u8A18\u865F\u3002\u25BC"
+  appaerGap: 0.1
+  displaySecs: 1
+  fadeoutDuration: 0.5
+  animationSelector: 0

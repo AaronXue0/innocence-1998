@@ -1758,6 +1758,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_text
+      value: "\u300C\u6C92\u6709\u63D2\u5361\u4E0D\u80FD\u6253\u96FB\u8A71,\u300D
+        \u25BC \u300C\u6309\u9375\u4E0A\u88AB\u5857\u4E0A\u4E86\u5947\u602A\u7684\u8A18\u865F\u3002\u300D
+        \u25BC"
+      objectReference: {fileID: 0}
+    - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 23bda5e4340774028bce35fb1bbb1ae1,
+        type: 2}
+    - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8746857019147902114, guid: 23bda5e4340774028bce35fb1bbb1ae1,
+        type: 2}
     - target: {fileID: 1464018917162359126, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_RootOrder

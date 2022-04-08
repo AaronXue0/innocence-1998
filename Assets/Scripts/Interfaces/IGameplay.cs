@@ -13,7 +13,8 @@ namespace Innocence
         public float coldDuration = 0.5f;
         public GampelaySetItems[] setItems;
         public GampelaySetLights[] setLights;
-        protected bool isSolved = false, isInColdDuration = false;
+        protected bool isSolved = false, isInColdDuration = false, isPlayingDialogue = false;
+        protected int CurrentState { get { return GameManager.instance.GetGameItem(id).currentState; } }
 
         public virtual void PuzzleSolved()
         {
