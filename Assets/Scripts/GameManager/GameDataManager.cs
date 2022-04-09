@@ -21,9 +21,12 @@ namespace Innocence
         public int progress { get { return gameDatas.progress; } set { gameDatas.progress = value; } }
         private int currentProgress;
 
+        private BagManager bagManager;
+
         private void Awake()
         {
             currentProgress = progress;
+            bagManager = GetComponentInChildren<BagManager>();
         }
 
         private void Update()
@@ -96,6 +99,10 @@ namespace Innocence
         #endregion
 
         #region Bag
+        public Bag GetBag()
+        {
+            return bag;
+        }
         public bool IsItemInBag(int id)
         {
             return bag.CheckInStorage(id);
@@ -107,7 +114,7 @@ namespace Innocence
             item.AddCurrentState();
             SetItemState(id, item.currentState);
             bag.StoreItem(item);
-            Debug.Log("Get item");
+            bagManager.GetItem(id);
         }
         public void ItemUsage(int id)
         {
@@ -214,7 +221,6 @@ namespace Innocence
             }
             progress++;
             Debug.Log("ProgressAdded");
-            TimelineProp.instance.Invoke(progress);
         }
         #endregion
     }

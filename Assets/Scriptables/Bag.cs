@@ -9,6 +9,16 @@ namespace Innocence
     {
         [SerializeField] List<GameItem> inStorageItem;
 
+        public List<int> GetItemsID()
+        {
+            List<int> items = new List<int>();
+            foreach (GameItem item in inStorageItem)
+            {
+                items.Add(item.id);
+            }
+            return items;
+        }
+
         public void Reset()
         {
             inStorageItem = new List<GameItem>();

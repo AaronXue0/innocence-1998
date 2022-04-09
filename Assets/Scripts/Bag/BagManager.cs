@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using CustomInput;
+using Innocence;
 
 public class BagManager : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class BagManager : MonoBehaviour
     [Space(10)]
     [SerializeField]
     private RectTransform bagCanvas;
-    
+
     [Space(10)]
     [SerializeField]
     private int minItemBoxAmount;
@@ -27,7 +28,7 @@ public class BagManager : MonoBehaviour
     private Transform itemContent;
     [SerializeField]
     private RectTransform itemContentRect;
-    
+
     private List<ItemBox> itemBoxs;
     private int focusIndex;
 
@@ -35,7 +36,7 @@ public class BagManager : MonoBehaviour
     {
         Initialize();
     }
-    
+
     private void Initialize()
     {
         Instance = this;
@@ -43,11 +44,11 @@ public class BagManager : MonoBehaviour
 
         itemBoxs = new List<ItemBox>();
         focusIndex = -1;
-        
+
         RefreshItems();
         ShowContentBegin();
     }
-    
+
     public Vector2 GetMousePosition()
     {
         return InputManager.Instance.GetMousePositionInUI(bagCanvas.sizeDelta); ;
@@ -83,7 +84,7 @@ public class BagManager : MonoBehaviour
             InitializeItem(i, items[i]);
         }
 
-        if(items.Count < minItemBoxAmount)
+        if (items.Count < minItemBoxAmount)
         {
             for (int i = 0; i < minItemBoxAmount - items.Count; i++)
             {
@@ -92,10 +93,11 @@ public class BagManager : MonoBehaviour
             }
         }
     }
-    
+
     private void InitializeItem(int boxIndex, int itemID)
     {
-        itemBoxs[boxIndex].Initialize(boxIndex, itemID, itemInfoList.items[itemID].onBagSprite, itemInfoList.items[itemID].canDrag);
+        ItemInfo itemInfo = itemInfoList.GetItemWithID(itemID);
+        itemBoxs[boxIndex].Initialize(boxIndex, itemID, itemInfo.onBagSprite, itemInfo.canDrag);
     }
 
     private void InitializeEmpty(int boxIndex)
@@ -155,7 +157,7 @@ public class BagManager : MonoBehaviour
     {
 
     }
-    
+
     public void OnClick_CheckItem()
     {
         HideCheckButton();
@@ -165,20 +167,21 @@ public class BagManager : MonoBehaviour
     {
         UnfocusItem();
     }
-    
+
     public void GetItem(int itemID)
     {
-        
+        RefreshItems();
     }
-    
+
     public void DeleteItem(int itemID)
     {
-        
+        RefreshItems();
     }
 
     private List<int> GetItemData()
     {
-        return new List<int>() { 0, 1, 2, 0, 1, 2, 0, 1, 2 };
+        return itemInfoList.GetInBagItemsID;
+        // return new List<int>() { 0, 1, 2, 0, 1, 2, 0, 1, 2 };
     }
 
     private int GetFocusedItemID()

@@ -72,10 +72,22 @@ namespace CustomDrag
             string scene = GameManager.instance.currentScene;
             switch (eventName)
             {
-                case "Item1":
-                    if (scene == "01_51 公共電話特寫")
+                // 置物櫃鑰匙
+                case "Item13":
+                    if (scene == "???")
                     {
                         Debug.Log("Test event");
+                    }
+                    break;
+                // 電話卡
+                case "Item16":
+                    if (scene == "01_51 公共電話特寫")
+                    {
+                        Debug.Log("電話卡");
+                        GameManager.instance.SetProgress(18);
+                        int itemID = 16;
+                        GameManager.instance.UsaItem(itemID);
+                        BagManager.Instance.DeleteItem(itemID);
                     }
                     break;
             }

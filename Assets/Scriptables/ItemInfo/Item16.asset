@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd095d4f5b07d694dad028ed78c22e00, type: 3}
-  m_Name: Item2
+  m_Name: Item16
   m_EditorClassIdentifier: 
-  canDrag: 0
-  onBagSprite: {fileID: 21300000, guid: 90e1acf7d1adab044b76c27fabb65091, type: 3}
-  onCheckSprite: {fileID: 21300000, guid: 90e1acf7d1adab044b76c27fabb65091, type: 3}
-  onGetSprite: {fileID: 21300000, guid: 90e1acf7d1adab044b76c27fabb65091, type: 3}
+  id: 16
+  canDrag: 1
+  onBagSprite: {fileID: 21300000, guid: 71a36dba48d469642bfe4cc4f13e3679, type: 3}
+  onCheckSprite: {fileID: 21300000, guid: 71a36dba48d469642bfe4cc4f13e3679, type: 3}
+  onGetSprite: {fileID: 21300000, guid: 71a36dba48d469642bfe4cc4f13e3679, type: 3}

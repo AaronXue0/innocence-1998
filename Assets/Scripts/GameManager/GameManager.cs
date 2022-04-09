@@ -10,7 +10,9 @@ namespace Innocence
         public static GameManager instance;
         [SerializeField] bool isTestMode = false;
         [SerializeField] float timeSpeed = 1f;
+        [SerializeField] GameObject bagObject;
 
+        [HideInInspector]
         public string currentScene;
 
         private GameDataManager gameData;
@@ -47,6 +49,14 @@ namespace Innocence
         }
         private void Update()
         {
+            if ((IsDialoguePlaying || IsTimelinePlaying) && bagObject.activeSelf == true)
+            {
+                bagObject.SetActive(false);
+            }
+            else if (bagObject.activeSelf == false && (IsDialoguePlaying || IsTimelinePlaying) == false)
+            {
+                bagObject.SetActive(true);
+            }
             if (isTestMode && Input.GetKeyDown(KeyCode.R))
             {
                 audioPlayer.bgmSource.clip = null;
@@ -66,6 +76,8 @@ namespace Innocence
         {
             Debug.Log("Progress changed: " + newProgress);
             audioPlayer.ChangeMusicDectector(newProgress);
+            if (TimelineProp.instance != null)
+                TimelineProp.instance.Invoke(newProgress);
         }
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
@@ -103,6 +115,9 @@ namespace Innocence
         public void SetLightState(int id, int state) => gameData.SetLightState(id, state);
         public void SetItemComplete(int id) => gameData.SetItemComplete(id);
         public void ObtainItem(int id) => gameData.ObtainItem(id);
+        public void UsaItem(int id) => gameData.ItemUsage(id);
+
+        public Bag GetBag { get { return gameData.GetBag(); } }
 
         public Vector2 GetPlayerPos() => gameData.GetPlayerPos();
 

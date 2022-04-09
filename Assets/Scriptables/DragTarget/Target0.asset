@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36721e179537e864ba3f6ea9c6eda054, type: 3}
   m_Name: Target0
   m_EditorClassIdentifier: 
-  eventName: Item1
+  eventName: Item16
   leftTop: {x: -200, y: 200}
   rightBottom: {x: 200, y: -200}

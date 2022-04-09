@@ -188,6 +188,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1464018917162359131, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: gameItems.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464018917162359131, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: gameItems.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 784153d076616467f9b40134d6ebbf42,
+        type: 2}
+    - target: {fileID: 2358967255974437091, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358967257387856648, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
 --- !u!1 &279507486
@@ -833,6 +854,8 @@ GameObject:
   m_Component:
   - component: {fileID: 874599516}
   - component: {fileID: 874599515}
+  - component: {fileID: 874599518}
+  - component: {fileID: 874599517}
   m_Layer: 0
   m_Name: "\u9470\u5319"
   m_TagString: Untagged
@@ -905,6 +928,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 16.342001, y: -8.505, z: -27.991001}
+--- !u!114 &874599517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874599514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64be0ceb4b00748cc942f1ddec073fee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 13
+  isGameplayItem: 0
+  isObtainedItem: 1
+  item:
+    sprite: {fileID: 0}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    nestItemsID: 
+    targetSceneName: 
+    awardItemsID: 
+    hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
+    completed: 0
+  hintSR: {fileID: 0}
+  distance: 0
+--- !u!61 &874599518
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874599514}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.45, y: 10.8}
+    newSize: {x: 4.45, y: 10.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.45, y: 10.8}
+  m_EdgeRadius: 0
 --- !u!1 &875792100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,13 +1270,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 6
   completeProgress: 8
+  autoComplete: 0
+  completeObjectState: -1
+  coldDuration: 1
   setItems: []
   setLights:
   - id: 100
     state: 2
-  completeObjectState: -1
   returnButton: {fileID: 810823644}
-  coldDuration: 1
 --- !u!1 &971723389
 GameObject:
   m_ObjectHideFlags: 0
