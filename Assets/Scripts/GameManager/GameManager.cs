@@ -11,6 +11,8 @@ namespace Innocence
         [SerializeField] bool isTestMode = false;
         [SerializeField] float timeSpeed = 1f;
 
+        public string currentScene;
+
         private GameDataManager gameData;
         private TimelinePlayer timeplyer;
         private TextPlayer textPlayer;
@@ -68,6 +70,7 @@ namespace Innocence
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             Debug.Log("Scene loaded: " + scene.name);
+            currentScene = scene.name;
             audioPlayer.ChangeMusicDectector(scene.name);
             gameData.SetAllStatesInScene();
         }
