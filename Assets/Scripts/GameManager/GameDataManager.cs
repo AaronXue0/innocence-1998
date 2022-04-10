@@ -159,15 +159,16 @@ namespace Innocence
             ItemProp prop = GetItemProp(id);
             GameObject go = null;
 
+            item.currentState = state;
+
             if (prop != null)
                 go = prop.gameObject;
             else
             {
-                Debug.Log("Itempro, id: " + id + " not found.");
+                Debug.Log("Item prop of id: " + id + " not found.");
                 return;
             }
 
-            item.currentState = state;
             ItemContent content = item.GetContent;
             prop.item = content;
             prop.SetHintSprite(content.hintSprite);
