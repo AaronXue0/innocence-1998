@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DistributionBoxDialogues
   m_EditorClassIdentifier: 
   msg:
-  - "\u592A\u9AD8\u4E86\u6406\u4E0D\u5230\u3002        \u25BC"
+  - "\u592A\u9AD8\u4E86\u6406\u4E0D\u5230\u3002    \u25BC"
   appaerGap: 0.1
   displaySecs: 1
   fadeoutDuration: 0.5
