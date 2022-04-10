@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 
 namespace Innocence
 {
@@ -82,6 +84,13 @@ namespace Innocence
 
             if (Input.GetMouseButtonDown(0))
             {
+                if (EventSystem.current.IsPointerOverGameObject())
+                {
+                    animWalk.SetBool("move", false);
+                    targetPos = transform.position;
+                    return;
+                }
+
                 Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
                 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 moving = true;

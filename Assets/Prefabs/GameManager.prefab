@@ -551,7 +551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1464018916899064458
 RectTransform:
   m_ObjectHideFlags: 0
@@ -689,6 +689,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1cee79eb1db5ed54d830071ca808508d, type: 2}
   - {fileID: 11400000, guid: b8a5eba26714545839857e78d32597d9, type: 2}
   - {fileID: 11400000, guid: d85d4b0ead09d4934a2a0418274b49e4, type: 2}
+  - {fileID: 11400000, guid: 784153d076616467f9b40134d6ebbf42, type: 2}
   lightDatas:
   - {fileID: 11400000, guid: fdd560d9308364c669195236a1156b2a, type: 2}
   itemProps: []

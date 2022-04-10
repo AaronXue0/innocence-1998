@@ -37,6 +37,16 @@ namespace Innocence
         // Update is called once per frame
         private void Update()
         {
+            if (IsPlaying || IsTimelinePlaying)
+            {
+                if (raycastIsolation.activeSelf == false)
+                    raycastIsolation.SetActive(true);
+            }
+            else if ((IsPlaying || IsTimelinePlaying) == false)
+            {
+                if (raycastIsolation.activeSelf == true)
+                    raycastIsolation.SetActive(false);
+            }
             if (WaitForContinue)
             {
                 if (Input.GetMouseButtonDown(0))
