@@ -9,7 +9,7 @@ public class ItemBox : MonoBehaviour
     [SerializeField]
     private BagItem item;
 
-    //因為圖片還沒打包成SpriteAtlas，所以先用這個代替
+    //嚙稽嚙踝蕭嚙誕歹蕭嚙誶沒嚙踝蕭嚙稽嚙踝蕭SpriteAtlas嚙璀嚙課以嚙踝蕭嚙諄這嚙諉代嚙踝蕭
     [Header("ItemBox")]
     [SerializeField]
     private Image itemBoxImage;
@@ -17,7 +17,7 @@ public class ItemBox : MonoBehaviour
     private Sprite focusSprite;
     [SerializeField]
     private Sprite unfocusSprite;
-    
+
     /*
     [Space(10)]
     public SpriteAtlasLoader spriteAtlasLoader;
@@ -32,9 +32,9 @@ public class ItemBox : MonoBehaviour
         Index = index;
 
         if (canDrag) item.eventName = "Item" + itemID;
-        
+
         itemImage.sprite = itemSprite;
-        itemImage.SetNativeSize();
+        // itemImage.SetNativeSize();
 
         item.enable = canDrag;
     }
@@ -43,7 +43,7 @@ public class ItemBox : MonoBehaviour
     {
         itemImage.enabled = false;
     }
-    
+
     public void OnClick_Item()
     {
         BagManager.Instance.OnClick_Item(Index);

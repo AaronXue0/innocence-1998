@@ -15,8 +15,10 @@ namespace CustomInput
 
         private void Awake()
         {
+            if (Instance != null)
+                return;
+
             Instance = this;
-            mainCamera = Camera.main;
             Input.multiTouchEnabled = multiTouchEnabled;
         }
 
@@ -36,12 +38,18 @@ namespace CustomInput
 
         public Vector2 GetMousePositionInUI(Vector2 canvasSize)
         {
-            pointRate = mainCamera.ScreenToViewportPoint(Input.mousePosition);
+            pointRate = GetMainCamera().ScreenToViewportPoint(Input.mousePosition);
 
             mousePosition.x = pointRate.x * canvasSize.x - canvasSize.x / 2f;
             mousePosition.y = pointRate.y * canvasSize.y - canvasSize.y / 2f;
 
             return mousePosition;
+        }
+
+        public Camera GetMainCamera()
+        {
+            if (!mainCamera) mainCamera = Camera.main;
+            return mainCamera;
         }
     }
 }

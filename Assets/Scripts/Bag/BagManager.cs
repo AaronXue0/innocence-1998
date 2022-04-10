@@ -34,12 +34,14 @@ public class BagManager : MonoBehaviour
 
     private void Start()
     {
-        Initialize();
+        if (Instance == null)
+            Initialize();
     }
 
     private void Initialize()
     {
         Instance = this;
+
         Enable = true;
 
         itemBoxs = new List<ItemBox>();

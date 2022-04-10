@@ -23,6 +23,9 @@ namespace CustomDrag
 
         private void Awake()
         {
+            if (Instance != null)
+                return;
+
             Instance = this;
             IsDragging = false;
             Enable = true;
