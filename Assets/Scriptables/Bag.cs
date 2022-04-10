@@ -35,6 +35,7 @@ namespace Innocence
         {
             GameItem item = inStorageItem.Find(x => x.id == id);
             inStorageItem.Remove(item);
+            BagManager.Instance.DeleteItem(id);
         }
 
         public bool CheckInStorage(int id)

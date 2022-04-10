@@ -90,6 +90,7 @@ namespace Innocence
             gameDatas.chapter = 0;
 
             bag.Reset();
+            BagManager.Instance.RefreshItems();
 
             yield return null;
 
