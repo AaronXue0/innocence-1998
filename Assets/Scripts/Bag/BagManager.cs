@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using CustomInput;
+using TMPro;
 using Innocence;
 
 public class BagManager : MonoBehaviour
@@ -28,6 +29,15 @@ public class BagManager : MonoBehaviour
     private Transform itemContent;
     [SerializeField]
     private RectTransform itemContentRect;
+
+    [Space(10)]
+    [Header("Check Item")]
+    [SerializeField]
+    private GameObject display;
+    [SerializeField]
+    private Image checkImg;
+    [SerializeField]
+    private Animator bagAnimator;
 
     private List<ItemBox> itemBoxs;
     private int focusIndex;
@@ -136,6 +146,7 @@ public class BagManager : MonoBehaviour
         Debug.Log("Focus: " + index);
         itemBoxs[index].SetFocus();
         focusIndex = index;
+        CheckItem();
     }
 
     public void UnfocusItem()
@@ -150,14 +161,25 @@ public class BagManager : MonoBehaviour
     }
 
     //API
+    public void CheckItem()
+    {
+        bagAnimator.SetTrigger("close");
+        ItemInfo info = itemInfoList.GetItemWithID(GetFocusedItemID());
+        checkImg.sprite = info.onCheckSprite;
+        display.SetActive(true);
+    }
+    public void UnCheckItem()
+    {
+        OnClick_Item(focusIndex);
+        display.SetActive(false);
+    }
+
     public void ShowCheckButton()
     {
-
     }
 
     public void HideCheckButton()
     {
-
     }
 
     public void OnClick_CheckItem()
@@ -183,7 +205,6 @@ public class BagManager : MonoBehaviour
     private List<int> GetItemData()
     {
         return itemInfoList.GetInBagItemsID;
-        // return new List<int>() { 0, 1, 2, 0, 1, 2, 0, 1, 2 };
     }
 
     private int GetFocusedItemID()

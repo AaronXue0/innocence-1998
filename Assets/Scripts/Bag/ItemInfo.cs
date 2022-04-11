@@ -8,7 +8,4 @@ public class ItemInfo : ScriptableObject
     public Sprite onBagSprite;
     public Sprite onCheckSprite;
     public Sprite onGetSprite;
-
-    public string title = "";
-    public string description = "";
 }
