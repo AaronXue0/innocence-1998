@@ -4,7 +4,7 @@ TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
   fontSize: 16
-  forceTextureCase: -2
+  forceTextureCase: 3
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
@@ -13,8 +13,9 @@ TrueTypeFontImporter:
   - GenYoMin TW TTF
   fallbackFontReferences:
   - {fileID: 12800000, guid: 2213e0624f073b243af294fa542b559d, type: 3}
-  customCharacters: 
-  fontRenderingMode: 0
+  customCharacters: "\u3001,.?\uFF1F\u300C\u300D\u25BC\u9019\u88E1\u662F\u597D\u50CF\u5ABD\u5DE5\u4F5C\u7684\u5C0F\u5403\u90E8\u5916\u9762\u98A8\u96E8\u5F88\u5927\u6211\u6700\u5148\u5F85\u5728\u5BA4\u5167\u4ECA\u5929\u5341\u6B72\u751F\u65E5\u8DDF\u7D04\u4E86\u8981\u4E00\u8D77\u86CB\u7CD5\u5439\u881F\u71ED\u53EF\u90FD\u500B\u6642\u9593\u9084\u6C92\u770B\u5230\u51FA\u73FE\u4E0B\u8457\u5E95\u53BB\u54EA\u6697\u4EC0\u9EBC\u4E0D\u628A\u71C8\u6253\u958B\u624D\u884C\u592A\u9AD8\u6406\u5C31\u5FEB\u904E\u77E5\u9053\u591A\u4E45\u6709\u4EAE\u6982
+    \u8DF3\u96FB\u8A72\u600E\u8FA6\u4EE5\u64AD\u653E\u5361\u5E36\u4F34\u5531\u6A5F\u90A3\u963F\u59E8\u59CA\u5011\u7528\u4F86\u7092\u71B1\u6C23\u6C1B\u5177"
+  fontRenderingMode: 2
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
