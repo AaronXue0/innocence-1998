@@ -12,7 +12,7 @@ namespace Innocence
 
             if (GUILayout.Button("Reset"))
             {
-                Debug.Log("Reset");
+                Debug.Log("Game Resetting");
                 gameDataManager.ResetOnEditor();
             }
         }
