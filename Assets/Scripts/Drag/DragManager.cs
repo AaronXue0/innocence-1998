@@ -24,14 +24,17 @@ namespace CustomDrag
 
         private void Awake()
         {
-            Instance = this;
-            IsDragging = false;
-            Enable = true;
+            if (Instance == null)
+            {
+                Instance = this;
+                IsDragging = false;
+                Enable = true;
 
-            mainCamera = Camera.main;
-            draggingObject.SetActive(false);
-            draggingObjectRect = draggingObject.GetComponent<RectTransform>();
-            draggingObjectImage = draggingObject.GetComponent<Image>();
+                mainCamera = Camera.main;
+                draggingObject.SetActive(false);
+                draggingObjectRect = draggingObject.GetComponent<RectTransform>();
+                draggingObjectImage = draggingObject.GetComponent<Image>();
+            }
         }
 
         private void Update()
@@ -69,9 +72,15 @@ namespace CustomDrag
 
         private bool IsMatchTarget(string eventName)
         {
-            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = GetMainCamera().ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 100, targetLayerMask);
             return (hit && hit.collider.GetComponent<TargetTrigger>().eventName == eventName);
+        }
+
+        private Camera GetMainCamera()
+        {
+            if (!mainCamera) mainCamera = Camera.main;
+            return mainCamera;
         }
 
         private void TriggerEvent(string eventName)
