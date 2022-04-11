@@ -137,7 +137,8 @@ public class BagManager : MonoBehaviour
             UnfocusItem();
         else
         {
-            ShowCheckButton();
+            CheckItem();
+            // ShowCheckButton();
             if (focusIndex != -1) itemBoxs[focusIndex].SetUnfocus();
             FocusItem(index);
         }
@@ -148,7 +149,6 @@ public class BagManager : MonoBehaviour
         Debug.Log("Focus: " + index);
         itemBoxs[index].SetFocus();
         focusIndex = index;
-        CheckItem();
     }
 
     public void UnfocusItem()
