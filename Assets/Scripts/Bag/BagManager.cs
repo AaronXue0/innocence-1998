@@ -33,6 +33,8 @@ public class BagManager : MonoBehaviour
     [Space(10)]
     [Header("Check Item")]
     [SerializeField]
+    private GameObject bagSwitchBtn;
+    [SerializeField]
     private GameObject display;
     [SerializeField]
     private Image checkImg;
@@ -163,15 +165,25 @@ public class BagManager : MonoBehaviour
     //API
     public void CheckItem()
     {
+        ActiveDisplayer(GetFocusedItemID());
+    }
+    public void CheckItem(int itemID)
+    {
+        ActiveDisplayer(itemID);
+    }
+    private void ActiveDisplayer(int id)
+    {
         bagAnimator.SetTrigger("close");
-        ItemInfo info = itemInfoList.GetItemWithID(GetFocusedItemID());
+        ItemInfo info = itemInfoList.GetItemWithID(id);
         checkImg.sprite = info.onCheckSprite;
         display.SetActive(true);
+        bagSwitchBtn.SetActive(false);
     }
     public void UnCheckItem()
     {
         OnClick_Item(focusIndex);
         display.SetActive(false);
+        bagSwitchBtn.SetActive(true);
     }
 
     public void ShowCheckButton()
@@ -194,7 +206,14 @@ public class BagManager : MonoBehaviour
 
     public void GetItem(int itemID)
     {
+        StartCoroutine(GetItemCoroutine(itemID));
+    }
+
+    private IEnumerator GetItemCoroutine(int itemID)
+    {
         RefreshItems();
+        yield return null;
+        CheckItem(itemID);
     }
 
     public void DeleteItem(int itemID)

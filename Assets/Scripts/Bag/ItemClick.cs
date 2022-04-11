@@ -4,11 +4,29 @@ using UnityEngine;
 
 public class ItemClick : MonoBehaviour
 {
+    float coldDuration = 0.5f;
+    float coldDurationCounter = 0;
+    private void OnEnable()
+    {
+        coldDurationCounter = 0;
+    }
+    private void OnDisable()
+    {
+        coldDurationCounter = 0;
+    }
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (coldDurationCounter >= coldDuration)
         {
-            BagManager.Instance.UnCheckItem();
+
+            if (Input.GetMouseButton(0))
+            {
+                BagManager.Instance.UnCheckItem();
+            }
+        }
+        else
+        {
+            coldDurationCounter += Time.deltaTime;
         }
     }
 }
