@@ -9,6 +9,7 @@ namespace Innocence
         public int id;
         public bool isGameplayItem = false;
         public bool isObtainedItem = false;
+        public ObtainedItemAndSetStates[] obtainedItemAndSetStates;
 
         [HideInInspector]
         public ItemContent item;
@@ -99,6 +100,10 @@ namespace Innocence
                     break;
                 case FinishedResult.GetItem:
                     GameManager.instance.ObtainItem(id);
+                    foreach (ObtainedItemAndSetStates o in obtainedItemAndSetStates)
+                    {
+                        GameManager.instance.SetItemState(o.id, o.newStaet);
+                    }
                     break;
                 case FinishedResult.None:
                 case FinishedResult.CheckForTimeline:
@@ -113,5 +118,12 @@ namespace Innocence
             isPlaying = false;
             GameManager.instance.ItemDialoguesFinished(id);
         }
+    }
+
+    [System.Serializable]
+    public class ObtainedItemAndSetStates
+    {
+        public int id;
+        public int newStaet;
     }
 }

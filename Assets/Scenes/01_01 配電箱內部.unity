@@ -902,8 +902,8 @@ SpriteRenderer:
   m_SortingLayerID: -831960729
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: db14a1f789268934f83b382f582882a3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7260530f5b4656e49a35f7dbc6142fe8, type: 3}
+  m_Color: {r: 1, g: 0.880473, b: 0.8160377, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -920,14 +920,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874599514}
-  m_LocalRotation: {x: 0.15528235, y: -0.036946263, z: -0.2285004, w: 0.9603697}
-  m_LocalPosition: {x: -2.61, y: -4.72, z: -1.63}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.815, y: -4.935, z: 0.897}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 971723391}
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 16.342001, y: -8.505, z: -27.991001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &874599517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,6 +943,9 @@ MonoBehaviour:
   id: 13
   isGameplayItem: 0
   isObtainedItem: 1
+  obtainedItemAndSetStates:
+  - id: 4
+    newStaet: 4
   item:
     sprite: {fileID: 0}
     animtorTriggerName: 
@@ -971,18 +974,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.14546537, y: 0.2881748}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.45, y: 10.8}
+    oldSize: {x: 1.96, y: 1.93}
     newSize: {x: 4.45, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.45, y: 10.8}
+  m_Size: {x: 1.7995949, y: 1.7284685}
   m_EdgeRadius: 0
 --- !u!1 &875792100
 GameObject:
@@ -1131,6 +1134,7 @@ MonoBehaviour:
   id: 6
   isGameplayItem: 1
   isObtainedItem: 0
+  obtainedItemAndSetStates: []
   item:
     sprite: {fileID: 0}
     animtorTriggerName: 
@@ -1273,7 +1277,9 @@ MonoBehaviour:
   autoComplete: 0
   completeObjectState: -1
   coldDuration: 1
-  setItems: []
+  setItems:
+  - id: 8
+    state: 1
   setLights:
   - id: 100
     state: 2
@@ -1322,8 +1328,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1.2566649
+  m_PointLightInnerRadius: 1.0870193
+  m_PointLightOuterRadius: 2.0397344
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -1344,7 +1350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971723389}
   m_LocalRotation: {x: -0.1578883, y: -0.023429083, z: -0.14490105, w: 0.9764866}
-  m_LocalPosition: {x: 0.3, y: 1.5, z: 0.12}
+  m_LocalPosition: {x: -0.11, y: 0.28, z: 0.52}
   m_LocalScale: {x: 4.8379374, y: 3.6663396, z: 1.0863087}
   m_Children: []
   m_Father: {fileID: 874599516}

@@ -85,6 +85,13 @@ namespace Innocence
             currentScene = scene.name;
             audioPlayer.ChangeMusicDectector(scene.name);
             gameData.SetAllStatesInScene();
+
+            switch (scene.name)
+            {
+                // Scene that player ables to move
+                case "01_00 小吃部":
+                    break;
+            }
         }
         #endregion
 

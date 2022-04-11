@@ -63,3 +63,15 @@ MonoBehaviour:
     hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
     soundClip: {fileID: 0}
     completed: 1
+  - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 0
+    dialogues: {fileID: 0}
+    finishedResult: 2
+    nestItemsID: 02000000
+    targetSceneName: "01_01 \u914D\u96FB\u7BB1\u5167\u90E8"
+    awardItemsID: 
+    hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
+    soundClip: {fileID: 0}
+    completed: 1

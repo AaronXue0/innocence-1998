@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using CustomInput;
+using TMPro;
 using Innocence;
 
 public class BagManager : MonoBehaviour
@@ -28,6 +29,17 @@ public class BagManager : MonoBehaviour
     private Transform itemContent;
     [SerializeField]
     private RectTransform itemContentRect;
+
+    [Space(10)]
+    [Header("Check Item")]
+    [SerializeField]
+    private GameObject bagSwitchBtn;
+    [SerializeField]
+    private GameObject display;
+    [SerializeField]
+    private Image checkImg;
+    [SerializeField]
+    private Animator bagAnimator;
 
     private List<ItemBox> itemBoxs;
     private int focusIndex;
@@ -125,7 +137,8 @@ public class BagManager : MonoBehaviour
             UnfocusItem();
         else
         {
-            ShowCheckButton();
+            CheckItem();
+            // ShowCheckButton();
             if (focusIndex != -1) itemBoxs[focusIndex].SetUnfocus();
             FocusItem(index);
         }
@@ -150,14 +163,35 @@ public class BagManager : MonoBehaviour
     }
 
     //API
+    public void CheckItem()
+    {
+        ActiveDisplayer(GetFocusedItemID());
+    }
+    public void CheckItem(int itemID)
+    {
+        ActiveDisplayer(itemID);
+    }
+    private void ActiveDisplayer(int id)
+    {
+        bagAnimator.SetTrigger("close");
+        ItemInfo info = itemInfoList.GetItemWithID(id);
+        checkImg.sprite = info.onCheckSprite;
+        display.SetActive(true);
+        bagSwitchBtn.SetActive(false);
+    }
+    public void UnCheckItem()
+    {
+        OnClick_Item(focusIndex);
+        display.SetActive(false);
+        bagSwitchBtn.SetActive(true);
+    }
+
     public void ShowCheckButton()
     {
-
     }
 
     public void HideCheckButton()
     {
-
     }
 
     public void OnClick_CheckItem()
@@ -172,7 +206,14 @@ public class BagManager : MonoBehaviour
 
     public void GetItem(int itemID)
     {
+        StartCoroutine(GetItemCoroutine(itemID));
+    }
+
+    private IEnumerator GetItemCoroutine(int itemID)
+    {
         RefreshItems();
+        yield return null;
+        CheckItem(itemID);
     }
 
     public void DeleteItem(int itemID)
@@ -183,7 +224,6 @@ public class BagManager : MonoBehaviour
     private List<int> GetItemData()
     {
         return itemInfoList.GetInBagItemsID;
-        // return new List<int>() { 0, 1, 2, 0, 1, 2, 0, 1, 2 };
     }
 
     private int GetFocusedItemID()

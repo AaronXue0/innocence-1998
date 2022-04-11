@@ -97,6 +97,29 @@ namespace Innocence
             if (callback != null)
                 callback();
         }
+        public void ResetOnEditor()
+        {
+            playerData.lastAnimator = "";
+
+            foreach (GameItem item in gameItems)
+            {
+                item.currentState = 0;
+                foreach (ItemContent content in item.stateContents)
+                {
+                    content.completed = false;
+                }
+            }
+
+            foreach (LightData lightData in lightDatas)
+            {
+                lightData.currentState = 0;
+            }
+
+            gameDatas.progress = 0;
+            gameDatas.chapter = 0;
+
+            bag.Reset();
+        }
         #endregion
 
         #region Bag
@@ -159,15 +182,16 @@ namespace Innocence
             ItemProp prop = GetItemProp(id);
             GameObject go = null;
 
+            item.currentState = state;
+
             if (prop != null)
                 go = prop.gameObject;
             else
             {
-                Debug.Log("Itempro, id: " + id + " not found.");
+                Debug.Log("Item prop of id: " + id + " not found.");
                 return;
             }
 
-            item.currentState = state;
             ItemContent content = item.GetContent;
             prop.item = content;
             prop.SetHintSprite(content.hintSprite);
