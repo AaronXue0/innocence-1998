@@ -4,12 +4,13 @@ using UnityEngine;
 
 namespace CustomInput
 {
-    enum Direction { Vertical, Horizontal};
+    enum Direction { Vertical, Horizontal };
 
     [RequireComponent(typeof(BoxCollider2D))]
     public class LoopScrollView : MonoBehaviour
     {
         public bool Enable { get; set; }
+        public System.Action PasswordChangedAction { get; set; }
 
         [SerializeField]
         private bool autoSetCollider = true;
@@ -42,7 +43,7 @@ namespace CustomInput
         private SpriteRenderer middleSpriteRenderer;
         [SerializeField]
         private SpriteRenderer nextSpriteRenderer;
-        
+
         //Custom
         private Vector2 MousePointRatio { get { return InputManager.Instance.GetMousePositionRatio(); } }
         private bool IsTouchedUI { get { return InputManager.Instance.IsPointerOverGameObject(); } }
@@ -95,7 +96,7 @@ namespace CustomInput
 
         private void SetCollider()
         {
-            if(!boxCollider) boxCollider = GetComponent<BoxCollider2D>();
+            if (!boxCollider) boxCollider = GetComponent<BoxCollider2D>();
             boxCollider.offset = new Vector2(0, 0);
             boxCollider.size = spriteSize;
         }
@@ -107,7 +108,7 @@ namespace CustomInput
 
         private void OnMouseDown()
         {
-            if(Enable)
+            if (Enable)
             {
                 StopAllCoroutines();
                 StartCoroutine(OnMouseDownHandle());
@@ -129,11 +130,12 @@ namespace CustomInput
         {
             isScrolling = false;
             ResetPosition();
+            PasswordChangedAction();
         }
 
         private void Scroll()
         {
-            if(scrollDirection == Direction.Horizontal)
+            if (scrollDirection == Direction.Horizontal)
             {
                 ratioDelta = MousePointRatio.x - preRatio;
 
@@ -161,7 +163,7 @@ namespace CustomInput
 
         private void IndexUpdateDetect()
         {
-            if(scrollDirection == Direction.Horizontal)
+            if (scrollDirection == Direction.Horizontal)
             {
                 if (middleTransform.localPosition.x >= spriteSize.x / 2f) //Right
                     MoveToPrevious();
@@ -191,7 +193,7 @@ namespace CustomInput
             middleSpriteRenderer = nextSpriteRenderer;
             nextSpriteRenderer = tempSpriteRenderer;
 
-            if(mirror) IndexDecrease();
+            if (mirror) IndexDecrease();
             else IndexIncrease();
         }
 
@@ -231,7 +233,7 @@ namespace CustomInput
 
         private void ResetPosition()
         {
-            if(scrollDirection == Direction.Horizontal)
+            if (scrollDirection == Direction.Horizontal)
             {
                 preTransform.localPosition = new Vector3(-spriteSize.x, 0, 0);
                 middleTransform.localPosition = new Vector3(0, 0, 0);
