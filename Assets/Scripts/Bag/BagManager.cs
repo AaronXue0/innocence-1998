@@ -44,6 +44,8 @@ public class BagManager : MonoBehaviour
     private List<ItemBox> itemBoxs;
     private int focusIndex;
 
+    public void SwitchBtnActive(bool state) => bagSwitchBtn.SetActive(state);
+
     private void Start()
     {
         if (Instance == null)
@@ -137,10 +139,10 @@ public class BagManager : MonoBehaviour
             UnfocusItem();
         else
         {
-            CheckItem();
             // ShowCheckButton();
             if (focusIndex != -1) itemBoxs[focusIndex].SetUnfocus();
             FocusItem(index);
+            CheckItem();
         }
     }
 
@@ -204,16 +206,21 @@ public class BagManager : MonoBehaviour
         UnfocusItem();
     }
 
-    public void GetItem(int itemID)
+    public ItemInfo GetItem(int itemID)
     {
-        StartCoroutine(GetItemCoroutine(itemID));
+        return itemInfoList.GetItemWithID(itemID);
+    }
+
+    public void ObtainedItem(int itemID)
+    {
+        Debug.Log("Obtain");
+        RefreshItems();
+        CheckItem(itemID);
     }
 
     private IEnumerator GetItemCoroutine(int itemID)
     {
-        RefreshItems();
         yield return null;
-        CheckItem(itemID);
     }
 
     public void DeleteItem(int itemID)

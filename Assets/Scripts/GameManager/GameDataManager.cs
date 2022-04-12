@@ -138,7 +138,7 @@ namespace Innocence
             item.AddCurrentState();
             SetItemState(id, item.currentState);
             bag.StoreItem(item);
-            bagManager.GetItem(id);
+            bagManager.ObtainedItem(id);
         }
         public void ItemUsage(int id)
         {

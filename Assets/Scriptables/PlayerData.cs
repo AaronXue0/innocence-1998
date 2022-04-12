@@ -8,5 +8,13 @@ namespace Innocence
     public class PlayerData : ScriptableObject
     {
         public string lastAnimator = "";
+        public List<SceneSpwanPos> sceneSpwanPos;
+    }
+
+    [System.Serializable]
+    public class SceneSpwanPos
+    {
+        public Vector2 firstPos;
+        public Vector2 currentPos;
     }
 }
