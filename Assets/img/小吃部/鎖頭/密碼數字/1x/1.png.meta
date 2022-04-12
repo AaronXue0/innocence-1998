@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 54aaa1fec14c44ac9be48288b204c9fa
+<<<<<<< HEAD:Assets/img/UI/WhitePanel.png.meta
+guid: 1a5759804d8e4407b9250574daab5459
+=======
+guid: c385a7e20ed2ca048aaf7b95616ff48d
+>>>>>>> 58a9348d4321154182a30786b476c77353e0c774:Assets/img/小吃部/鎖頭/密碼數字/1x/1.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
