@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd095d4f5b07d694dad028ed78c22e00, type: 3}
   m_Name: Item17
   m_EditorClassIdentifier: 
-  id: 0
-  canDrag: 0
-  onBagSprite: {fileID: 0}
-  onCheckSprite: {fileID: 0}
-  onGetSprite: {fileID: 0}
+  id: 17
+  canDrag: 1
+  onBagSprite: {fileID: 21300000, guid: abdbb26dbe122aa418bfb0cec3bcd35b, type: 3}
+  onCheckSprite: {fileID: 21300000, guid: abdbb26dbe122aa418bfb0cec3bcd35b, type: 3}
+  onGetSprite: {fileID: 21300000, guid: abdbb26dbe122aa418bfb0cec3bcd35b, type: 3}
   onGetSound: {fileID: 0}
   onUsedSound: {fileID: 0}

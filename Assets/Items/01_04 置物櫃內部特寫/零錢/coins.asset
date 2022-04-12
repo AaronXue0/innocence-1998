@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: coins
   m_EditorClassIdentifier: 
   id: 17
-  currentState: 0
+  currentState: 1
   stateContents:
   - sprite: {fileID: 0}
     animtorTriggerName: 
-    isActive: 0
-    isClickAble: 0
+    isActive: 1
+    isClickAble: 1
     dialogues: {fileID: 0}
-    finishedResult: 0
+    finishedResult: 3
     nestItemsID: 
     targetSceneName: 
     awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 0
+    completed: 1
   - sprite: {fileID: 0}
     animtorTriggerName: 
     isActive: 0
@@ -38,4 +38,4 @@ MonoBehaviour:
     awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 0
+    completed: 1
