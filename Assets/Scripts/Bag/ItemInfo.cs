@@ -8,4 +8,8 @@ public class ItemInfo : ScriptableObject
     public Sprite onBagSprite;
     public Sprite onCheckSprite;
     public Sprite onGetSprite;
+
+    [Space(10)]
+    public AudioClip onGetSound;
+    public AudioClip onUsedSound;
 }

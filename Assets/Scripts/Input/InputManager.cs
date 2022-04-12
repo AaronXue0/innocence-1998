@@ -27,6 +27,7 @@ namespace CustomInput
 
         public bool IsPointerOverGameObject()
         {
+            if (!EventSystem.current) return false; //多加這行
 #if UNITY_EDITOR
             return EventSystem.current.IsPointerOverGameObject();
 #elif UNITY_ANDROID || UNITY_IOS
@@ -34,6 +35,10 @@ namespace CustomInput
 #else
         return EventSystem.current.IsPointerOverGameObject();
 #endif
+        }
+        public Vector2 GetMousePositionRatio()
+        {
+            return GetMainCamera().ScreenToViewportPoint(Input.mousePosition);
         }
 
         public Vector2 GetMousePositionInUI(Vector2 canvasSize)

@@ -21,6 +21,7 @@ namespace CustomDrag
         private Camera mainCamera;
         private RectTransform draggingObjectRect;
         private Image draggingObjectImage;
+        private AudioSource audioSource;
 
         private void Awake()
         {
@@ -34,6 +35,7 @@ namespace CustomDrag
                 draggingObject.SetActive(false);
                 draggingObjectRect = draggingObject.GetComponent<RectTransform>();
                 draggingObjectImage = draggingObject.GetComponent<Image>();
+                audioSource = GetComponent<AudioSource>();
             }
         }
 
@@ -87,19 +89,32 @@ namespace CustomDrag
         {
             Debug.Log("Drag Event: " + eventName);
             string scene = GameManager.instance.currentScene;
+            int itemID = -1;
             switch (eventName)
             {
                 // 置物櫃鑰匙
                 case "Item13":
+                    itemID = 13;
+                    GameManager.instance.SetItemState(12, 1);
                     break;
                 // 電話卡
                 case "Item16":
-                    Debug.Log("電話卡");
+                    itemID = 16;
                     GameManager.instance.SetProgress(18);
-                    int itemID = 16;
-                    GameManager.instance.UsaItem(itemID);
-                    BagManager.Instance.DeleteItem(itemID);
                     break;
+            }
+
+            if (itemID != -1)
+            {
+                ItemInfo info = BagManager.Instance.GetItem(itemID);
+                if (info.onUsedSound != null)
+                {
+                    audioSource.clip = info.onUsedSound;
+                    audioSource.Play();
+                }
+
+                GameManager.instance.UsaItem(itemID);
+                BagManager.Instance.DeleteItem(itemID);
             }
         }
     }
