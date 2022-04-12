@@ -44,6 +44,8 @@ public class BagManager : MonoBehaviour
     private List<ItemBox> itemBoxs;
     private int focusIndex;
 
+    public void SwitchBtnActive(bool state) => bagSwitchBtn.SetActive(state);
+
     private void Start()
     {
         if (Instance == null)
