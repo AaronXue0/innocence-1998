@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Innocence
 {
+    [RequireComponent(typeof(BoxCollider2D))]
     public class ItemProp : MonoBehaviour
     {
         public int id;
