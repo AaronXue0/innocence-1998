@@ -615,7 +615,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6e321e41a194aa3980f7f63aa563f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timelineContents: []
+  timelineContents:
+  - requiredProgress: 10
+    asset: {fileID: 11400000, guid: a95324f7bbc25473788474b2afdac80c, type: 2}
+    conition: 0
 --- !u!95 &302016966
 Animator:
   serializedVersion: 3
@@ -644,7 +647,7 @@ PlayableDirector:
   m_GameObject: {fileID: 302016963}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 167ae206b114b4177ab86754302df58c, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: a95324f7bbc25473788474b2afdac80c, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -710,6 +713,10 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -5990885620769392632, guid: 167ae206b114b4177ab86754302df58c, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -4888958442193106238, guid: a95324f7bbc25473788474b2afdac80c, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8695024819299421267, guid: a95324f7bbc25473788474b2afdac80c, type: 2}
+    value: {fileID: 627966184}
   m_ExposedReferences:
     m_References:
     - 149f97ce81026fc4abfa7e71cc268883: {fileID: 0}
