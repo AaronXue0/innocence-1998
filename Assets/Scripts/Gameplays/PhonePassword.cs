@@ -81,6 +81,7 @@ namespace Innocence
                     int num;
                     if (int.TryParse(hit.collider.name, out num))
                     {
+                        StartCoroutine(DialViewCoroutine(hit.collider.gameObject.GetComponent<SpriteRenderer>()));
                         Dial(num);
                     }
                     else
@@ -90,6 +91,13 @@ namespace Innocence
                 }
 
             }
+        }
+        IEnumerator DialViewCoroutine(SpriteRenderer spriteRenderer)
+        {
+            Debug.Log(spriteRenderer);
+            spriteRenderer.color = new Color32(145, 145, 145, 255);
+            yield return new WaitForSeconds(0.3f);
+            spriteRenderer.color = new Color32(255, 255, 255, 255);
         }
         private void OnMouseDown()
         {
@@ -152,7 +160,6 @@ namespace Innocence
 
             if (isPasswordCorrect)
             {
-                Debug.Log("Correct");
                 PuzzleSolved();
             }
             else

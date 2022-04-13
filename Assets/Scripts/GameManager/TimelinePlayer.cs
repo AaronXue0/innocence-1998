@@ -6,6 +6,7 @@ namespace Innocence
 {
     public class TimelinePlayer : MonoBehaviour
     {
+        public bool IsPlaying { get; set; }
         PlayableDirector currentDirector;
 
         public void StopPlaying()
@@ -33,6 +34,7 @@ namespace Innocence
             {
                 GameManager.instance.StopTimelinePlaying();
                 Debug.Log("PlayableDirector named " + aDirector.name + " is now stopped.");
+                IsPlaying = false;
             }
         }
 
@@ -42,6 +44,7 @@ namespace Innocence
             if (currentDirector == null)
                 SetMainDirector();
 
+            IsPlaying = true;
             currentDirector.Play();
         }
         public void Play(TimelineAsset timelineAsset)
@@ -49,6 +52,7 @@ namespace Innocence
             if (currentDirector == null)
                 SetMainDirector();
 
+            IsPlaying = true;
             currentDirector.playableAsset = timelineAsset;
             currentDirector.Play();
         }

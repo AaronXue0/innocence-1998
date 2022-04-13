@@ -7,9 +7,13 @@ public class GameplayActivator : MonoBehaviour
     [SerializeField]
     private GameObject levelGO;
 
+    private void Awake()
+    {
+        levelGO.SetActive(false);
+    }
+
     private void OnMouseDown()
     {
-        Debug.Log("aosfpjsop");
         levelGO.SetActive(true);
         BagManager.Instance.SwitchBtnActive(false);
     }

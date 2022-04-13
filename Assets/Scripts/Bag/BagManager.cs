@@ -41,21 +41,38 @@ public class BagManager : MonoBehaviour
     [SerializeField]
     private Animator bagAnimator;
 
+    private AudioSource audioSource;
     private List<ItemBox> itemBoxs;
     private int focusIndex;
 
     public void SwitchBtnActive(bool state) => bagSwitchBtn.SetActive(state);
+    public void OnSceneLoadeed(string scene)
+    {
+        switch (scene)
+        {
+            case "MainMenu":
+                SwitchBtnActive(false);
+                break;
+            default:
+                SwitchBtnActive(true);
+                break;
+        }
+    }
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (Instance == null)
+            Instance = this;
+    }
 
     private void Start()
     {
-        if (Instance == null)
-            Initialize();
+        Initialize();
     }
 
     private void Initialize()
     {
-        Instance = this;
-
         Enable = true;
 
         itemBoxs = new List<ItemBox>();
@@ -214,6 +231,13 @@ public class BagManager : MonoBehaviour
     public void ObtainedItem(int itemID)
     {
         Debug.Log("Obtain");
+        AudioClip clip = GetItem(itemID).onGetSound;
+        Debug.Log(clip);
+        if (clip != null)
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
         RefreshItems();
         CheckItem(itemID);
     }

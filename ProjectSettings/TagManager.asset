@@ -54,3 +54,6 @@ TagManager:
   - name: foreground
     uniqueID: 3463006567
     locked: 0
+  - name: mouse
+    uniqueID: 3709429259
+    locked: 0

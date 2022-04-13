@@ -37,7 +37,7 @@ namespace Innocence
 
         private void OnEnable()
         {
-            SetPosition(GameManager.instance.GetPlayerPos());
+            // SetPosition(GameManager.instance.GetPlayerPos());
         }
 
         public void SetPosition(Vector2 position)

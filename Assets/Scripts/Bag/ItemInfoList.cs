@@ -12,8 +12,8 @@ public class ItemInfoList : ScriptableObject
     {
         get
         {
+            Debug.Log(GameManager.instance);
             Bag bag = GameManager.instance.GetBag;
-            List<ItemInfo> inBagItems = new List<ItemInfo>();
             return bag.GetItemsID();
         }
     }
