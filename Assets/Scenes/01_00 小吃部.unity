@@ -926,7 +926,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.889181, y: 1.6191995, z: -10}
+  m_LocalPosition: {x: 8.616901, y: 1.621269, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -2940,7 +2940,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7297268, y: 1.0868521, z: 0}
+  m_LocalPosition: {x: 0.0020065308, y: 1.0847826, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -3632,7 +3632,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2041513077
   m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: db23d704585a61348a2133e853a7918d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4199,6 +4199,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8982eae7a95a24630a09f2890a898496,
+        type: 2}
+    - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4871303133452370217, guid: 8982eae7a95a24630a09f2890a898496,
+        type: 2}
     - target: {fileID: 1464018917162359126, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_RootOrder
