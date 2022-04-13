@@ -63,13 +63,16 @@ public class BagManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         if (Instance == null)
-            Initialize();
+            Instance = this;
+    }
+
+    private void Start()
+    {
+        Initialize();
     }
 
     private void Initialize()
     {
-        Instance = this;
-
         Enable = true;
 
         itemBoxs = new List<ItemBox>();
