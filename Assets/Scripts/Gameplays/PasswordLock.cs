@@ -12,9 +12,6 @@ namespace Innocence
         [SerializeField] List<int> passwords = new List<int>();
         [SerializeField] BoxCollider2D child;
 
-        [Header("Scene GameObject")]
-        [SerializeField] GameObject returnButton;
-
         private float closeDuration = 1, closeDurationCounter = 0;
 
         #region Override
@@ -54,6 +51,7 @@ namespace Innocence
 
                 if (hit && Input.GetMouseButtonDown(0))
                 {
+                    Debug.Log(hit.collider.name);
                     if (hit.collider == child)
                     {
                         CloseGameplay();
