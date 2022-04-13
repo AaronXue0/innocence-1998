@@ -136,7 +136,7 @@ namespace Innocence
         #endregion
 
         #region Timeline
-        public bool IsTimelinePlaying { get { return textPlayer.IsTimelinePlaying; } }
+        public bool IsTimelinePlaying { get { return timeplyer.IsPlaying; } }
 
         public void SetMainDirector() => timeplyer.SetMainDirector();
         public void Play() => timeplyer.Play();
