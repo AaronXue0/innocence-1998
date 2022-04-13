@@ -17,8 +17,6 @@ namespace Innocence
 
         private float closeDuration = 1, closeDurationCounter = 0;
 
-        private bool isInAnimation = false;
-
         #region Override
         public override void GameplaySetup()
         {
@@ -43,6 +41,10 @@ namespace Innocence
         private void OnEnable()
         {
             closeDurationCounter = 0;
+        }
+        private void Start()
+        {
+            GameplaySetup();
         }
         public void Update()
         {
@@ -70,12 +72,6 @@ namespace Innocence
             gameObject.SetActive(false);
             BagManager.Instance.SwitchBtnActive(true);
         }
-
-        public void AnimationFinished()
-        {
-            isInAnimation = false;
-        }
-
         public void CheckPassword()
         {
             bool isCorrect = true;
