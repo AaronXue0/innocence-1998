@@ -22,6 +22,9 @@ namespace CustomDrag
         private RectTransform draggingObjectRect;
         private Image draggingObjectImage;
         private AudioSource audioSource;
+        private string currentEvent;
+
+        private Material mat;
 
         private void Awake()
         {
@@ -36,6 +39,7 @@ namespace CustomDrag
                 draggingObjectRect = draggingObject.GetComponent<RectTransform>();
                 draggingObjectImage = draggingObject.GetComponent<Image>();
                 audioSource = GetComponent<AudioSource>();
+                mat = draggingObjectImage.material;
             }
         }
 
@@ -44,7 +48,7 @@ namespace CustomDrag
             if (IsDragging) Dragging();
         }
 
-        public void StartDrag(Sprite sprite)
+        public void StartDrag(Sprite sprite, string eventName)
         {
             if (Enable)
             {
@@ -53,6 +57,7 @@ namespace CustomDrag
                 draggingObjectRect.anchoredPosition = InputManager.Instance.GetMousePositionInUI(dragCanvas.sizeDelta);
                 draggingObject.SetActive(true);
                 IsDragging = true;
+                currentEvent = eventName;
             }
         }
 
@@ -65,11 +70,25 @@ namespace CustomDrag
                 draggingObject.SetActive(false);
                 IsDragging = false;
             }
+
+            if (Movement.instance != null)
+                Movement.isLocked = false;
         }
 
         private void Dragging()
         {
             draggingObjectRect.anchoredPosition = InputManager.Instance.GetMousePositionInUI(dragCanvas.sizeDelta);
+
+            if (Movement.instance != null)
+                Movement.isLocked = true;
+
+            string shaderName = "PIXELATE_ON";
+            if (IsMatchTarget(currentEvent))
+            {
+                mat.EnableKeyword(shaderName);
+            }
+            else
+                mat.DisableKeyword(shaderName);
         }
 
         private bool IsMatchTarget(string eventName)

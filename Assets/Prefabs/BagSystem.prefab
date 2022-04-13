@@ -513,6 +513,10 @@ MonoBehaviour:
   bagScrollRect: {fileID: 2358967255727736078}
   itemContent: {fileID: 2358967255702604531}
   itemContentRect: {fileID: 2358967255702604531}
+  bagSwitchBtn: {fileID: 0}
+  display: {fileID: 0}
+  checkImg: {fileID: 0}
+  bagAnimator: {fileID: 0}
 --- !u!1 &2358967257100516313
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,13 +823,14 @@ GameObject:
   - component: {fileID: 8971196719517932321}
   - component: {fileID: 8971196719517932327}
   - component: {fileID: 8971196719517932326}
+  - component: {fileID: 7443973710253439004}
   m_Layer: 5
   m_Name: DraggingObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8971196719517932321
 RectTransform:
   m_ObjectHideFlags: 0
@@ -882,6 +887,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7443973710253439004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8971196719517932320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee158225ee1e59f4791627785501d950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaderTypes: 0
+  normalStrength: 5
+  normalSmoothing: 1
+  computingNormal: 0
 --- !u!1 &8971196719601640838
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,4 +955,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragCanvas: {fileID: 2358967257644505368}
   draggingObject: {fileID: 8971196719517932320}
-  targetList: {fileID: 11400000, guid: 804f910113c57ff41967ef700b061a42, type: 2}
+  targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 0

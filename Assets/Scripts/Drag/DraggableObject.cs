@@ -14,7 +14,7 @@ namespace CustomDrag
             if (enable)
             {
                 IsDragging = true;
-                DragManager.Instance.StartDrag(sprite);
+                DragManager.Instance.StartDrag(sprite, eventName);
                 Hide();
             }
         }
