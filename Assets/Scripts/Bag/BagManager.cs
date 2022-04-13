@@ -46,14 +46,22 @@ public class BagManager : MonoBehaviour
     private int focusIndex;
 
     public void SwitchBtnActive(bool state) => bagSwitchBtn.SetActive(state);
+    public void OnSceneLoadeed(string scene)
+    {
+        switch (scene)
+        {
+            case "MainMenu":
+                SwitchBtnActive(false);
+                break;
+            default:
+                SwitchBtnActive(true);
+                break;
+        }
+    }
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-    }
-
-    private void Start()
-    {
         if (Instance == null)
             Initialize();
     }

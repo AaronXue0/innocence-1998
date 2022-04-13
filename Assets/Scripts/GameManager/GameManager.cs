@@ -86,7 +86,9 @@ namespace Innocence
             audioPlayer.ChangeMusicDectector(scene.name);
             gameData.SetAllStatesInScene();
 
-            switch (scene.name)
+            BagManager.Instance.OnSceneLoadeed(currentScene);
+
+            switch (currentScene)
             {
                 // Scene that player ables to move
                 case "01_00 小吃部":
