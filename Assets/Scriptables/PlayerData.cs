@@ -15,6 +15,6 @@ namespace Innocence
     public class SceneSpwanPos
     {
         public Vector2 firstPos;
-        public Vector2 currentPos;
+        public Vector2 currentSpwanPos { get; set; }
     }
 }

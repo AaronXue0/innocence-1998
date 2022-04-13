@@ -15,7 +15,6 @@ namespace Innocence
         [HideInInspector]
         [SerializeField] LightProp[] lightProps;
         [SerializeField] PlayerData playerData;
-        [SerializeField] Vector2[] spawnPoints;
 
         public System.Action<int> onProgressChanged;
         public int progress { get { return gameDatas.progress; } set { gameDatas.progress = value; } }
@@ -38,10 +37,13 @@ namespace Innocence
             }
         }
 
-        #region Getter
         #region PlayerData
         public PlayerData GetPlayerData() => playerData;
-        public Vector2 GetPlayerPos() => spawnPoints[gameDatas.progress];
+        public Vector2 GetPlayerPos(int index) => playerData.sceneSpwanPos[index].currentSpwanPos;
+        public void SavePlayerPos(int index, Vector2 pos)
+        {
+            playerData.sceneSpwanPos[index].currentSpwanPos = pos;
+        }
         #endregion
 
         #region Item
@@ -55,7 +57,6 @@ namespace Innocence
         #region Light
         public LightData GetLightData(int id) => lightDatas.ToList().Find(x => x.id == id);
         public LightProp GetLightProp(int id) => lightProps.ToList().Find(x => x.id == id);
-        #endregion
         #endregion
 
         #region APIs
@@ -88,6 +89,11 @@ namespace Innocence
 
             gameDatas.progress = 0;
             gameDatas.chapter = 0;
+
+            foreach (SceneSpwanPos sceneSpwanPos in playerData.sceneSpwanPos)
+            {
+                sceneSpwanPos.currentSpwanPos = sceneSpwanPos.firstPos;
+            }
 
             bag.Reset();
             BagManager.Instance.RefreshItems();

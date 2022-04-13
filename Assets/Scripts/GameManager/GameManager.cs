@@ -79,7 +79,16 @@ namespace Innocence
             if (TimelineProp.instance != null)
                 TimelineProp.instance.Invoke(newProgress);
         }
-        void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        private void BeforeSceneChanging(string scene)
+        {
+            switch (scene)
+            {
+                case "01_00 小吃部":
+                    gameData.SavePlayerPos(0, Movement.instance.transform.position);
+                    break;
+            }
+        }
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             Debug.Log("Scene loaded: " + scene.name);
             currentScene = scene.name;
@@ -92,13 +101,19 @@ namespace Innocence
             {
                 // Scene that player ables to move
                 case "01_00 小吃部":
+                    if (Movement.instance)
+                        Movement.instance.SetPosition(gameData.GetPlayerPos(0));
                     break;
             }
         }
         #endregion
 
         #region Scene
-        public void ChangeScene(string name) => sceneTransition.ChangeScene(name);
+        public void ChangeScene(string name)
+        {
+            BeforeSceneChanging(currentScene);
+            sceneTransition.ChangeScene(name);
+        }
         #endregion
 
         #region Menu
@@ -128,8 +143,7 @@ namespace Innocence
 
         public Bag GetBag { get { return gameData.GetBag(); } }
 
-        public Vector2 GetPlayerPos() => gameData.GetPlayerPos();
-
+        // public Vector2 GetPlayerPos() => gameData.GetPlayerPos();
         public PlayerData GetPlayerData() => gameData.GetPlayerData();
         public GameItem GetGameItem(int id) => gameData.GetGameItem(id);
         public ItemContent GetItemContent(int id) => gameData.GetItemContent(id);
