@@ -150,7 +150,7 @@ PlayableDirector:
   m_GameObject: {fileID: 5832162}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 787d8ce772966498ba802947d84f5450, type: 2}
+  m_PlayableAsset: {fileID: 0}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -928,7 +928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5410919, y: 0.8900001, z: -10}
+  m_LocalPosition: {x: 8.618908, y: 2.0800002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -1489,8 +1489,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -2600,8 +2600,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -2995,8 +2995,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -3351,8 +3351,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -3710,13 +3710,13 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
   hintSR: {fileID: 1767091416}
-  distance: 5
+  distance: 6
 --- !u!61 &1554064509
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4237,8 +4237,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -4709,8 +4709,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -4800,8 +4800,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0

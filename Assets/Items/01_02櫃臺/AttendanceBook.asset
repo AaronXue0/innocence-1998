@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AttendanceBook
   m_EditorClassIdentifier: 
   id: 9
-  currentState: 0
+  currentState: 1
   stateContents:
   - sprite: {fileID: 0}
     animtorTriggerName: 
@@ -21,12 +21,14 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 3
-    nestItemsID: 
+    nestItemsID: 090000000a0000001000000011000000
+    afterGetAllNestItemsAndSetItemsState:
+    - id: 3
+      newState: 2
     targetSceneName: 
-    awardItemsID: 09000000
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 0
+    completed: 1
   - sprite: {fileID: 0}
     animtorTriggerName: 
     isActive: 0
@@ -34,8 +36,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 0
+    completed: 1

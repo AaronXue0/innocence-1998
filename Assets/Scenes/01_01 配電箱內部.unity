@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -945,7 +945,7 @@ MonoBehaviour:
   isObtainedItem: 1
   obtainedItemAndSetStates:
   - id: 4
-    newStaet: 4
+    newState: 4
   item:
     sprite: {fileID: 0}
     animtorTriggerName: 
@@ -954,8 +954,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -1143,8 +1143,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -1276,10 +1276,14 @@ MonoBehaviour:
   completeProgress: 8
   autoComplete: 0
   completeObjectState: -1
-  coldDuration: 1
+  coldDuration: 0.5
   setItems:
   - id: 8
     state: 1
+  - id: 0
+    state: 2
+  - id: 1
+    state: 2
   setLights:
   - id: 100
     state: 2

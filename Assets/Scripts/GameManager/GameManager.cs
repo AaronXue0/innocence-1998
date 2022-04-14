@@ -72,6 +72,18 @@ namespace Innocence
         #endregion
 
         #region Listener
+        public void OnTimelineFinished()
+        {
+            switch (currentScene)
+            {
+                case "01_00 小吃部":
+                    gameData.SavePlayerPos(0, Movement.instance.transform.position);
+                    break;
+                case "01_50 電話亭過場":
+                    gameData.SavePlayerPos(1, Movement.instance.transform.position);
+                    break;
+            }
+        }
         public void OnProgressChanged(int newProgress)
         {
             Debug.Log("Progress changed: " + newProgress);
@@ -85,6 +97,9 @@ namespace Innocence
             {
                 case "01_00 小吃部":
                     gameData.SavePlayerPos(0, Movement.instance.transform.position);
+                    break;
+                case "01_50 電話亭過場":
+                    gameData.SavePlayerPos(1, Movement.instance.transform.position);
                     break;
             }
         }
@@ -103,6 +118,10 @@ namespace Innocence
                 case "01_00 小吃部":
                     if (Movement.instance)
                         Movement.instance.SetPosition(gameData.GetPlayerPos(0));
+                    break;
+                case "01_50 電話亭過場":
+                    if (Movement.instance)
+                        Movement.instance.SetPosition(gameData.GetPlayerPos(1));
                     break;
             }
         }

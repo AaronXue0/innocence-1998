@@ -33,6 +33,7 @@ namespace Innocence
             if (currentDirector == aDirector)
             {
                 GameManager.instance.StopTimelinePlaying();
+                GameManager.instance.OnTimelineFinished();
                 Debug.Log("PlayableDirector named " + aDirector.name + " is now stopped.");
                 IsPlaying = false;
             }

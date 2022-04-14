@@ -25,8 +25,8 @@ namespace Innocence
         public Dialogues dialogues = null;
         public FinishedResult finishedResult;
         public int[] nestItemsID;
+        public SetItemStateContent[] afterGetAllNestItemsAndSetItemsState;
         public string targetSceneName;
-        public int[] awardItemsID;
 
         [Header("UI")]
         public Sprite hintSprite;

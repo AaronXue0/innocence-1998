@@ -90,6 +90,7 @@ namespace Innocence
                     isClickOnUI = true;
                     animWalk.SetBool("move", false);
                     targetPos = transform.position;
+                    moving = false;
                     return;
                 }
                 Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
