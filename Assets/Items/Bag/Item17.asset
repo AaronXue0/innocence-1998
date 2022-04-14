@@ -18,4 +18,4 @@ MonoBehaviour:
   onCheckSprite: {fileID: 21300000, guid: e01bf6a26bfe4b84aad518e0e4dfe11f, type: 3}
   onGetSprite: {fileID: 21300000, guid: abdbb26dbe122aa418bfb0cec3bcd35b, type: 3}
   onGetSound: {fileID: 0}
-  onUsedSound: {fileID: 0}
+  onUsedSound: {fileID: 8300000, guid: 87ea35ef18ef8f24abf33b1f794122ab, type: 3}
