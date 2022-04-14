@@ -2606,7 +2606,7 @@ MonoBehaviour:
     soundClip: {fileID: 0}
     completed: 0
   hintSR: {fileID: 1004533497}
-  distance: 5
+  distance: 3.5
 --- !u!61 &999354274
 BoxCollider2D:
   m_ObjectHideFlags: 0
