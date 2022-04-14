@@ -1495,7 +1495,7 @@ MonoBehaviour:
     soundClip: {fileID: 0}
     completed: 0
   hintSR: {fileID: 1442121188}
-  distance: 3
+  distance: 2.3
 --- !u!61 &552484789
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2606,7 +2606,7 @@ MonoBehaviour:
     soundClip: {fileID: 0}
     completed: 0
   hintSR: {fileID: 1004533497}
-  distance: 3.5
+  distance: 4
 --- !u!61 &999354274
 BoxCollider2D:
   m_ObjectHideFlags: 0
