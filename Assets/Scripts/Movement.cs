@@ -17,6 +17,7 @@ namespace Innocence
         Animator animWalk;
 
         private PlayerData playerData;
+        private bool isClickOnUI = false, isPressing = false;
 
         private void Awake()
         {
@@ -82,15 +83,15 @@ namespace Innocence
                 return;
             }
 
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 if (EventSystem.current.IsPointerOverGameObject())
                 {
+                    isClickOnUI = true;
                     animWalk.SetBool("move", false);
                     targetPos = transform.position;
                     return;
                 }
-
                 Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
                 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 moving = true;

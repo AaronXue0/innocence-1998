@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Innocence
 {
@@ -79,6 +80,11 @@ namespace Innocence
         {
             if (isGameplayItem || isPlaying)
                 return;
+
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
             Debug.Log("onmousedown on: " + name);
 
             if (ableToClick || isObtainedItem)
