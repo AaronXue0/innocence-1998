@@ -13,23 +13,29 @@ MonoBehaviour:
   m_Name: Clock
   m_EditorClassIdentifier: 
   id: 1
-  currentState: 0
+  currentState: 1
   stateContents:
   - sprite: {fileID: 21300000, guid: 65a05d1db134aba409f6e006e60856f9, type: 3}
+    animtorTriggerName: 
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 11400000, guid: 392baa366786140cbaa95d76dca17abe, type: 2}
     finishedResult: 1
     nestItemsID: 000000000100000003000000
+    targetSceneName: 
     awardItemsID: 
     hintSprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
-    completed: 0
+    soundClip: {fileID: 0}
+    completed: 1
   - sprite: {fileID: 21300000, guid: 65a05d1db134aba409f6e006e60856f9, type: 3}
+    animtorTriggerName: 
     isActive: 1
     isClickAble: 0
-    dialogues: {fileID: 11400000, guid: 392baa366786140cbaa95d76dca17abe, type: 2}
+    dialogues: {fileID: 11400000, guid: 779f3fcdd0f4be946b6bc326c7674cef, type: 2}
     finishedResult: 0
     nestItemsID: 000000000100000003000000
+    targetSceneName: 
     awardItemsID: 
     hintSprite: {fileID: 0}
-    completed: 0
+    soundClip: {fileID: 0}
+    completed: 1
