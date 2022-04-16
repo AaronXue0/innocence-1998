@@ -71,8 +71,6 @@ namespace Innocence
         }
         IEnumerator ResetCoroutine(System.Action callback = null)
         {
-            playerData.lastAnimator = "";
-
             foreach (GameItem item in gameItems)
             {
                 item.currentState = 0;
@@ -97,6 +95,8 @@ namespace Innocence
 
             bag.Reset();
             BagManager.Instance.RefreshItems();
+            
+            playerData.lastAnimator = "";
 
             yield return null;
 
