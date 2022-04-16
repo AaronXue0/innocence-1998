@@ -378,7 +378,7 @@ PrefabInstance:
     - target: {fileID: 5816077403754875009, guid: 67dc91f76904b774f9b3004eb908ad5f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 5816077403754875009, guid: 67dc91f76904b774f9b3004eb908ad5f,
         type: 3}
@@ -976,8 +976,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -1237,8 +1237,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -1537,7 +1537,7 @@ PrefabInstance:
     - target: {fileID: 5816077403754875009, guid: 67dc91f76904b774f9b3004eb908ad5f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 5816077403754875009, guid: 67dc91f76904b774f9b3004eb908ad5f,
         type: 3}
@@ -2194,8 +2194,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -2899,7 +2899,7 @@ PrefabInstance:
     - target: {fileID: 5816077403754875009, guid: 67dc91f76904b774f9b3004eb908ad5f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5816077403754875009, guid: 67dc91f76904b774f9b3004eb908ad5f,
         type: 3}
@@ -3270,7 +3270,7 @@ PrefabInstance:
     - target: {fileID: 5816077403754875009, guid: 67dc91f76904b774f9b3004eb908ad5f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5816077403754875009, guid: 67dc91f76904b774f9b3004eb908ad5f,
         type: 3}
@@ -3499,6 +3499,7 @@ MonoBehaviour:
   - {fileID: 887191433}
   passwords: 00000000050000000100000000000000
   child: {fileID: 1702686482}
+  targetItems: 
 --- !u!1 &1966456962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3722,8 +3723,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
