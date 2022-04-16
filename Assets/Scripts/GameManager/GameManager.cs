@@ -174,6 +174,7 @@ namespace Innocence
         public void SetLightState(int id, int state) => gameData.SetLightState(id, state);
         public void SetItemComplete(int id) => gameData.SetItemComplete(id);
         public void ObtainItem(int id, bool doseCheckItem = true) => gameData.ObtainItem(id, doseCheckItem);
+        public void ObtainNoneInstanceItem(int id, bool doseCheckItem = true) => gameData.ObtainNoneInstanceItem(id, doseCheckItem);
         public void UsaItem(int id) => gameData.ItemUsage(id);
 
         public Bag GetBag { get { return gameData.GetBag(); } }
