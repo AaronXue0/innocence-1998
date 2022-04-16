@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using CustomInput;
@@ -130,11 +131,21 @@ namespace CustomDrag
                 {
                     audioSource.clip = info.onUsedSound;
                     audioSource.Play();
+                    StartCoroutine(WaitForPlay());
                 }
 
                 GameManager.instance.UsaItem(itemID);
                 BagManager.Instance.DeleteItem(itemID);
             }
+        }
+
+        IEnumerator WaitForPlay()
+        {
+            while (audioSource.isPlaying)
+            {
+                yield return null;
+            }
+            audioSource.clip = null;
         }
     }
 }

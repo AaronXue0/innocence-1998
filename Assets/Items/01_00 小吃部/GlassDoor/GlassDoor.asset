@@ -13,23 +13,41 @@ MonoBehaviour:
   m_Name: GlassDoor
   m_EditorClassIdentifier: 
   id: 3
-  currentState: 1
+  currentState: 0
   stateContents:
   - sprite: {fileID: 0}
+    animtorTriggerName: 
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 11400000, guid: 4fea626e28f6a4fb4b36a58020e329e8, type: 2}
     finishedResult: 1
     nestItemsID: 000000000100000003000000
-    awardItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: 
     hintSprite: {fileID: 0}
-    completed: 1
+    soundClip: {fileID: 0}
+    completed: 0
   - sprite: {fileID: 0}
+    animtorTriggerName: 
     isActive: 1
     isClickAble: 0
     dialogues: {fileID: 11400000, guid: 4fea626e28f6a4fb4b36a58020e329e8, type: 2}
     finishedResult: 0
     nestItemsID: 000000000100000003000000
-    awardItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: 
     hintSprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
-    completed: 1
+    soundClip: {fileID: 0}
+    completed: 0
+  - sprite: {fileID: 0}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 11400000, guid: 4fea626e28f6a4fb4b36a58020e329e8, type: 2}
+    finishedResult: 2
+    nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: "01_50 \u96FB\u8A71\u4EAD\u904E\u5834"
+    hintSprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
+    soundClip: {fileID: 0}
+    completed: 0

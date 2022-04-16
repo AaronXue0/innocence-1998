@@ -22,8 +22,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -34,8 +34,20 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 2
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: "01_02 \u6AC3\u53F0"
-    awardItemsID: 
+    hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
+    completed: 0
+  - sprite: {fileID: 0}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 0
+    dialogues: {fileID: 0}
+    finishedResult: 2
+    nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: "01_02 \u6AC3\u53F0"
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0

@@ -7,6 +7,7 @@ namespace Innocence
     public class LightSwitch : IGameplay
     {
         [SerializeField] GameObject returnButton;
+        [SerializeField] BoxCollider2D[] switches;
 
         Animator animator;
 
@@ -23,6 +24,10 @@ namespace Innocence
         public override void PuzzleSolvedCallback()
         {
             returnButton.SetActive(true);
+            foreach (BoxCollider2D collider2D in switches)
+            {
+                collider2D.enabled = false;
+            }
         }
         #endregion
 
@@ -39,6 +44,10 @@ namespace Innocence
             else
             {
                 isSolved = true;
+                foreach (BoxCollider2D collider2D in switches)
+                {
+                    collider2D.enabled = false;
+                }
             }
         }
         private void Update()

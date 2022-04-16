@@ -17,13 +17,13 @@ MonoBehaviour:
   stateContents:
   - sprite: {fileID: 0}
     animtorTriggerName: 
-    isActive: 0
-    isClickAble: 0
+    isActive: 1
+    isClickAble: 1
     dialogues: {fileID: 0}
-    finishedResult: 0
+    finishedResult: 2
     nestItemsID: 
-    targetSceneName: 
-    awardItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: "01_51 \u516C\u5171\u96FB\u8A71\u7279\u5BEB"
     hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
     soundClip: {fileID: 0}
     completed: 0
@@ -34,8 +34,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Innocence
 {
@@ -10,7 +11,7 @@ namespace Innocence
         public int id;
         public bool isGameplayItem = false;
         public bool isObtainedItem = false;
-        public ObtainedItemAndSetStates[] obtainedItemAndSetStates;
+        public SetItemStateContent[] obtainedItemAndSetStates;
 
         [HideInInspector]
         public ItemContent item;
@@ -79,6 +80,11 @@ namespace Innocence
         {
             if (isGameplayItem || isPlaying)
                 return;
+
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
             Debug.Log("onmousedown on: " + name);
 
             if (ableToClick || isObtainedItem)
@@ -101,9 +107,9 @@ namespace Innocence
                     break;
                 case FinishedResult.GetItem:
                     GameManager.instance.ObtainItem(id);
-                    foreach (ObtainedItemAndSetStates o in obtainedItemAndSetStates)
+                    foreach (SetItemStateContent o in obtainedItemAndSetStates)
                     {
-                        GameManager.instance.SetItemState(o.id, o.newStaet);
+                        GameManager.instance.SetItemState(o.id, o.newState);
                     }
                     break;
                 case FinishedResult.None:
@@ -122,9 +128,9 @@ namespace Innocence
     }
 
     [System.Serializable]
-    public class ObtainedItemAndSetStates
+    public class SetItemStateContent
     {
         public int id;
-        public int newStaet;
+        public int newState;
     }
 }

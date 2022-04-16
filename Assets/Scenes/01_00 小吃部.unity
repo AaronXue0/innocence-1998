@@ -928,7 +928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.604486, y: 2.0800066, z: -10}
+  m_LocalPosition: {x: 8.618908, y: 2.0800002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -1489,13 +1489,13 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
   hintSR: {fileID: 1442121188}
-  distance: 3
+  distance: 2.3
 --- !u!61 &552484789
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2600,13 +2600,13 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
   hintSR: {fileID: 1004533497}
-  distance: 5
+  distance: 4
 --- !u!61 &999354274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2995,8 +2995,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -3171,7 +3171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.014421463, y: -0.0000064373016, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -3351,8 +3351,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -3710,13 +3710,13 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
   hintSR: {fileID: 1767091416}
-  distance: 5
+  distance: 6
 --- !u!61 &1554064509
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4237,8 +4237,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -4358,7 +4358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1767091415
 Transform:
   m_ObjectHideFlags: 0
@@ -4367,7 +4367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767091414}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.358, y: -0.59, z: 0}
+  m_LocalPosition: {x: -0.358, y: 0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1554064510}
@@ -4430,6 +4430,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 27885978, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 27885979, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125312468, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a32dea0875e02d64396cd2139616741b,
+        type: 3}
+    - target: {fileID: 577011395360335691, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -413
+      objectReference: {fileID: 0}
     - target: {fileID: 1464018917162359126, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_RootOrder
@@ -4696,8 +4714,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -4787,8 +4805,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -5311,6 +5329,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 232233079236132566, guid: 3ff9772071037cc46ba3b29e452ed7f5,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 232233079568065056, guid: 3ff9772071037cc46ba3b29e452ed7f5,
         type: 3}
       propertyPath: m_Name

@@ -140,11 +140,41 @@ namespace Innocence
         public void ObtainItem(int id)
         {
             GameItem item = GetGameItem(id);
+            int[] nestItems = item.GetContent.nestItemsID;
+            SetItemStateContent[] afterGetAllNestItemsAndSetItemsState = item.GetContent.afterGetAllNestItemsAndSetItemsState;
+
             item.GetContent.completed = true;
             item.AddCurrentState();
             SetItemState(id, item.currentState);
+            item.GetContent.completed = true;
+
+            CheckNestItemsObtained(nestItems, afterGetAllNestItemsAndSetItemsState);
+
             bag.StoreItem(item);
             bagManager.ObtainedItem(id);
+        }
+        public void CheckNestItemsObtained(int[] nestItems, SetItemStateContent[] afterGetAllNestItemsAndSetItemsState)
+        {
+            bool allItemsGet = true;
+            foreach (int id in nestItems)
+            {
+                ItemContent item = GetGameItem(id).GetContent;
+                if (item.completed)
+                {
+                    continue;
+                }
+
+                allItemsGet = false;
+                break;
+            }
+
+            if (allItemsGet)
+            {
+                foreach (SetItemStateContent s in afterGetAllNestItemsAndSetItemsState)
+                {
+                    GetGameItem(s.id).currentState = s.newState;
+                }
+            }
         }
         public void ItemUsage(int id)
         {
