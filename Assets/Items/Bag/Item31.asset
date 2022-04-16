@@ -9,21 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0db39359815e8439a984a7c2eb22bd76, type: 3}
+  m_Script: {fileID: 11500000, guid: dd095d4f5b07d694dad028ed78c22e00, type: 3}
   m_Name: Item31
   m_EditorClassIdentifier: 
   id: 31
-  currentState: 0
-  stateContents:
-  - sprite: {fileID: 21300000, guid: abdbb26dbe122aa418bfb0cec3bcd35b, type: 3}
-    animtorTriggerName: 
-    isActive: 0
-    isClickAble: 0
-    dialogues: {fileID: 0}
-    finishedResult: 0
-    nestItemsID: 
-    afterGetAllNestItemsAndSetItemsState: []
-    targetSceneName: 
-    hintSprite: {fileID: 0}
-    soundClip: {fileID: 0}
-    completed: 0
+  canDrag: 0
+  onBagSprite: {fileID: 21300000, guid: abdbb26dbe122aa418bfb0cec3bcd35b, type: 3}
+  onCheckSprite: {fileID: 21300000, guid: e01bf6a26bfe4b84aad518e0e4dfe11f, type: 3}
+  onGetSprite: {fileID: 21300000, guid: e01bf6a26bfe4b84aad518e0e4dfe11f, type: 3}
+  onGetSound: {fileID: 0}
+  onUsedSound: {fileID: 0}

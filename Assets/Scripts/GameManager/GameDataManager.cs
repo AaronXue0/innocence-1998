@@ -95,7 +95,7 @@ namespace Innocence
 
             bag.Reset();
             BagManager.Instance.RefreshItems();
-            
+
             playerData.lastAnimator = "";
 
             yield return null;
@@ -137,7 +137,7 @@ namespace Innocence
         {
             return bag.CheckInStorage(id);
         }
-        public void ObtainItem(int id)
+        public void ObtainItem(int id, bool doseCheckItem = true)
         {
             GameItem item = GetGameItem(id);
             int[] nestItems = item.GetContent.nestItemsID;
@@ -151,7 +151,7 @@ namespace Innocence
             CheckNestItemsObtained(nestItems, afterGetAllNestItemsAndSetItemsState);
 
             bag.StoreItem(item);
-            bagManager.ObtainedItem(id);
+            bagManager.ObtainedItem(id, doseCheckItem);
         }
         public void CheckNestItemsObtained(int[] nestItems, SetItemStateContent[] afterGetAllNestItemsAndSetItemsState)
         {

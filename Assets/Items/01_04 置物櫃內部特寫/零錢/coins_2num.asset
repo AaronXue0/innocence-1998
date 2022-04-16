@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec676d6766563422b9b73e75f444134f, type: 3}
-  m_Name: PlayerData
+  m_Script: {fileID: 11500000, guid: 0db39359815e8439a984a7c2eb22bd76, type: 3}
+  m_Name: coins_2num
   m_EditorClassIdentifier: 
-  lastAnimator: 
-  sceneSpwanPos:
-  - firstPos: {x: 8.63, y: -0.12}
-  - firstPos: {x: -15.95489, y: -3.53}
-  - firstPos: {x: -27.03, y: -3.71}
+  id: 0
+  currentState: 0
+  stateContents: []
