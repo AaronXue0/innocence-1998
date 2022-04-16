@@ -11,6 +11,7 @@ namespace Innocence
         [SerializeField] bool isTestMode = false;
         [SerializeField] float timeSpeed = 1f;
         [SerializeField] GameObject bagObject;
+        [SerializeField] GameObject resetPanel;
 
         [HideInInspector]
         public string currentScene;
@@ -59,10 +60,11 @@ namespace Innocence
             }
             if (isTestMode && Input.GetKeyDown(KeyCode.R))
             {
+                resetPanel.SetActive(true);
                 audioPlayer.bgmSource.clip = null;
                 timeplyer.StopPlaying();
                 textPlayer.StopTextPlaying();
-                gameData.Reset(() => sceneTransition.ChangeScene("01_00 小吃部"));
+                gameData.Reset(() => sceneTransition.ChangeScene("01_00 小吃部", () => resetPanel.SetActive(false)));
             }
         }
         void OnDisable()

@@ -98,6 +98,11 @@ namespace Innocence
 
             playerData.lastAnimator = "";
 
+            foreach (SceneSpwanPos pos in playerData.sceneSpwanPos)
+            {
+                pos.currentSpwanPos = pos.firstPos;
+            }
+
             yield return null;
 
             if (callback != null)

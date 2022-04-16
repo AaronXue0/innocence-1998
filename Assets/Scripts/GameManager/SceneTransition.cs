@@ -27,6 +27,10 @@ namespace Innocence
         {
             Fade(() => SceneManager.LoadScene(sceneName), delegate { });
         }
+        public void ChangeScene(string sceneName, Action callback)
+        {
+            Fade(() => SceneManager.LoadScene(sceneName), callback);
+        }
 
         #region LoadSceneAdditive
         #endregion
