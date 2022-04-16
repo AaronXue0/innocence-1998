@@ -22,7 +22,6 @@ namespace CustomDrag
         private Camera mainCamera;
         private RectTransform draggingObjectRect;
         private Image draggingObjectImage;
-        private AudioSource audioSource;
         private string currentEvent;
 
         private Material mat;
@@ -39,7 +38,6 @@ namespace CustomDrag
                 draggingObject.SetActive(false);
                 draggingObjectRect = draggingObject.GetComponent<RectTransform>();
                 draggingObjectImage = draggingObject.GetComponent<Image>();
-                audioSource = GetComponent<AudioSource>();
                 mat = draggingObjectImage.material;
             }
         }
@@ -141,23 +139,12 @@ namespace CustomDrag
                 ItemInfo info = BagManager.Instance.GetItem(itemID);
                 if (info.onUsedSound != null)
                 {
-                    StartCoroutine(WaitForPlay(info));
+                    GameManager.instance.PlaySFX(info.onUsedSound);
                 }
 
                 GameManager.instance.UsaItem(itemID);
                 BagManager.Instance.DeleteItem(itemID);
             }
-        }
-
-        IEnumerator WaitForPlay(ItemInfo info)
-        {
-            audioSource.clip = info.onUsedSound;
-            audioSource.Play();
-            while (audioSource.isPlaying)
-            {
-                yield return null;
-            }
-            audioSource.clip = null;
         }
     }
 }

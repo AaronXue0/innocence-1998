@@ -187,6 +187,10 @@ namespace Innocence
         public LightData GetLightData(int id) => gameData.GetLightData(id);
         #endregion
 
+        #region SFX
+        public void PlaySFX(AudioClip clip) => audioPlayer.PlaySFX(clip);
+        #endregion
+
         #region Timeline
         public bool IsTimelinePlaying { get { return timeplyer.IsPlaying; } }
 

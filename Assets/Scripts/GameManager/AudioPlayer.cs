@@ -9,6 +9,26 @@ namespace Innocence
         public AudioSource bgmSource;
         public AudioContent[] contents;
 
+        #region SoundEffects
+        public void PlaySFX(AudioClip clip)
+        {
+            StartCoroutine(SFXCoroutine(clip));
+        }
+        IEnumerator SFXCoroutine(AudioClip clip)
+        {
+            AudioSource source = gameObject.AddComponent<AudioSource>();
+            source.clip = clip;
+            source.Play();
+
+            while (source.isPlaying)
+            {
+                yield return null;
+            }
+
+            Destroy(source);
+        }
+        #endregion
+
         public void ChangeMusicDectector(int progress)
         {
             AudioContent content = contents.ToList().Find(x => x.requiredProgress == progress);

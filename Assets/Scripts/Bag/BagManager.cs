@@ -41,7 +41,7 @@ public class BagManager : MonoBehaviour
     [SerializeField]
     private Animator bagAnimator;
 
-    private AudioSource audioSource;
+    // private AudioSource audioSource;
     private List<ItemBox> itemBoxs;
     private int focusIndex;
 
@@ -61,7 +61,6 @@ public class BagManager : MonoBehaviour
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
         if (Instance == null)
             Instance = this;
     }
@@ -232,12 +231,12 @@ public class BagManager : MonoBehaviour
     {
         Debug.Log("Obtain");
         AudioClip clip = GetItem(itemID).onGetSound;
-        Debug.Log(clip);
+
         if (clip != null)
         {
-            audioSource.clip = clip;
-            audioSource.Play();
+            GameManager.instance.PlaySFX(clip);
         }
+
         RefreshItems();
 
         if (doseCheckItem)
