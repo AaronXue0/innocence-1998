@@ -77,10 +77,16 @@ namespace Innocence
             switch (currentScene)
             {
                 case "01_00 小吃部":
-                    gameData.SavePlayerPos(0, Movement.instance.transform.position);
+                    if (Movement.instance)
+                        gameData.SavePlayerPos(0, Movement.instance.transform.position);
                     break;
                 case "01_50 電話亭過場":
-                    gameData.SavePlayerPos(1, Movement.instance.transform.position);
+                    if (Movement.instance)
+                        gameData.SavePlayerPos(1, Movement.instance.transform.position);
+                    break;
+                case "02_00 騎樓":
+                    if (Movement.instance)
+                        gameData.SavePlayerPos(2, Movement.instance.transform.position);
                     break;
             }
         }
@@ -96,10 +102,16 @@ namespace Innocence
             switch (scene)
             {
                 case "01_00 小吃部":
-                    gameData.SavePlayerPos(0, Movement.instance.transform.position);
+                    if (Movement.instance)
+                        gameData.SavePlayerPos(0, Movement.instance.transform.position);
                     break;
                 case "01_50 電話亭過場":
-                    gameData.SavePlayerPos(1, Movement.instance.transform.position);
+                    if (Movement.instance)
+                        gameData.SavePlayerPos(1, Movement.instance.transform.position);
+                    break;
+                case "02_00 騎樓":
+                    if (Movement.instance)
+                        gameData.SavePlayerPos(2, Movement.instance.transform.position);
                     break;
             }
         }
@@ -122,6 +134,10 @@ namespace Innocence
                 case "01_50 電話亭過場":
                     if (Movement.instance)
                         Movement.instance.SetPosition(gameData.GetPlayerPos(1));
+                    break;
+                case "02_00 騎樓":
+                    if (Movement.instance)
+                        Movement.instance.SetPosition(gameData.GetPlayerPos(2));
                     break;
             }
         }
@@ -157,7 +173,7 @@ namespace Innocence
         public void ItemDialoguesFinished(int id) => gameData.ItemDialoguesFinished(id);
         public void SetLightState(int id, int state) => gameData.SetLightState(id, state);
         public void SetItemComplete(int id) => gameData.SetItemComplete(id);
-        public void ObtainItem(int id) => gameData.ObtainItem(id);
+        public void ObtainItem(int id, bool doseCheckItem = true) => gameData.ObtainItem(id, doseCheckItem);
         public void UsaItem(int id) => gameData.ItemUsage(id);
 
         public Bag GetBag { get { return gameData.GetBag(); } }

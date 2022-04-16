@@ -228,7 +228,7 @@ public class BagManager : MonoBehaviour
         return itemInfoList.GetItemWithID(itemID);
     }
 
-    public void ObtainedItem(int itemID)
+    public void ObtainedItem(int itemID, bool doseCheckItem = true)
     {
         Debug.Log("Obtain");
         AudioClip clip = GetItem(itemID).onGetSound;
@@ -239,7 +239,9 @@ public class BagManager : MonoBehaviour
             audioSource.Play();
         }
         RefreshItems();
-        CheckItem(itemID);
+
+        if (doseCheckItem)
+            CheckItem(itemID);
     }
 
     private IEnumerator GetItemCoroutine(int itemID)
