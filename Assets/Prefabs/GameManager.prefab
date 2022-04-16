@@ -501,7 +501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: db23d704585a61348a2133e853a7918d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a32dea0875e02d64396cd2139616741b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -783,7 +783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -450}
+  m_AnchoredPosition: {x: 0, y: -413}
   m_SizeDelta: {x: 15.75116, y: 653.8522}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &577011395360335685
@@ -1220,6 +1220,9 @@ MonoBehaviour:
   - requiredScene: "01_00 \u5C0F\u5403\u90E8"
     requiredProgress: 0
     clip: {fileID: 8300000, guid: 9b575b7dfd1dec4459ba3ff41ca4cd84, type: 3}
+  - requiredScene: "01_00 \u5C0F\u5403\u90E8"
+    requiredProgress: 9
+    clip: {fileID: 8300000, guid: a648c18617a68a84cbeb3d1f8350ec38, type: 3}
 --- !u!95 &1859662143
 Animator:
   serializedVersion: 3

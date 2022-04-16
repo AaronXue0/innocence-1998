@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Collections;
 using UnityEngine;
 
@@ -40,8 +41,10 @@ namespace Innocence
         }
         public void ChangeMusicDectector(string sceneName)
         {
-            AudioContent content = contents.ToList().Find(x => x.requiredScene == sceneName);
-            Debug.Log("Content: " + content);
+            List<AudioContent> allContents = contents.ToList().FindAll(x => x.requiredScene == sceneName);
+            AudioContent content = allContents.Find(x => x.requiredProgress == GameManager.instance.Progress);
+            // Debug.Log("Content: " + content);
+
             if (content != null)
             {
                 Debug.Log("Change audio by scene");

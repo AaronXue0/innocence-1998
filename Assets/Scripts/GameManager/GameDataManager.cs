@@ -180,6 +180,7 @@ namespace Innocence
                 {
                     GetGameItem(s.id).currentState = s.newState;
                 }
+                gameDatas.progress++;
             }
         }
         public void ItemUsage(int id)
