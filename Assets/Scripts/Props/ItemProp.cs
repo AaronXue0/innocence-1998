@@ -87,15 +87,19 @@ namespace Innocence
             }
             Debug.Log("onmousedown on: " + name);
 
+            if (Movement.instance != null)
+            {
+                Movement.instance.StopMovingInPos();
+            }
+
+            Debug.Log(ableToClick || isObtainedItem);
+
             if (ableToClick || isObtainedItem)
                 ClickEvent();
         }
 
         private void ClickEvent()
         {
-            if (Movement.instance != null)
-                Movement.instance.StopMovingInPos();
-
             isPlaying = true;
 
             Debug.Log("Result: " + item.finishedResult);

@@ -55,6 +55,8 @@ namespace Innocence
         public void StopMovingInPos()
         {
             targetPos = transform.position;
+            animWalk.SetBool("move", false);
+            moving = false;
         }
 
 
