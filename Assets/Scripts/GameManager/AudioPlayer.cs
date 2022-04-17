@@ -51,7 +51,7 @@ namespace Innocence
 
             for (int i = allContents.Count - 1; i >= 0; i--)
             {
-                if (allContents[i].requiredProgress >= GameManager.instance.Progress)
+                if (GameManager.instance.Progress >= allContents[i].requiredProgress)
                 {
                     content = allContents[i];
                     break;

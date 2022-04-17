@@ -1391,7 +1391,7 @@ MonoBehaviour:
   - id: 1
     state: 2
   - id: 12
-    state: 2
+    state: 1
   setLights:
   - id: 100
     state: 2
