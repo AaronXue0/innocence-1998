@@ -24,7 +24,7 @@ MonoBehaviour:
     nestItemsID: 1000000011000000
     afterGetAllNestItemsAndSetItemsState:
     - id: 12
-      newState: 2
+      newState: 4
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
