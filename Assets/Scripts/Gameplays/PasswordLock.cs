@@ -11,7 +11,6 @@ namespace Innocence
         [SerializeField] List<LoopScrollView> loopScrollViews = new List<LoopScrollView>();
         [SerializeField] List<int> passwords = new List<int>();
         [SerializeField] BoxCollider2D child;
-        [SerializeField] int[] targetItems;
 
         private float closeDuration = 1, closeDurationCounter = 0;
 
@@ -46,7 +45,6 @@ namespace Innocence
         }
         private void Update()
         {
-            CheckAllItemsGot();
             if (closeDurationCounter >= closeDuration)
             {
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 32)), Vector2.zero);
@@ -66,19 +64,6 @@ namespace Innocence
             }
         }
         #endregion
-
-        public void CheckAllItemsGot()
-        {
-            foreach (int id in targetItems)
-            {
-                if (GameManager.instance.GetGameItem(id).currentState <= 0)
-                {
-                    return;
-                }
-            }
-
-            GameManager.instance.SetItemState(12, 2);
-        }
 
         public void CloseGameplay()
         {
