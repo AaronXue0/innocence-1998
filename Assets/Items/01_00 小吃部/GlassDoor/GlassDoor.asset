@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GlassDoor
   m_EditorClassIdentifier: 
   id: 3
-  currentState: 0
+  currentState: 1
   stateContents:
   - sprite: {fileID: 0}
     animtorTriggerName: 
@@ -26,7 +26,7 @@ MonoBehaviour:
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 0
+    completed: 1
   - sprite: {fileID: 0}
     animtorTriggerName: 
     isActive: 1
@@ -48,6 +48,6 @@ MonoBehaviour:
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: "01_50 \u96FB\u8A71\u4EAD\u904E\u5834"
-    hintSprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
+    hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
     soundClip: {fileID: 0}
     completed: 0
