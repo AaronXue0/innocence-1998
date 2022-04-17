@@ -10,5 +10,15 @@ namespace Innocence
         {
             GameManager.instance.ChangeScene(name);
         }
+
+        public void NewGame()
+        {
+            GameManager.instance.NewGame();
+        }
+
+        public void ExitGame()
+        {
+            GameManager.instance.ExitGame();
+        }
     }
 }

@@ -12,6 +12,8 @@ namespace Innocence
         [SerializeField] float timeSpeed = 1f;
         [SerializeField] GameObject bagObject;
         [SerializeField] GameObject resetPanel;
+        [SerializeField] GameObject pauseGO;
+
 
         [HideInInspector]
         public string currentScene;
@@ -66,10 +68,38 @@ namespace Innocence
                 textPlayer.StopTextPlaying();
                 gameData.Reset(() => sceneTransition.ChangeScene("01_00 小吃部", () => resetPanel.SetActive(false)));
             }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                GamePause();
+            }
         }
         void OnDisable()
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
+        #endregion
+
+        #region PauseUI
+        public void GamePause()
+        {
+            if (currentScene == "MainMenu" || currentScene == "GameOver")
+                return;
+
+            if (pauseGO.activeSelf == false)
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
+            bool activeState = !pauseGO.activeSelf;
+            pauseGO.SetActive(activeState);
+        }
+        public void BackToMenu()
+        {
+            ChangeScene("MainMenu");
+            GamePause();
         }
         #endregion
 
@@ -109,6 +139,9 @@ namespace Innocence
         {
             switch (scene)
             {
+                case "MainMenu":
+                    pauseGO.SetActive(false);
+                    break;
                 case "01_00 小吃部":
                     if (Movement.instance)
                         gameData.SavePlayerPos(0, Movement.instance.transform.position);
