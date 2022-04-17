@@ -47,7 +47,16 @@ namespace Innocence
         public void ChangeMusicDectector(string sceneName)
         {
             List<AudioContent> allContents = contents.ToList().FindAll(x => x.requiredScene == sceneName);
-            AudioContent content = allContents.Find(x => x.requiredProgress == GameManager.instance.Progress);
+            AudioContent content = null;//= allContents.Find(x => x.requiredProgress == GameManager.instance.Progress);
+
+            for (int i = allContents.Count - 1; i >= 0; i--)
+            {
+                if (allContents[i].requiredProgress >= GameManager.instance.Progress)
+                {
+                    content = allContents[i];
+                    break;
+                }
+            }
             // Debug.Log("Content: " + content);
 
             if (content != null)
