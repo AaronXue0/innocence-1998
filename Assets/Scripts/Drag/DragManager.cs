@@ -43,7 +43,6 @@ namespace CustomDrag
                 mat = draggingObjectImage.material;
             }
         }
-
         private void Update()
         {
             if (IsDragging) Dragging();
@@ -142,9 +141,7 @@ namespace CustomDrag
                 ItemInfo info = BagManager.Instance.GetItem(itemID);
                 if (info.onUsedSound != null)
                 {
-                    audioSource.clip = info.onUsedSound;
-                    audioSource.Play();
-                    StartCoroutine(WaitForPlay());
+                    StartCoroutine(WaitForPlay(info));
                 }
 
                 GameManager.instance.UsaItem(itemID);
@@ -152,8 +149,10 @@ namespace CustomDrag
             }
         }
 
-        IEnumerator WaitForPlay()
+        IEnumerator WaitForPlay(ItemInfo info)
         {
+            audioSource.clip = info.onUsedSound;
+            audioSource.Play();
             while (audioSource.isPlaying)
             {
                 yield return null;

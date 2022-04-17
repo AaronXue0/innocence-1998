@@ -1155,6 +1155,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b0c4712812d444f10a1a6fc2d226e678, type: 2}
   - {fileID: 11400000, guid: 5b6d19f8ba00f46fe9b1eedc57a64688, type: 2}
   - {fileID: 11400000, guid: 68cf0d908164d4d48991e98afa299a80, type: 2}
+  - {fileID: 11400000, guid: 7f1eaff8e9efa4629a035b777865831d, type: 2}
   lightDatas:
   - {fileID: 11400000, guid: fdd560d9308364c669195236a1156b2a, type: 2}
   itemProps: []

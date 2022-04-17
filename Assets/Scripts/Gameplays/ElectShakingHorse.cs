@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CustomDrag;
 
 namespace Innocence
 {
     public class ElectShakingHorse : IGameplay
     {
         [SerializeField] GameObject returnBtn;
-        [SerializeField] int targetIndex = 3;
 
         private BoxCollider2D boxCollider2D;
+        private TargetTrigger targetTrigger;
 
         private int currentIndex = 0;
 
@@ -21,28 +22,28 @@ namespace Innocence
         public override void GameplaySetup()
         {
             returnBtn.SetActive(false);
+            targetTrigger.eventName = "Item17";
         }
         public override void PuzzleSolvedCallback()
         {
-
+            returnBtn.SetActive(true);
         }
         #endregion
 
         private void Awake()
         {
             boxCollider2D = GetComponent<BoxCollider2D>();
+            targetTrigger = GetComponent<TargetTrigger>();
         }
         private void Start()
         {
-            GameplaySetup();
+            if (IsComplete == false)
+                GameplaySetup();
+            else
+                isSolved = true;
         }
         private void Update()
         {
-            if (currentIndex >= targetIndex)
-            {
-                PuzzleSolved();
-            }
-
             if (delayCounter < 1f && isStartedPlaying == false)
             {
                 delayCounter += Time.deltaTime;
@@ -68,19 +69,25 @@ namespace Innocence
 
         IEnumerator TimelineFinishedCoroutine()
         {
+            isStartedPlaying = false;
             yield return null;
             currentIndex++;
             switch (currentIndex)
             {
                 case 1:
-                    GameManager.instance.ObtainItem(31, false);
+                    targetTrigger.eventName = "Item31";
+                    GameManager.instance.ObtainNoneInstanceItem(31, false);
+                    boxCollider2D.enabled = true;
                     break;
                 case 2:
-                    GameManager.instance.ObtainItem(32, false);
+                    targetTrigger.eventName = "Item32";
+                    GameManager.instance.ObtainNoneInstanceItem(32, false);
+                    boxCollider2D.enabled = true;
+                    break;
+                case 3:
+                    PuzzleSolved();
                     break;
             }
-            isStartedPlaying = false;
-            boxCollider2D.enabled = true;
         }
     }
 }

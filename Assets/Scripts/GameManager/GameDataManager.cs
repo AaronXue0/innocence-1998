@@ -153,6 +153,12 @@ namespace Innocence
             bag.StoreItem(item);
             bagManager.ObtainedItem(id, doseCheckItem);
         }
+        public void ObtainNoneInstanceItem(int id, bool doseCheckItem = true)
+        {
+            GameItem item = GetGameItem(id);
+            bag.StoreItem(item);
+            bagManager.ObtainedItem(id, doseCheckItem);
+        }
         public void CheckNestItemsObtained(int[] nestItems, SetItemStateContent[] afterGetAllNestItemsAndSetItemsState)
         {
             bool allItemsGet = true;

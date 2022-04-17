@@ -12,6 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0db39359815e8439a984a7c2eb22bd76, type: 3}
   m_Name: coins_2num
   m_EditorClassIdentifier: 
-  id: 0
+  id: 31
   currentState: 0
-  stateContents: []
+  stateContents:
+  - sprite: {fileID: 0}
+    animtorTriggerName: 
+    isActive: 0
+    isClickAble: 0
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: 
+    hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
+    completed: 0
