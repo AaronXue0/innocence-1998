@@ -50,6 +50,7 @@ public class BagManager : MonoBehaviour
     {
         switch (scene)
         {
+            case "GameOver":
             case "MainMenu":
                 SwitchBtnActive(false);
                 break;

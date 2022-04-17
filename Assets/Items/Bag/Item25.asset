@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item25
   m_EditorClassIdentifier: 
   id: 25
-  canDrag: 0
+  canDrag: 1
   onBagSprite: {fileID: 21300000, guid: 0816e4de078ba0540ab09626edeb3fa4, type: 3}
   onCheckSprite: {fileID: 21300000, guid: a0b7fd82085d32549859dd7eb4cb3727, type: 3}
   onGetSprite: {fileID: 21300000, guid: a0b7fd82085d32549859dd7eb4cb3727, type: 3}

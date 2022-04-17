@@ -132,6 +132,11 @@ namespace CustomDrag
                     itemID = 32;
                     GameManager.instance.SetProgress(27);
                     break;
+                case "Item25":
+                    itemID = 25;
+                    GameManager.instance.SetItemState(7, 2);
+                    GameManager.instance.SetProgress(30);
+                    break;
             }
 
             if (itemID != -1)

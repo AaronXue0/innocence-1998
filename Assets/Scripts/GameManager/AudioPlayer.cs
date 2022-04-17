@@ -30,6 +30,11 @@ namespace Innocence
         }
         #endregion
 
+        public void StopPlaying()
+        {
+            bgmSource.Stop();
+        }
+
         public void ChangeMusicDectector(int progress)
         {
             AudioContent content = contents.ToList().Find(x => x.requiredProgress == progress);

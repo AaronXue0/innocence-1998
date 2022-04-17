@@ -17,7 +17,6 @@ namespace Innocence
         Animator animWalk;
 
         private PlayerData playerData;
-        private bool isClickOnUI = false, isPressing = false;
 
         private void Awake()
         {
@@ -89,7 +88,6 @@ namespace Innocence
             {
                 if (EventSystem.current.IsPointerOverGameObject())
                 {
-                    isClickOnUI = true;
                     animWalk.SetBool("move", false);
                     targetPos = transform.position;
                     moving = false;

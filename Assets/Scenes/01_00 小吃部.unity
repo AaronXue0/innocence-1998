@@ -150,7 +150,7 @@ PlayableDirector:
   m_GameObject: {fileID: 5832162}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: e3937e7e070334f1aaf89c9d49acbce3, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: badf3d58f819e4d7aa299e9d05cc90b3, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -218,6 +218,8 @@ PlayableDirector:
     value: {fileID: 1177466226}
   - key: {fileID: 4718667240905288697, guid: 787d8ce772966498ba802947d84f5450, type: 2}
     value: {fileID: 1860479353}
+  - key: {fileID: 6620770640634808416, guid: badf3d58f819e4d7aa299e9d05cc90b3, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 149f97ce81026fc4abfa7e71cc268883: {fileID: 1177466223}
@@ -259,6 +261,9 @@ MonoBehaviour:
     conition: 0
   - requiredProgress: 6
     asset: {fileID: 11400000, guid: 787d8ce772966498ba802947d84f5450, type: 2}
+    conition: 0
+  - requiredProgress: 30
+    asset: {fileID: 11400000, guid: badf3d58f819e4d7aa299e9d05cc90b3, type: 2}
     conition: 0
 --- !u!95 &5832166
 Animator:
@@ -577,7 +582,8 @@ GameObject:
   - component: {fileID: 208624247}
   - component: {fileID: 208624250}
   - component: {fileID: 208624249}
-  m_Layer: 0
+  - component: {fileID: 208624251}
+  m_Layer: 8
   m_Name: "\u4F34\u5531\u6A5F"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,7 +684,7 @@ MonoBehaviour:
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
-  hintSR: {fileID: 0}
+  hintSR: {fileID: 908519258}
   distance: 4
 --- !u!61 &208624250
 BoxCollider2D:
@@ -706,6 +712,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6615613, y: 4.3515315}
   m_EdgeRadius: 0
+--- !u!114 &208624251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208624246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f931c5dc63ffb443688b5e3833b7697f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: Item25
 --- !u!1 &280712857
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +979,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.7553787, y: 1.0960016, z: -10}
+  m_LocalPosition: {x: 8.618908, y: 1.0956271, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -2341,7 +2360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 908519257}
   - component: {fileID: 908519258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\u53EF\u4E92\u52D5"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3203,7 +3222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8635292, y: -0.0003745556, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -4462,40 +4481,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 27885978, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 27885979, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 223721133, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
-      propertyPath: contents.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 223721133, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
-      propertyPath: contents.Array.data[1].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: a648c18617a68a84cbeb3d1f8350ec38, type: 3}
-    - target: {fileID: 223721133, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
-      propertyPath: contents.Array.data[1].requiredScene
-      value: "01_00 \u5C0F\u5403\u90E8"
-      objectReference: {fileID: 0}
-    - target: {fileID: 223721133, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
-      propertyPath: contents.Array.data[1].requiredProgress
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1125312468, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a32dea0875e02d64396cd2139616741b,
-        type: 3}
-    - target: {fileID: 577011395360335691, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -413
-      objectReference: {fileID: 0}
     - target: {fileID: 1464018917162359126, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_RootOrder

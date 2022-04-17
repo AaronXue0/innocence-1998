@@ -33,12 +33,14 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 3
-    nestItemsID: 
-    afterGetAllNestItemsAndSetItemsState: []
+    nestItemsID: 22000000
+    afterGetAllNestItemsAndSetItemsState:
+    - id: 34
+      newState: 2
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 0
+    completed: 1
   - sprite: {fileID: 0}
     animtorTriggerName: 
     isActive: 0
@@ -50,4 +52,4 @@ MonoBehaviour:
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 0
+    completed: 1

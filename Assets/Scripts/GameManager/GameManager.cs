@@ -95,6 +95,12 @@ namespace Innocence
         public void OnProgressChanged(int newProgress)
         {
             Debug.Log("Progress changed: " + newProgress);
+
+            if (newProgress == 50)
+            {
+                sceneTransition.ChangeScene("GameOver");
+            }
+
             audioPlayer.ChangeMusicDectector(newProgress);
             if (TimelineProp.instance != null)
                 TimelineProp.instance.Invoke(newProgress);
@@ -128,6 +134,9 @@ namespace Innocence
 
             switch (currentScene)
             {
+                case "MainMenu":
+                    audioPlayer.StopPlaying();
+                    break;
                 // Scene that player ables to move
                 case "01_00 小吃部":
                     if (Movement.instance)

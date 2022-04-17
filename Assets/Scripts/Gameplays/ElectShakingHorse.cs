@@ -86,6 +86,7 @@ namespace Innocence
                     break;
                 case 3:
                     PuzzleSolved();
+                    targetTrigger.eventName = "Null";
                     break;
             }
         }
