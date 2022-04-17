@@ -20,11 +20,6 @@ namespace Innocence
 
         private void Awake()
         {
-            if (instance != null)
-            {
-                Destroy(instance.gameObject);
-            }
-
             instance = this;
 
             animWalk = GetComponent<Animator>();
@@ -84,15 +79,15 @@ namespace Innocence
                 return;
             }
 
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                StopMovingInPos();
+                return;
+            }
+
             if (Input.GetMouseButtonDown(0))
             {
-                if (EventSystem.current.IsPointerOverGameObject())
-                {
-                    animWalk.SetBool("move", false);
-                    targetPos = transform.position;
-                    moving = false;
-                    return;
-                }
+
                 Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
                 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 moving = true;
