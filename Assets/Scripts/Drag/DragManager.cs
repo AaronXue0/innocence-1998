@@ -112,7 +112,7 @@ namespace CustomDrag
                 // 置物櫃鑰匙
                 case "Item13":
                     itemID = 13;
-                    GameManager.instance.SetItemState(12, 1);
+                    GameManager.instance.SetItemState(12, 3);
                     break;
                 // 電話卡
                 case "Item16":

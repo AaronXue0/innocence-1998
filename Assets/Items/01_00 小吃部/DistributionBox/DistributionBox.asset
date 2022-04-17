@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DistributionBox
   m_EditorClassIdentifier: 
   id: 4
-  currentState: 3
+  currentState: 4
   stateContents:
   - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
     animtorTriggerName: 
@@ -22,11 +22,11 @@ MonoBehaviour:
     dialogues: {fileID: 11400000, guid: 0e1fd682afec7d64d80c1c31f62c7ae0, type: 2}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 1
+    completed: 0
   - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
     animtorTriggerName: 
     isActive: 1
@@ -34,8 +34,8 @@ MonoBehaviour:
     dialogues: {fileID: 11400000, guid: 0e1fd682afec7d64d80c1c31f62c7ae0, type: 2}
     finishedResult: 0
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: "01_01 \u914D\u96FB\u7BB1\u5167\u90E8"
-    awardItemsID: 
     hintSprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
     soundClip: {fileID: 0}
     completed: 0
@@ -46,9 +46,9 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 1
     nestItemsID: 02000000
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: "01_01 \u914D\u96FB\u7BB1\u5167\u90E8"
-    awardItemsID: 
-    hintSprite: {fileID: 21300000, guid: 3209ba6ed4a79f343bf641a993105efe, type: 3}
+    hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
     soundClip: {fileID: 0}
     completed: 1
   - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
@@ -58,11 +58,11 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 2
     nestItemsID: 02000000
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: "01_01 \u914D\u96FB\u7BB1\u5167\u90E8"
-    awardItemsID: 
     hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
     soundClip: {fileID: 0}
-    completed: 1
+    completed: 0
   - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
     animtorTriggerName: 
     isActive: 1
@@ -70,8 +70,8 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 2
     nestItemsID: 02000000
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: "01_01 \u914D\u96FB\u7BB1\u5167\u90E8"
-    awardItemsID: 
     hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
     soundClip: {fileID: 0}
-    completed: 1
+    completed: 0
