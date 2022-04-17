@@ -44,6 +44,8 @@ namespace Innocence
                 textPlayer.Init(Pause, Resume);
                 sceneTransition = GetComponent<SceneTransition>();
                 audioPlayer = GetComponent<AudioPlayer>();
+
+                Cursor.visible = false;
             }
         }
         void OnEnable()
@@ -98,8 +100,12 @@ namespace Innocence
         }
         public void BackToMenu()
         {
-            ChangeScene("MainMenu");
+            resetPanel.SetActive(true);
             GamePause();
+            audioPlayer.bgmSource.clip = null;
+            timeplyer.StopPlaying();
+            textPlayer.StopTextPlaying();
+            gameData.Reset(() => sceneTransition.ChangeScene("MainMenu", () => resetPanel.SetActive(false)));
         }
         #endregion
 
