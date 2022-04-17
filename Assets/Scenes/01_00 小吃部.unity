@@ -576,8 +576,9 @@ GameObject:
   - component: {fileID: 208624248}
   - component: {fileID: 208624247}
   - component: {fileID: 208624250}
+  - component: {fileID: 208624249}
   m_Layer: 0
-  m_Name: "\u5361\u62C9ok\u55AE\u7368"
+  m_Name: "\u4F34\u5531\u6A5F"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -648,6 +649,37 @@ Transform:
   m_Father: {fileID: 453772510}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &208624249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208624246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64be0ceb4b00748cc942f1ddec073fee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 7
+  isGameplayItem: 0
+  isObtainedItem: 0
+  obtainedItemAndSetStates: []
+  item:
+    sprite: {fileID: 0}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: 
+    hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
+    completed: 0
+  hintSR: {fileID: 0}
+  distance: 4
 --- !u!61 &208624250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -928,7 +960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.7448635, y: 1.0960069, z: -10}
+  m_LocalPosition: {x: 7.7553787, y: 1.0960016, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -3171,7 +3203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8740444, y: -0.0003798008, z: 0}
+  m_LocalPosition: {x: 0.8635292, y: -0.0003745556, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
