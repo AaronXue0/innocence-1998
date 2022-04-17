@@ -979,7 +979,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.7553787, y: 1.0960016, z: -10}
+  m_LocalPosition: {x: 8.618908, y: 1.0956271, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -3222,7 +3222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8635292, y: -0.0003745556, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -4481,28 +4481,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8982eae7a95a24630a09f2890a898496,
-        type: 2}
-    - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: m_fontStyle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 577011395360335684, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -4871303133452370217, guid: 8982eae7a95a24630a09f2890a898496,
-        type: 2}
     - target: {fileID: 1464018917162359126, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_RootOrder
@@ -4562,11 +4540,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 1464018917162359130, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: timeSpeed
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2358967255974437091, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
