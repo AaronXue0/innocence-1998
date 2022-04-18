@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -955,7 +955,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.5
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -979,7 +979,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.618908, y: 1.0956271, z: -10}
+  m_LocalPosition: {x: 8.618851, y: 1.3384278, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -2478,7 +2478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: -0.0010919571, y: 2.2, z: -10}
+  m_FollowOffset: {x: -0.0010919571, y: 2.32, z: -10}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -2890,8 +2890,8 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 2.2965698, y: 4.837078}
       - {x: -5.447014, y: 4.755031}
-      - {x: -5.5166087, y: -5.89402}
-      - {x: 28.178463, y: -5.976304}
+      - {x: -5.446572, y: -5.70722}
+      - {x: 28.178463, y: -5.690912}
       - {x: 28.183134, y: 4.789198}
 --- !u!4 &1108346796
 Transform:
@@ -3201,7 +3201,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1454403568}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 4.5
+    OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -3222,7 +3222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.00005722046, y: -0.12280083, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -4541,6 +4541,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1464018917162359130, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: timeSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358967255974437091, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358967257387856648, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8971196721053557469, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_Material
@@ -5422,6 +5437,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 232233079568065087, guid: 3ff9772071037cc46ba3b29e452ed7f5,
+        type: 3}
+      propertyPath: speed
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ff9772071037cc46ba3b29e452ed7f5, type: 3}
