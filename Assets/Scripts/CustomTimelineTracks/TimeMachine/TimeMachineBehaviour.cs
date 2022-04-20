@@ -12,7 +12,6 @@ namespace Innocence
         public Condition condition;
         public string markerToJumpTo, markerLabel;
         public float timeToJumpTo;
-        // public Platoon platoon;
 
         [HideInInspector]
         public bool clipExecuted = false; //the user shouldn't author this, the Mixer does
@@ -42,7 +41,7 @@ namespace Innocence
         {
             Always,
             Never,
-            Loop,
+            ChangeState
         }
     }
 
