@@ -138,6 +138,7 @@ namespace Innocence
             }
 
             audioPlayer.ChangeMusicDectector(newProgress);
+
             if (TimelineProp.instance != null)
                 TimelineProp.instance.Invoke(newProgress);
         }
@@ -252,6 +253,9 @@ namespace Innocence
         public void Pause(PlayableDirector director) => timeplyer.Pause(director);
         public void Resume() => timeplyer.Resume();
         public void Resume(PlayableDirector director) => timeplyer.Resume(director);
+
+        public void SubPlay(PlayableAsset asset) => timeplyer.SubPlay(asset);
+        public void SubStop() => timeplyer.SubStop();
         #endregion
 
         #region Text
