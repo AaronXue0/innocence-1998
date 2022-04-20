@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -150,7 +150,7 @@ PlayableDirector:
   m_GameObject: {fileID: 5832162}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 787d8ce772966498ba802947d84f5450, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 786d085d8102744a59d676aea134bc62, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -4725,7 +4725,7 @@ PrefabInstance:
     - target: {fileID: 1464018917162359130, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: timeSpeed
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2358967255974437091, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
