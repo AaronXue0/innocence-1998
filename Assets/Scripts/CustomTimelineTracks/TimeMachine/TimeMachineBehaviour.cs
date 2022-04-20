@@ -42,7 +42,7 @@ namespace Innocence
         {
             Always,
             Never,
-            PlatoonIsAlive,
+            Loop,
         }
     }
 

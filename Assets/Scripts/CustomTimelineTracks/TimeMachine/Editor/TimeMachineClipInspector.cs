@@ -68,12 +68,6 @@ namespace Innocence
                         EditorGUILayout.PropertyField(conditionProp);
                         break;
 
-                    case TimeMachineBehaviour.Condition.PlatoonIsAlive:
-                        EditorGUILayout.HelpBox("The above action will be executed if any Unit in the Platoon connected below is alive when the playhead reaches this clip.", MessageType.Info);
-                        EditorGUILayout.Space();
-                        EditorGUILayout.PropertyField(conditionProp);
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("platoon"));
-                        break;
 
                 }
             }
