@@ -14,6 +14,7 @@ namespace Innocence
         public override void OnPlayableCreate(Playable playable)
         {
             director = (playable.GetGraph().GetResolver() as PlayableDirector);
+            Debug.Log(director);
         }
 
         public override void ProcessFrame(Playable playable, FrameData info, object playerData)
@@ -56,13 +57,14 @@ namespace Innocence
                                     if (input.action == TimeMachineBehaviour.TimeMachineAction.JumpToTime)
                                     {
                                         //Jump to time
-                                        (playable.GetGraph().GetResolver() as PlayableDirector).time = (double)input.timeToJumpTo;
+                                        director.time = (double)input.timeToJumpTo;
                                     }
                                     else
                                     {
                                         //Jump to marker
                                         double t = markerClips[input.markerToJumpTo];
-                                        (playable.GetGraph().GetResolver() as PlayableDirector).time = t;
+                                        director.time = t;
+                                        director.Play();
                                     }
                                     input.clipExecuted = false; //we want the jump to happen again!
                                 }

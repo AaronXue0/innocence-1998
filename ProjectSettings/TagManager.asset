@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - MainDirector
+  - SubDirector
   layers:
   - Default
   - TransparentFX

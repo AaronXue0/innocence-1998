@@ -92,5 +92,27 @@ namespace Innocence
             director.playableGraph.GetRootPlayable(0).SetSpeed(1);
         }
         #endregion
+
+        public void SubPlay(PlayableAsset asset)
+        {
+            GameObject go = GameObject.FindGameObjectWithTag("SubDirector") as GameObject;
+            if (go)
+            {
+                PlayableDirector director = go.GetComponent<PlayableDirector>();
+                director.playableAsset = asset;
+                director.Play();
+            }
+        }
+
+        public void SubStop()
+        {
+            GameObject go = GameObject.FindGameObjectWithTag("SubDirector") as GameObject;
+            if (go)
+            {
+                PlayableDirector director = go.GetComponent<PlayableDirector>();
+                director.Stop();
+
+            }
+        }
     }
 }
