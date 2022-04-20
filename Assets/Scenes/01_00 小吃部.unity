@@ -220,6 +220,8 @@ PlayableDirector:
     value: {fileID: 1860479353}
   - key: {fileID: 6620770640634808416, guid: badf3d58f819e4d7aa299e9d05cc90b3, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -1241869669435985815, guid: 167ae206b114b4177ab86754302df58c, type: 2}
+    value: {fileID: 1108346797}
   m_ExposedReferences:
     m_References:
     - 149f97ce81026fc4abfa7e71cc268883: {fileID: 1177466223}
@@ -999,7 +1001,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.618848, y: 1.3384292, z: -10}
+  m_LocalPosition: {x: 8.618847, y: 1.3387284, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -2916,6 +2918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1108346796}
   - component: {fileID: 1108346795}
+  - component: {fileID: 1108346797}
   m_Layer: 0
   m_Name: confiner
   m_TagString: Untagged
@@ -2967,6 +2970,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1108346797
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108346794}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1161890494
 GameObject:
   m_ObjectHideFlags: 0
@@ -3302,7 +3324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.000060081482, y: -0.12280226, z: 0}
+  m_LocalPosition: {x: 0.000061035156, y: -0.12310147, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
