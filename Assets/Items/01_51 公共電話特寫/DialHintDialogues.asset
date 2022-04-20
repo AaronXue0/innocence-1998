@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DialHintDialogues
   m_EditorClassIdentifier: 
   msg:
-  - "\u6C92\u6709\u63D2\u5361\u4E0D\u80FD\u6253\u96FB\u8A71\uFF0C\u25BC "
+  - "\u6C92\u6709\u63D2\u5361\u4E0D\u80FD\u6253\u96FB\u8A71\uFF0C \u25BC "
   - "\u6309\u9375\u4E0A\u88AB\u5857\u4E0A\u4E86\u5947\u602A\u7684\u8A18\u865F\u3002\u25BC"
   appaerGap: 0.1
   displaySecs: 1
