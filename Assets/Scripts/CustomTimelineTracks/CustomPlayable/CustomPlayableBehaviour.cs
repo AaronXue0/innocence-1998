@@ -9,6 +9,7 @@ namespace Innocence
     public class CustomPlayableBehaviour : PlayableBehaviour
     {
         public PlayableAsset asset;
+        public bool asDector;
 
         public bool hasToPause = false;
 
@@ -24,7 +25,7 @@ namespace Innocence
         public override void ProcessFrame(Playable playable, FrameData info, object playerData)
         {
             if (!clipPlayed
-                && info.weight > 0f)
+                && info.weight > 0f && asDector == false)
             {
                 if (GameManager.instance)
                 {
@@ -48,6 +49,15 @@ namespace Innocence
 
         public override void OnBehaviourPause(Playable playable, FrameData info)
         {
+            var duration = playable.GetDuration();
+            var count = playable.GetTime() + info.deltaTime;
+
+            if ((count > duration) || playable.GetGraph().GetRootPlayable(0).IsDone())
+            {
+                // Execute your finishing logic here:
+                Debug.Log("Clip done!");
+            }
+
             if (pauseScheduled)
             {
                 pauseScheduled = false;
