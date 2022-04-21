@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class NoteManager : MonoBehaviour
 {
     public static NoteManager Instance;
-    [SerializeField] Image image;
+    private Image image;
 
     private void Awake()
     {
