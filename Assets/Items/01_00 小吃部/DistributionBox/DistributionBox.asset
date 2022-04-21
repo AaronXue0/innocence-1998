@@ -63,7 +63,7 @@ MonoBehaviour:
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
-    finishedResult: 1
+    finishedResult: 2
     setItemsState: []
     nestItemsID: 02000000
     afterGetAllNestItemsAndSetItemsState: []

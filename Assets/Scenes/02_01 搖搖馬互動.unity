@@ -430,6 +430,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8347341307460390761, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
 --- !u!1 &578317439
@@ -1672,7 +1677,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1758663392}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: d94de5f72822eb64cbb396930b5596f1, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: f3a5a85fb4f62db48a21d10a8e83976f, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
