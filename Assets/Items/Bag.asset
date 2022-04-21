@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Bag
   m_EditorClassIdentifier: 
   inStorageItem:
-  - {fileID: 11400000, guid: 68cf0d908164d4d48991e98afa299a80, type: 2}
+  - {fileID: 11400000, guid: 5b384ad7f6d144bef987cd5256465055, type: 2}
+  - {fileID: 11400000, guid: 5b6d19f8ba00f46fe9b1eedc57a64688, type: 2}
