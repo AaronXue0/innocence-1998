@@ -41,5 +41,9 @@ public class MouseCursor : MonoBehaviour
                     break;
             }
         }
+        else if (image.sprite != cursorSprite)
+        {
+            image.sprite = cursorSprite;
+        }
     }
 }
