@@ -182,6 +182,7 @@ public class BagManager : MonoBehaviour
         Debug.Log("Focus: " + index);
         itemBoxs[index].SetFocus();
         focusIndex = index;
+        hideBagUI.SetActive(false);
     }
 
     public void UnfocusItem()

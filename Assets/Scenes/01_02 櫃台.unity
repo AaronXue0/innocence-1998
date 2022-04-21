@@ -721,21 +721,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1464018917162359130, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: timeSpeed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2358967255974437091, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2358967257240464400, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: bagSwitchBtn
-      value: 
-      objectReference: {fileID: 952879284}
     - target: {fileID: 2358967257387856648, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -974,12 +964,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &952879284 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2358967256522621474, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-    type: 3}
-  m_PrefabInstance: {fileID: 782966850}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &986220330
 GameObject:
   m_ObjectHideFlags: 0
