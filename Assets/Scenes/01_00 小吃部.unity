@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -150,7 +150,7 @@ PlayableDirector:
   m_GameObject: {fileID: 5832162}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 167ae206b114b4177ab86754302df58c, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: e3937e7e070334f1aaf89c9d49acbce3, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -420,7 +420,6 @@ GameObject:
   m_Component:
   - component: {fileID: 140698353}
   - component: {fileID: 140698354}
-  - component: {fileID: 140698355}
   m_Layer: 0
   m_Name: Hint
   m_TagString: Untagged
@@ -482,7 +481,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -492,25 +491,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &140698355
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 140698352}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f5cef4c4cb481814ab359b0af88669a3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &175481587
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +562,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -607,7 +587,7 @@ GameObject:
   - component: {fileID: 208624251}
   m_Layer: 8
   m_Name: "\u4F34\u5531\u6A5F"
-  m_TagString: Untagged
+  m_TagString: GameItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -700,6 +680,7 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
@@ -1001,7 +982,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.618847, y: 1.3387284, z: -10}
+  m_LocalPosition: {x: 8.618849, y: 1.3387222, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -1468,7 +1449,7 @@ GameObject:
   - component: {fileID: 552484788}
   m_Layer: 0
   m_Name: "\u7D05\u6905\u5B50"
-  m_TagString: Untagged
+  m_TagString: GameItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1561,6 +1542,7 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
@@ -2158,7 +2140,6 @@ GameObject:
   m_Component:
   - component: {fileID: 783747209}
   - component: {fileID: 783747210}
-  - component: {fileID: 783747211}
   m_Layer: 0
   m_Name: Hint
   m_TagString: Untagged
@@ -2220,7 +2201,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2230,25 +2211,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &783747211
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783747208}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f5cef4c4cb481814ab359b0af88669a3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &856927911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,7 +2370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &908519257
 Transform:
   m_ObjectHideFlags: 0
@@ -2463,7 +2425,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2599,7 +2561,7 @@ GameObject:
   - component: {fileID: 999354273}
   m_Layer: 0
   m_Name: "\u8B8A\u96FB\u7BB1\u55AE\u7368"
-  m_TagString: Untagged
+  m_TagString: GameItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2692,6 +2654,7 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
@@ -2798,7 +2761,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2898,7 +2861,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2964,7 +2927,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108346794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.31, y: 2.03, z: -14.285002}
+  m_LocalPosition: {x: -9.31, y: 2.03, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3034,7 +2997,7 @@ GameObject:
   - component: {fileID: 1164430227}
   m_Layer: 0
   m_Name: "\u6AC3\u53F0"
-  m_TagString: Untagged
+  m_TagString: GameItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3127,6 +3090,7 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
@@ -3171,7 +3135,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1171216798}
   - component: {fileID: 1171216799}
-  - component: {fileID: 1171216800}
   m_Layer: 0
   m_Name: Hint
   m_TagString: Untagged
@@ -3233,7 +3196,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3243,25 +3206,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1171216800
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171216797}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f5cef4c4cb481814ab359b0af88669a3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1177466222
 GameObject:
   m_ObjectHideFlags: 0
@@ -3324,7 +3268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.000061035156, y: -0.12310147, z: 0}
+  m_LocalPosition: {x: 0.000059127808, y: -0.123095274, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -3384,7 +3328,7 @@ GameObject:
   - component: {fileID: 1242013206}
   m_Layer: 8
   m_Name: "\u7F6E\u7269\u6AC3"
-  m_TagString: Untagged
+  m_TagString: GameItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3503,6 +3447,7 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
@@ -3772,7 +3717,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3834,7 +3779,7 @@ GameObject:
   - component: {fileID: 1554064508}
   m_Layer: 0
   m_Name: "\u73BB\u7483\u9580"
-  m_TagString: Untagged
+  m_TagString: GameItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3862,6 +3807,7 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
@@ -4296,7 +4242,7 @@ GameObject:
   - component: {fileID: 1716322652}
   m_Layer: 0
   m_Name: "\u65E5\u66C6"
-  m_TagString: Untagged
+  m_TagString: GameItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4389,6 +4335,7 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
@@ -4505,7 +4452,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1767091415}
   - component: {fileID: 1767091416}
-  - component: {fileID: 1767091417}
   m_Layer: 0
   m_Name: Hint
   m_TagString: Untagged
@@ -4567,7 +4513,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4577,25 +4523,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1767091417
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767091414}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f5cef4c4cb481814ab359b0af88669a3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1805678223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4781,7 +4708,7 @@ GameObject:
   - component: {fileID: 1856178091}
   m_Layer: 0
   m_Name: "\u6642\u9418"
-  m_TagString: Untagged
+  m_TagString: GameItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4874,6 +4801,7 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
@@ -4941,7 +4869,7 @@ GameObject:
   - component: {fileID: 1860479355}
   m_Layer: 0
   m_Name: "\u8B8A\u96FB\u7BB1\u7D05\u6905\u5B50"
-  m_TagString: Untagged
+  m_TagString: GameItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4984,6 +4912,7 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 

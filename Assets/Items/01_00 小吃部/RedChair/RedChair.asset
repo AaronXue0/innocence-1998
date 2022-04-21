@@ -13,35 +13,57 @@ MonoBehaviour:
   m_Name: RedChair
   m_EditorClassIdentifier: 
   id: 2
-  currentState: 1
+  currentState: 0
   stateContents:
   - sprite: {fileID: 21300000, guid: 217b207aae8068e41a705a475ee03034, type: 3}
+    animtorTriggerName: 
     isActive: 1
     isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
     completed: 0
   - sprite: {fileID: 21300000, guid: 217b207aae8068e41a705a475ee03034, type: 3}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 11400000, guid: c597a0c37374841f7a980f6300672613, type: 2}
+    finishedResult: 0
+    setItemsState: []
+    nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: 
+    hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
+    soundClip: {fileID: 0}
+    completed: 0
+  - sprite: {fileID: 21300000, guid: 217b207aae8068e41a705a475ee03034, type: 3}
+    animtorTriggerName: 
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 1
+    setItemsState: []
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
-    completed: 1
+    soundClip: {fileID: 0}
+    completed: 0
   - sprite: {fileID: 21300000, guid: 217b207aae8068e41a705a475ee03034, type: 3}
+    animtorTriggerName: 
     isActive: 0
     isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 02000000
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
+    soundClip: {fileID: 0}
     completed: 0

@@ -18,6 +18,7 @@ namespace Innocence
 
         [Header("Hint")]
         [SerializeField] SpriteRenderer hintSR;
+        public Sprite GetHintSprite { get { return hintSR.sprite; } }
         [SerializeField] float distance;
         BoxCollider2D boxCollider2D;
 
