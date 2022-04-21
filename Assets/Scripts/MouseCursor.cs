@@ -7,6 +7,7 @@ using Innocence;
 
 public class MouseCursor : MonoBehaviour
 {
+    public static MouseCursor Instance = null;
     [SerializeField]
     Sprite cursorSprite, exitSprite;
 
@@ -15,16 +16,38 @@ public class MouseCursor : MonoBehaviour
 
     private Image image;
 
+    private bool isOnUI = false;
+
+    public void OnUIEnter(Sprite sprite)
+    {
+        image.sprite = sprite;
+        isOnUI = true;
+    }
+    public void OnUIExit()
+    {
+        image.sprite = cursorSprite;
+        isOnUI = false;
+    }
+
     private void Awake()
     {
-        Cursor.visible = false;
-        image = GetComponent<Image>();
-        image.sprite = cursorSprite;
+        if (Instance == null)
+        {
+            Instance = this;
+            Cursor.visible = false;
+            image = GetComponent<Image>();
+            image.sprite = cursorSprite;
+        }
     }
     private void Update()
     {
         Vector2 cursorPos = Input.mousePosition;
         transform.position = cursorPos + offset;
+
+        if (isOnUI)
+        {
+            return;
+        }
 
         if (EventSystem.current.IsPointerOverGameObject())
         {

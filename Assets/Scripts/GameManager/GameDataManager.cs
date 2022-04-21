@@ -12,6 +12,7 @@ namespace Innocence
         [HideInInspector]
         [SerializeField] ItemProp[] itemProps;
         [SerializeField] Bag bag;
+        [SerializeField] Note note;
         [HideInInspector]
         [SerializeField] LightProp[] lightProps;
         [SerializeField] PlayerData playerData;

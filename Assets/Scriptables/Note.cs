@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Innocence
 {
     [CreateAssetMenu(fileName = "Note", menuName = "Innocene/Note", order = 4)]
-    public class Note : MonoBehaviour
+    public class Note : ScriptableObject
     {
         public int currentIndex = 0;
         [SerializeField] List<NoteItem> inStoreageNoteItems;
