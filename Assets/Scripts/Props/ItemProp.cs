@@ -118,6 +118,7 @@ namespace Innocence
                     break;
                 case FinishedResult.None:
                 case FinishedResult.CheckForTimeline:
+                case FinishedResult.SetItemState:
                 default:
                     GameManager.instance.DisplayDialogues(id, DialoguesFinished);
                     break;

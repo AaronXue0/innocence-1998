@@ -93,6 +93,7 @@ namespace Innocence
         }
         #endregion
 
+        #region SubPlay
         public void SubPlay(PlayableAsset asset)
         {
             GameObject go = GameObject.FindGameObjectWithTag("SubDirector") as GameObject;
@@ -103,7 +104,6 @@ namespace Innocence
                 director.Play();
             }
         }
-
         public void SubStop()
         {
             GameObject go = GameObject.FindGameObjectWithTag("SubDirector") as GameObject;
@@ -111,8 +111,8 @@ namespace Innocence
             {
                 PlayableDirector director = go.GetComponent<PlayableDirector>();
                 director.Stop();
-
             }
         }
+        #endregion
     }
 }

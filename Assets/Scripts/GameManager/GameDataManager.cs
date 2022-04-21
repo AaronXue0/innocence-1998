@@ -71,6 +71,13 @@ namespace Innocence
         }
         IEnumerator ResetCoroutine(System.Action callback = null)
         {
+            playerData.lastAnimator = "";
+
+            foreach (SceneSpwanPos pos in playerData.sceneSpwanPos)
+            {
+                pos.currentSpwanPos = pos.firstPos;
+            }
+
             foreach (GameItem item in gameItems)
             {
                 item.currentState = 0;
@@ -95,13 +102,6 @@ namespace Innocence
 
             bag.Reset();
             BagManager.Instance.RefreshItems();
-
-            playerData.lastAnimator = "";
-
-            foreach (SceneSpwanPos pos in playerData.sceneSpwanPos)
-            {
-                pos.currentSpwanPos = pos.firstPos;
-            }
 
             yield return null;
 
@@ -267,6 +267,12 @@ namespace Innocence
             Debug.Log("Item Dialogue Finished, id: " + id);
             switch (content.finishedResult)
             {
+                case FinishedResult.SetItemState:
+                    foreach (SetItemStateContent sc in content.setItemsState)
+                    {
+                        SetItemState(sc.id, sc.newState);
+                    }
+                    break;
                 case FinishedResult.CheckForTimeline:
                     CheckCurrentTimelineCondition(content);
                     break;

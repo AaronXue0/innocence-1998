@@ -2108,7 +2108,7 @@ MonoBehaviour:
     requiredProgress: 9
     clip: {fileID: 8300000, guid: a648c18617a68a84cbeb3d1f8350ec38, type: 3}
   - requiredScene: "02_01\u6416\u6416\u99AC\u4E92\u52D5"
-    requiredProgress: 9
+    requiredProgress: 23
     clip: {fileID: 8300000, guid: 022d26204a8196f48a84e91f916c44d6, type: 3}
 --- !u!95 &1859662143
 Animator:
@@ -2204,8 +2204,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2358967256596522583, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358967256596522583, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -295
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 2358967256644818410, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
