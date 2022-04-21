@@ -18,6 +18,19 @@ public class MouseCursor : MonoBehaviour
 
     private bool isOnUI = false;
 
+    public void OnSceneLoaded(string name)
+    {
+        switch (name)
+        {
+            case "EVScene":
+            case "PVScene":
+                image.enabled = false;
+                break;
+            default:
+                image.enabled = true;
+                break;
+        }
+    }
     public void OnUIEnter(Sprite sprite)
     {
         image.sprite = sprite;
@@ -41,6 +54,9 @@ public class MouseCursor : MonoBehaviour
     }
     private void Update()
     {
+        if (Cursor.visible == true)
+            Cursor.visible = false;
+
         Vector2 cursorPos = Input.mousePosition;
         transform.position = cursorPos + offset;
 

@@ -62,6 +62,8 @@ public class BagManager : MonoBehaviour
     {
         switch (scene)
         {
+            case "EVScene":
+            case "PVScene":
             case "GameOver":
             case "MainMenu":
                 SwitchBtnActive(false);

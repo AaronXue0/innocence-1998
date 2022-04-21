@@ -3,29 +3,47 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NoteManager : MonoBehaviour
+namespace Innocence
 {
-    public static NoteManager Instance;
-    private Image image;
-
-    private void Awake()
+    public class NoteManager : MonoBehaviour
     {
-        if (Instance != null)
+        public static NoteManager Instance;
+
+        [SerializeField]
+        private GameObject noteDisplay;
+        [SerializeField]
+        private Image image;
+
+        private Note note;
+
+        private void Awake()
         {
-            Instance = this;
-            image = GetComponent<Image>();
+            if (Instance != null)
+            {
+                Instance = this;
+                image = GetComponent<Image>();
+            }
+        }
+
+        public void SetNoteDisplay(bool state)
+        {
+            noteDisplay.SetActive(state);
+        }
+
+        public void RefreshItems()
+        {
+            note = GameManager.instance.GetNote;
+            image.sprite = note.CurrentPage().sprite;
+        }
+
+        public void NextPage()
+        {
+            image.sprite = note.NextPage().sprite;
+        }
+
+        public void PrevPage()
+        {
+            image.sprite = note.PrevPage().sprite;
         }
     }
-
-    public void RefreshItems()
-    {
-
-    }
-
-    public void NextPage()
-    {
-
-    }
-
-
 }

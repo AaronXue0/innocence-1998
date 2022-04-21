@@ -134,6 +134,13 @@ namespace Innocence
         }
         #endregion
 
+        #region Note
+        public Note GetNote()
+        {
+            return note;
+        }
+        #endregion
+
         #region Bag
         public Bag GetBag()
         {

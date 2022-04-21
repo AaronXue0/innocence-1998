@@ -68,7 +68,7 @@ namespace Innocence
                 audioPlayer.bgmSource.clip = null;
                 timeplyer.StopPlaying();
                 textPlayer.StopTextPlaying();
-                gameData.Reset(() => sceneTransition.ChangeScene("01_00 小吃部", () => resetPanel.SetActive(false)));
+                gameData.Reset(() => sceneTransition.ChangeScene("PVScene", () => resetPanel.SetActive(false)));
             }
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -84,7 +84,7 @@ namespace Innocence
         #region PauseUI
         public void GamePause()
         {
-            if (currentScene == "MainMenu" || currentScene == "GameOver")
+            if (currentScene == "MainMenu" || currentScene == "GameOver" || currentScene == "PVScene" || currentScene == "EVScene")
                 return;
 
             if (pauseGO.activeSelf == false)
@@ -134,7 +134,7 @@ namespace Innocence
 
             if (newProgress == 50)
             {
-                sceneTransition.ChangeScene("GameOver");
+                sceneTransition.ChangeScene("EVScene");
             }
 
             audioPlayer.ChangeMusicDectector(newProgress);
@@ -146,6 +146,8 @@ namespace Innocence
         {
             switch (scene)
             {
+                case "EVScene":
+                case "PVScene":
                 case "MainMenu":
                     pauseGO.SetActive(false);
                     break;
@@ -171,9 +173,12 @@ namespace Innocence
             gameData.SetAllStatesInScene();
 
             BagManager.Instance.OnSceneLoadeed(currentScene);
+            MouseCursor.Instance.OnSceneLoaded(currentScene);
 
             switch (currentScene)
             {
+                case "PVScene":
+                case "EVScene":
                 case "MainMenu":
                     audioPlayer.StopPlaying();
                     break;
@@ -206,7 +211,7 @@ namespace Innocence
         public void NewGame()
         {
             gameData.Reset();
-            sceneTransition.ChangeScene("01_00 小吃部");
+            sceneTransition.ChangeScene("PVScene");
         }
         public void ExitGame()
         {
@@ -229,6 +234,8 @@ namespace Innocence
         public void UsaItem(int id) => gameData.ItemUsage(id);
 
         public Bag GetBag { get { return gameData.GetBag(); } }
+
+        public Note GetNote { get { return gameData.GetNote(); } }
 
         // public Vector2 GetPlayerPos() => gameData.GetPlayerPos();
         public PlayerData GetPlayerData() => gameData.GetPlayerData();

@@ -18,25 +18,35 @@ namespace Innocence
             inStoreageNoteItems.Add(item);
         }
 
-        public NoteItem CurrentPage()
+        public List<int> GetNotesID()
         {
-            return inStoreageNoteItems[currentIndex];
+            List<int> items = new List<int>();
+            foreach (NoteItem item in inStoreageNoteItems)
+            {
+                items.Add(item.id);
+            }
+            return items;
         }
-        public NoteItem NextPage()
+
+        public NoteItemContent CurrentPage()
+        {
+            return inStoreageNoteItems[currentIndex].GetContent;
+        }
+        public NoteItemContent NextPage()
         {
             if (currentIndex + 1 < inStoreageNoteItems.Count)
             {
                 currentIndex++;
             }
-            return inStoreageNoteItems[currentIndex];
+            return inStoreageNoteItems[currentIndex].GetContent;
         }
-        public NoteItem PrevPage()
+        public NoteItemContent PrevPage()
         {
             if (currentIndex - 1 >= 0)
             {
                 currentIndex--;
             }
-            return inStoreageNoteItems[currentIndex];
+            return inStoreageNoteItems[currentIndex].GetContent;
         }
 
     }
