@@ -18,17 +18,14 @@ namespace Innocence
             }
             return items;
         }
-
         public void Reset()
         {
             inStorageItem = new List<GameItem>();
         }
-
         public void StoreItem(GameItem item)
         {
             inStorageItem.Add(item);
         }
-
         public void RemoveItem(GameItem item) => inStorageItem.Remove(item);
 
         public void RemoveItem(int id)
