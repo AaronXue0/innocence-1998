@@ -103,7 +103,7 @@ namespace Innocence
             bag.Reset();
             BagManager.Instance.RefreshItems();
 
-            yield return null;
+            yield return new WaitForSeconds(1.5f);
 
             if (callback != null)
                 callback();
