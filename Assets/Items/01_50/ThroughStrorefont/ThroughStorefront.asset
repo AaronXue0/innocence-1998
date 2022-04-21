@@ -21,6 +21,7 @@ MonoBehaviour:
     isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
@@ -33,6 +34,7 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 2
+    setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: "02_00 \u9A0E\u6A13"

@@ -18,6 +18,7 @@ namespace Innocence
 
         [Header("Hint")]
         [SerializeField] SpriteRenderer hintSR;
+        public Sprite GetHintSprite { get { return hintSR.sprite; } }
         [SerializeField] float distance;
         BoxCollider2D boxCollider2D;
 
@@ -47,12 +48,15 @@ namespace Innocence
 
             if (boxCollider2D.enabled && hintSR != null)
             {
-                float _distance = Vector2.Distance(transform.position, Movement.instance.transform.position);
+                if (Movement.instance != null)
+                {
+                    float _distance = Vector2.Distance(transform.position, Movement.instance.transform.position);
 
-                if (_distance < this.distance)
-                    SetClickable(true);
-                else
-                    SetClickable(false);
+                    if (_distance < this.distance)
+                        SetClickable(true);
+                    else
+                        SetClickable(false);
+                }
             }
             else if (boxCollider2D.enabled == false && hintSR != null)
             {
@@ -85,14 +89,11 @@ namespace Innocence
             {
                 return;
             }
-            Debug.Log("onmousedown on: " + name);
 
             if (Movement.instance != null)
             {
                 Movement.instance.StopMovingInPos();
             }
-
-            Debug.Log(ableToClick || isObtainedItem);
 
             if (ableToClick || isObtainedItem)
                 ClickEvent();
@@ -118,6 +119,7 @@ namespace Innocence
                     break;
                 case FinishedResult.None:
                 case FinishedResult.CheckForTimeline:
+                case FinishedResult.SetItemState:
                 default:
                     GameManager.instance.DisplayDialogues(id, DialoguesFinished);
                     break;

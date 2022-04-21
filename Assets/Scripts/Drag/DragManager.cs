@@ -80,6 +80,11 @@ namespace CustomDrag
             if (Movement.instance != null)
                 Movement.isLocked = true;
 
+            MatchEffect();
+        }
+
+        private void MatchEffect()
+        {
             string shaderName = "PIXELATE_ON";
             if (IsMatchTarget(currentEvent))
             {

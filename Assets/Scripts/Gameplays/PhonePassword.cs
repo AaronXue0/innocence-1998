@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using TMPro;
 
 namespace Innocence
@@ -11,6 +12,7 @@ namespace Innocence
         [SerializeField] TMP_Text phoneDialDisplay;
         [SerializeField] GameObject returnButton;
         [SerializeField] float dialFailedAnimationDuration, dialingAnimationDuration;
+        [SerializeField] LayerMask targetLayer;
 
         private Animator animator;
         private SoundProp soundProp;
@@ -60,7 +62,7 @@ namespace Innocence
             if (InactiveClick || isInColdDuration)
                 return;
 
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Vector2.zero);
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Vector2.zero, targetLayer);
             if (hit && Input.GetMouseButtonDown(0) && isPickedUp)
             {
                 if (hit.collider.name == gameObject.name)
@@ -83,10 +85,6 @@ namespace Innocence
                     {
                         StartCoroutine(DialViewCoroutine(hit.collider.gameObject.GetComponent<SpriteRenderer>()));
                         Dial(num);
-                    }
-                    else
-                    {
-                        Debug.Log("Not a valid int");
                     }
                 }
 

@@ -24,6 +24,7 @@ namespace Innocence
         [Header("Dialogues")]
         public Dialogues dialogues = null;
         public FinishedResult finishedResult;
+        public SetItemStateContent[] setItemsState;
         public int[] nestItemsID;
         public SetItemStateContent[] afterGetAllNestItemsAndSetItemsState;
         public string targetSceneName;
@@ -37,5 +38,5 @@ namespace Innocence
         [Header("Game Storage")]
         public bool completed = false;
     }
-    public enum FinishedResult { None, CheckForTimeline, ChangeScene, GetItem }
+    public enum FinishedResult { None, CheckForTimeline, ChangeScene, GetItem, SetItemState }
 }
