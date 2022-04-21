@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1840,7 +1840,7 @@ MonoBehaviour:
   setLights: []
   password: 00000000090000000000000000000000000000000800000004000000070000000100000003000000
   phoneDialDisplay: {fileID: 1830613418}
-  returnButton: {fileID: 879334388}
+  returnButton: {fileID: 1308933917}
   dialFailedAnimationDuration: 1
   dialingAnimationDuration: 1
   targetLayer:
@@ -1968,7 +1968,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 16.21004, y: -0.575449}
+  m_Offset: {x: 16.941933, y: -0.575449}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1979,7 +1979,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.6175117, y: 12.892544}
+  m_Size: {x: 4.153723, y: 12.892544}
   m_EdgeRadius: 0
 --- !u!61 &1308933920
 BoxCollider2D:
