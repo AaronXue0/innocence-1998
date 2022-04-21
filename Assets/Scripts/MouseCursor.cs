@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using Innocence;
 
 public class MouseCursor : MonoBehaviour
@@ -24,6 +25,12 @@ public class MouseCursor : MonoBehaviour
     {
         Vector2 cursorPos = Input.mousePosition;
         transform.position = cursorPos + offset;
+
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            image.sprite = cursorSprite;
+            return;
+        }
 
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Vector2.zero);
         if (hit)

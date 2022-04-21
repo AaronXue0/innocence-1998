@@ -48,12 +48,15 @@ namespace Innocence
 
             if (boxCollider2D.enabled && hintSR != null)
             {
-                float _distance = Vector2.Distance(transform.position, Movement.instance.transform.position);
+                if (Movement.instance != null)
+                {
+                    float _distance = Vector2.Distance(transform.position, Movement.instance.transform.position);
 
-                if (_distance < this.distance)
-                    SetClickable(true);
-                else
-                    SetClickable(false);
+                    if (_distance < this.distance)
+                        SetClickable(true);
+                    else
+                        SetClickable(false);
+                }
             }
             else if (boxCollider2D.enabled == false && hintSR != null)
             {
@@ -86,14 +89,11 @@ namespace Innocence
             {
                 return;
             }
-            Debug.Log("onmousedown on: " + name);
 
             if (Movement.instance != null)
             {
                 Movement.instance.StopMovingInPos();
             }
-
-            Debug.Log(ableToClick || isObtainedItem);
 
             if (ableToClick || isObtainedItem)
                 ClickEvent();

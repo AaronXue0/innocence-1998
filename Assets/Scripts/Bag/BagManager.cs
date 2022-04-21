@@ -35,6 +35,8 @@ public class BagManager : MonoBehaviour
     [SerializeField]
     private GameObject bagSwitchBtn;
     [SerializeField]
+    private GameObject hideBagUI;
+    [SerializeField]
     private GameObject display;
     [SerializeField]
     private Image checkImg;
@@ -44,8 +46,18 @@ public class BagManager : MonoBehaviour
     // private AudioSource audioSource;
     private List<ItemBox> itemBoxs;
     private int focusIndex;
+    private bool isBagActive = false;
 
-    public void SwitchBtnActive(bool state) => bagSwitchBtn.SetActive(state);
+    public void SwitchBtnActive(bool state)
+    {
+        bagSwitchBtn.SetActive(state);
+    }
+    public void SwitchBagOpenState()
+    {
+        isBagActive = !isBagActive;
+        hideBagUI.SetActive(isBagActive);
+        bagAnimator.SetTrigger("switch");
+    }
     public void OnSceneLoadeed(string scene)
     {
         switch (scene)
@@ -64,6 +76,8 @@ public class BagManager : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
+
+        hideBagUI.SetActive(false);
     }
 
     private void Start()
@@ -197,6 +211,7 @@ public class BagManager : MonoBehaviour
         checkImg.sprite = info.onCheckSprite;
         display.SetActive(true);
         bagSwitchBtn.SetActive(false);
+        isBagActive = false;
     }
     public void UnCheckItem()
     {
