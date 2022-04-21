@@ -10,7 +10,7 @@ namespace Innocence
         public static NoteManager Instance;
 
         [SerializeField]
-        private GameObject noteDisplay;
+        private GameObject noteDisplay, flipRight, flipLeft;
         [SerializeField]
         private Image image;
 
@@ -18,10 +18,37 @@ namespace Innocence
 
         private void Awake()
         {
-            if (Instance != null)
+            if (Instance == null)
             {
                 Instance = this;
-                image = GetComponent<Image>();
+            }
+        }
+
+        private void Start()
+        {
+            RefreshItems();
+        }
+
+        private void Update()
+        {
+            if (note.currentIndex == note.InStoreCounts - 1 && flipRight.activeSelf == true)
+            {
+                flipRight.SetActive(false);
+                MouseCursor.Instance.OnUIExit();
+            }
+            else if (note.currentIndex < note.InStoreCounts - 1 && flipRight.activeSelf == false)
+            {
+                flipRight.SetActive(true);
+            }
+
+            if (note.currentIndex == 0 && flipLeft.activeSelf == true)
+            {
+                flipLeft.SetActive(false);
+                MouseCursor.Instance.OnUIExit();
+            }
+            else if (note.currentIndex > 0 && flipLeft.activeSelf == false)
+            {
+                flipLeft.SetActive(true);
             }
         }
 

@@ -117,6 +117,10 @@ namespace Innocence
                         GameManager.instance.SetItemState(o.id, o.newState);
                     }
                     break;
+                case FinishedResult.GetNote:
+                    Debug.Log("aslfmaspfm");
+                    GameManager.instance.ObtainNote(id);
+                    break;
                 case FinishedResult.None:
                 case FinishedResult.CheckForTimeline:
                 case FinishedResult.SetItemState:

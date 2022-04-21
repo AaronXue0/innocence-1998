@@ -7,6 +7,7 @@ namespace Innocence
 {
     public class NoteUIFliper : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, IPointerExitHandler
     {
+        [SerializeField] NoteSelector noteSelector;
         [SerializeField] Sprite flipSprite;
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -19,7 +20,17 @@ namespace Innocence
         }
         public void OnPointerDown(PointerEventData eventData)
         {
-
+            switch (noteSelector)
+            {
+                case NoteSelector.Next:
+                    NoteManager.Instance.NextPage();
+                    break;
+                case NoteSelector.Prev:
+                    NoteManager.Instance.PrevPage();
+                    break;
+            }
         }
     }
+
+    public enum NoteSelector { Next, Prev }
 }

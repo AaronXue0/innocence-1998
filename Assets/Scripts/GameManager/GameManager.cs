@@ -236,6 +236,7 @@ namespace Innocence
         public Bag GetBag { get { return gameData.GetBag(); } }
 
         public Note GetNote { get { return gameData.GetNote(); } }
+        public void ObtainNote(int id) => gameData.ObtainNote(id);
 
         // public Vector2 GetPlayerPos() => gameData.GetPlayerPos();
         public PlayerData GetPlayerData() => gameData.GetPlayerData();

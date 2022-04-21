@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: "Assets/Scenes/02_01 \u6416\u6416\u99AC\u4E92\u52D5.unity"
     guid: 9994a574442c45a458909402b3882a28
   - enabled: 1
+    path: Assets/Scenes/EVScene.unity
+    guid: f6be718c94eac4b79afb44d331b094f1
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: c27fc8dbc74f242f291c8f54f5b15dec
   m_configObjects: {}

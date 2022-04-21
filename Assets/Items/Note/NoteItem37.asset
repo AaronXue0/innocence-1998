@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8c71b495f84447988e9fcd2b879d485, type: 3}
-  m_Name: Bag
+  m_Script: {fileID: 11500000, guid: 152933f14c9ad49dd96ae995b3b11dad, type: 3}
+  m_Name: NoteItem37
   m_EditorClassIdentifier: 
-  inStorageItem:
-  - {fileID: 11400000, guid: 5b384ad7f6d144bef987cd5256465055, type: 2}
+  id: 37
+  currentState: 0
+  stateContents:
+  - sprite: {fileID: 21300000, guid: fd47fe9447f2b7046a34471037c717d6, type: 3}

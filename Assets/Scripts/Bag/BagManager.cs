@@ -210,11 +210,20 @@ public class BagManager : MonoBehaviour
     private void ActiveDisplayer(int id)
     {
         bagAnimator.SetTrigger("close");
-        ItemInfo info = itemInfoList.GetItemWithID(id);
-        checkImg.sprite = info.onCheckSprite;
-        display.SetActive(true);
-        bagSwitchBtn.SetActive(false);
-        isBagActive = false;
+        switch (id)
+        {
+            case 9:
+                NoteManager.Instance.SetNoteDisplay(true);
+                UnCheckItem();
+                break;
+            default:
+                ItemInfo info = itemInfoList.GetItemWithID(id);
+                checkImg.sprite = info.onCheckSprite;
+                display.SetActive(true);
+                bagSwitchBtn.SetActive(false);
+                isBagActive = false;
+                break;
+        }
     }
     public void UnCheckItem()
     {

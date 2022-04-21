@@ -104,6 +104,9 @@ namespace Innocence
             bag.Reset();
             BagManager.Instance.RefreshItems();
 
+            note.Reset();
+            NoteManager.Instance.RefreshItems();
+
             yield return new WaitForSeconds(1.5f);
 
             if (callback != null)
@@ -138,6 +141,22 @@ namespace Innocence
         public Note GetNote()
         {
             return note;
+        }
+        public void ObtainNote(int id)
+        {
+            GameItem item = GetGameItem(id);
+            ItemContent itemContent = item.GetContent;
+
+            itemContent.completed = true;
+            item.AddCurrentState();
+            SetItemState(id, item.currentState);
+            item.GetContent.completed = true;
+
+            note.StoreItem(item.id);
+            note.SelectLastestNote();
+            NoteManager.Instance.RefreshItems();
+
+            BagManager.Instance.CheckItem(9);
         }
         #endregion
 
