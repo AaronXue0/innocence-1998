@@ -53,9 +53,13 @@ namespace Innocence
                     float _distance = Vector2.Distance(transform.position, Movement.instance.transform.position);
 
                     if (_distance < this.distance)
+                    {
                         SetClickable(true);
+                    }
                     else
+                    {
                         SetClickable(false);
+                    }
                 }
             }
             else if (boxCollider2D.enabled == false && hintSR != null)
@@ -76,7 +80,6 @@ namespace Innocence
             if (hintSR != null && sprite != null)
             {
                 hintSR.sprite = sprite;
-                Debug.Log("Change sprite");
             }
         }
 
@@ -90,20 +93,23 @@ namespace Innocence
                 return;
             }
 
-            if (Movement.instance != null)
-            {
-                Movement.instance.StopMovingInPos();
-            }
-
             if (ableToClick || isObtainedItem)
                 ClickEvent();
+            else
+            {
+                GameManager.instance.StopAllItemPropCoroutines();
+                StartCoroutine(WaitForPlayer());
+            }
         }
 
         private void ClickEvent()
         {
             isPlaying = true;
 
-            Debug.Log("Result: " + item.finishedResult);
+            if (Movement.instance != null)
+            {
+                Movement.instance.StopMovingInPos();
+            }
 
             switch (item.finishedResult)
             {
@@ -134,6 +140,18 @@ namespace Innocence
         {
             isPlaying = false;
             GameManager.instance.ItemDialoguesFinished(id);
+        }
+
+        IEnumerator WaitForPlayer()
+        {
+            float _distance = Vector2.Distance(transform.position, Movement.instance.transform.position);
+            while (_distance > this.distance)
+            {
+                yield return null;
+                _distance = Vector2.Distance(transform.position, Movement.instance.transform.position);
+            }
+
+            ClickEvent();
         }
     }
 

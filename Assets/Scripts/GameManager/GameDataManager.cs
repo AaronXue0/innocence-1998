@@ -53,6 +53,13 @@ namespace Innocence
         public GameItem GetGameItem(int id) => gameItems.ToList().Find(x => x.id == id);
         public ItemContent GetItemContent(int id) => gameItems.ToList().Find(x => x.id == id).GetContent;
         public Dialogues GetDialogues(int id) => gameItems.ToList().Find(x => x.id == id).GetContent.dialogues;
+        public void StopAllItemPropCoroutines()
+        {
+            foreach (ItemProp itemProp in itemProps)
+            {
+                itemProp.StopAllCoroutines();
+            }
+        }
         #endregion
 
         #region Light

@@ -51,6 +51,10 @@ public class MouseCursor : MonoBehaviour
             image = GetComponent<Image>();
             image.sprite = cursorSprite;
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     private void Update()
     {

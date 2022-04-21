@@ -224,6 +224,7 @@ namespace Innocence
 
         public bool IsItemComplete(int id) => gameData.IsItemComplete(id);
 
+        public void StopAllItemPropCoroutines() => gameData.StopAllItemPropCoroutines();
         public void SetProgress(int progress) => gameData.progress = progress;
         public void SetItemState(int id, int state) => gameData.SetItemState(id, state);
         public void ItemDialoguesFinished(int id) => gameData.ItemDialoguesFinished(id);
