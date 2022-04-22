@@ -10,14 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0db39359815e8439a984a7c2eb22bd76, type: 3}
-  m_Name: HouseBox
+  m_Name: Pawn
   m_EditorClassIdentifier: 
-  id: 15
-  currentState: 1
+  id: 19
+  currentState: 0
   stateContents:
-  - sprite: {fileID: 21300000, guid: 01b787280c5bdb544a908e6fc6bef866, type: 3}
+  - sprite: {fileID: 0}
     animtorTriggerName: 
     isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 5
+    setItemsState: []
+    nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: 
+    hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
+    completed: 0
+  - sprite: {fileID: 0}
+    animtorTriggerName: 
+    isActive: 0
     isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 0
@@ -28,16 +41,3 @@ MonoBehaviour:
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
-  - sprite: {fileID: 21300000, guid: 84bb41ddd2598a344a7e05b3f21e47b0, type: 3}
-    animtorTriggerName: 
-    isActive: 1
-    isClickAble: 0
-    dialogues: {fileID: 0}
-    finishedResult: 0
-    setItemsState: []
-    nestItemsID: 
-    afterGetAllNestItemsAndSetItemsState: []
-    targetSceneName: 
-    hintSprite: {fileID: 0}
-    soundClip: {fileID: 0}
-    completed: 1
