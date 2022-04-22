@@ -8,6 +8,7 @@ namespace Innocence
         public int id;
         public int currentState;
         public NoteItemContent[] stateContents;
+        public AudioClip onGetSound;
 
         public NoteItemContent GetContent { get { return stateContents[currentState]; } }
         public void AddCurrentState() { currentState++; }

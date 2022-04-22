@@ -10,23 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0db39359815e8439a984a7c2eb22bd76, type: 3}
-  m_Name: ABoxOfLighter
+  m_Name: HouseBox
   m_EditorClassIdentifier: 
-  id: 10
+  id: 15
   currentState: 0
   stateContents:
   - sprite: {fileID: 0}
     animtorTriggerName: 
     isActive: 1
-    isClickAble: 1
+    isClickAble: 0
     dialogues: {fileID: 0}
-    finishedResult: 3
+    finishedResult: 0
     setItemsState: []
-    nestItemsID: 090000000a0000001000000011000000
-    afterGetAllNestItemsAndSetItemsState:
-    - id: 3
-      newState: 2
-    afterGetAllNestItemsSetProgress: 10
+    nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
@@ -40,7 +37,6 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
-    afterGetAllNestItemsSetProgress: 0
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}

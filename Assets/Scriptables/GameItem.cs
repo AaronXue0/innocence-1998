@@ -27,6 +27,7 @@ namespace Innocence
         public SetItemStateContent[] setItemsState;
         public int[] nestItemsID;
         public SetItemStateContent[] afterGetAllNestItemsAndSetItemsState;
+        // public int afterGetAllNestItemsSetProgress;
         public string targetSceneName;
 
         [Header("UI")]

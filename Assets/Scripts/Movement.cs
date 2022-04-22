@@ -41,13 +41,20 @@ namespace Innocence
 
         public void SetScale(Vector2 scale)
         {
-            transform.localScale = scale;
+            float x = transform.localScale.x;
+            float y = transform.localScale.y;
+            Vector2 myScale = new Vector2(scale.x > 0 ? x : -x, y);
+            transform.localScale = myScale;
         }
 
         public void SetPosition(Vector2 position, Vector2 scale)
         {
             transform.position = position;
-            transform.localScale = scale;
+
+            float x = transform.localScale.x;
+            float y = transform.localScale.y;
+            Vector2 myScale = new Vector2(scale.x > 0 ? x : -x, y);
+            transform.localScale = myScale;
         }
 
         public void SetTrigger(string name)
