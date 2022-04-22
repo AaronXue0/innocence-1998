@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DistributionBox
   m_EditorClassIdentifier: 
   id: 4
-  currentState: 4
+  currentState: 3
   stateContents:
   - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
     animtorTriggerName: 
@@ -63,6 +63,19 @@ MonoBehaviour:
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
+    finishedResult: 1
+    setItemsState: []
+    nestItemsID: 02000000
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: 
+    hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
+    soundClip: {fileID: 0}
+    completed: 1
+  - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
     finishedResult: 2
     setItemsState: []
     nestItemsID: 02000000
@@ -70,13 +83,13 @@ MonoBehaviour:
     targetSceneName: "01_01 \u914D\u96FB\u7BB1\u5167\u90E8"
     hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
     soundClip: {fileID: 0}
-    completed: 1
+    completed: 0
   - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
     animtorTriggerName: 
     isActive: 1
     isClickAble: 0
     dialogues: {fileID: 0}
-    finishedResult: 2
+    finishedResult: 0
     setItemsState: []
     nestItemsID: 02000000
     afterGetAllNestItemsAndSetItemsState: []

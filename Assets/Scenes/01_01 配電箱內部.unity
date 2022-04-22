@@ -815,7 +815,7 @@ MonoBehaviour:
   isObtainedItem: 1
   obtainedItemAndSetStates:
   - id: 4
-    newState: 4
+    newState: 5
   item:
     sprite: {fileID: 0}
     animtorTriggerName: 

@@ -289,7 +289,7 @@ MonoBehaviour:
     newProgress: 7
     dataClipContents:
     - targetData: {fileID: 11400000, guid: d2b58735e71ca804a89541d62723dad7, type: 2}
-      setNewState: 3
+      setNewState: 4
     - targetData: {fileID: 11400000, guid: 57f53dbc82a999b4e87d078cb0dd25f8, type: 2}
       setNewState: 1
     lightClipContents: []
