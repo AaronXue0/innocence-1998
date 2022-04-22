@@ -131,7 +131,7 @@ namespace Innocence
             soundProp.ChoseAndPlayClip(num);
             phoneDialDisplay.text += num;
 
-            if (dialPassword.Count == 10)
+            if (dialPassword.Count == password.Count)
             {
                 CheckPassword();
             }
