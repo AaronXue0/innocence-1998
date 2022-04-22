@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -978,9 +978,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2358967255974437091, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2358967257387856648, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347341307460390761, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2105,6 +2115,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1051252237}
   - component: {fileID: 1051252236}
+  - component: {fileID: 1051252239}
+  - component: {fileID: 1051252238}
   m_Layer: 0
   m_Name: "\u623F\u5B50"
   m_TagString: Untagged
@@ -2176,6 +2188,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1051252238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051252235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64be0ceb4b00748cc942f1ddec073fee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 15
+  isGameplayItem: 0
+  isObtainedItem: 0
+  obtainedItemAndSetStates: []
+  item:
+    sprite: {fileID: 0}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    setItemsState: []
+    nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: 
+    hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
+    completed: 0
+  hintSR: {fileID: 0}
+  distance: 0
+--- !u!61 &1051252239
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051252235}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.40084124, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 12.22, y: 7.65}
+    newSize: {x: 12.22, y: 7.65}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.420745, y: 7.65}
+  m_EdgeRadius: 0
 --- !u!1 &1076365591
 GameObject:
   m_ObjectHideFlags: 0
