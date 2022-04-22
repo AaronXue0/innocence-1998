@@ -342,7 +342,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 93de2cfd98e793c43ac7b21dbae72117, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6431373, g: 0.7411765, b: 0.8039216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -612,6 +612,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 232233079568065057, guid: 3ff9772071037cc46ba3b29e452ed7f5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 232233079568065057, guid: 3ff9772071037cc46ba3b29e452ed7f5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7294959
+      objectReference: {fileID: 0}
+    - target: {fileID: 232233079568065057, guid: 3ff9772071037cc46ba3b29e452ed7f5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.63403344
       objectReference: {fileID: 0}
     - target: {fileID: 232233079568065086, guid: 3ff9772071037cc46ba3b29e452ed7f5,
         type: 3}
@@ -1235,7 +1250,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1259,7 +1274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618178856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.1, y: 0.089999914, z: -10}
+  m_LocalPosition: {x: -19.099997, y: 0.047676086, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1836295221}
@@ -1400,10 +1415,10 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 1.63
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: 0.5030185, y: -0.23566556, z: 0}
-  - {x: -0.016134024, y: -0.09978056, z: 0}
-  - {x: -0.4067161, y: 0.01569748, z: 0}
-  - {x: -0.6184466, y: 0.13977242, z: 0}
+  - {x: 0.48292542, y: -0.8788147, z: 0}
+  - {x: 0.05091858, y: -0.552964, z: 0}
+  - {x: -0.3429699, y: -0.4181503, z: 0}
+  - {x: -0.81661224, y: -0.40357852, z: 0}
   - {x: -5.9549685, y: -8.345741, z: 0}
   - {x: 5.9741573, y: -8.323956, z: 0}
 --- !u!95 &670674077
@@ -1451,7 +1466,7 @@ Transform:
   m_GameObject: {fileID: 757873310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.35, z: 1}
   m_Children: []
   m_Father: {fileID: 141339678}
   m_RootOrder: 0
@@ -2155,7 +2170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 3.8, z: -10}
+  m_FollowOffset: {x: 0, y: 3.73, z: -10}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -3043,7 +3058,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 93de2cfd98e793c43ac7b21dbae72117, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6431373, g: 0.7411765, b: 0.8039216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3124,7 +3139,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c450bae0ffcd6914e8beb16efd64b14e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.63923997, g: 0.7403825, b: 0.8018868, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3209,7 +3224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836295220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0000038146973, y: -0.027676105, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1290997190}
@@ -3255,7 +3270,7 @@ MonoBehaviour:
   m_Follow: {fileID: 226440644}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 5.1
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -3380,7 +3395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993948541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.95, y: -3.01, z: 0}
+  m_LocalPosition: {x: -14.14, y: -3.01, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
