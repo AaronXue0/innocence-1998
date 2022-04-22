@@ -17,6 +17,7 @@ namespace Innocence
 
         [HideInInspector]
         public string currentScene;
+        private string prevScene;
 
         private GameDataManager gameData;
         private TimelinePlayer timeplyer;
@@ -144,6 +145,7 @@ namespace Innocence
         }
         private void BeforeSceneChanging(string scene)
         {
+            prevScene = scene;
             switch (scene)
             {
                 case "EVScene":
@@ -175,6 +177,8 @@ namespace Innocence
             BagManager.Instance.OnSceneLoadeed(currentScene);
             MouseCursor.Instance.OnSceneLoaded(currentScene);
 
+            int index = -1;
+
             switch (currentScene)
             {
                 case "PVScene":
@@ -184,17 +188,31 @@ namespace Innocence
                     break;
                 // Scene that player ables to move
                 case "01_00 小吃部":
-                    if (Movement.instance)
-                        Movement.instance.SetPosition(gameData.GetPlayerPos(0));
+                    index = 0;
                     break;
                 case "01_50 電話亭過場":
-                    if (Movement.instance)
-                        Movement.instance.SetPosition(gameData.GetPlayerPos(1));
+                    index = 1;
                     break;
                 case "02_00 騎樓":
-                    if (Movement.instance)
-                        Movement.instance.SetPosition(gameData.GetPlayerPos(2));
+                    index = 2;
                     break;
+            }
+
+            if (index != -1)
+            {
+                if (Movement.instance)
+                {
+                    if (prevScene != "01_00 小吃部" && prevScene != "01_50 電話亭過場" && prevScene != "02_00 騎樓")
+                    {
+                        Movement.instance.SetPosition(gameData.GetPlayerPos(index), new Vector2(1, 1));
+                    }
+                    else
+                    {
+                        Debug.Log("asfomaspf");
+                        var (pos, scale) = gameData.GetPlayerVectors(currentScene, prevScene);
+                        Movement.instance.SetPosition(pos, scale);
+                    }
+                }
             }
         }
         #endregion

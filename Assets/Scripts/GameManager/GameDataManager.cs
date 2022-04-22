@@ -41,6 +41,7 @@ namespace Innocence
         #region PlayerData
         public PlayerData GetPlayerData() => playerData;
         public Vector2 GetPlayerPos(int index) => playerData.sceneSpwanPos[index].currentSpwanPos;
+        public (Vector2, Vector2) GetPlayerVectors(string to, string from) => playerData.GetPlayerVectors(to, from);
         public void SavePlayerPos(int index, Vector2 pos)
         {
             playerData.sceneSpwanPos[index].currentSpwanPos = pos;

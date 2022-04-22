@@ -35,9 +35,10 @@ namespace Innocence
             // SetPosition(GameManager.instance.GetPlayerPos());
         }
 
-        public void SetPosition(Vector2 position)
+        public void SetPosition(Vector2 position, Vector2 scale)
         {
             transform.position = position;
+            transform.localScale = scale;
         }
 
         public void SetTrigger(string name)
