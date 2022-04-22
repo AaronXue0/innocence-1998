@@ -162,6 +162,14 @@ namespace Innocence
 
             note.StoreItem(item.id);
             note.SelectLastestNote();
+
+            AudioClip clip = note.GetNote(id).onGetSound;
+
+            if (clip != null)
+            {
+                GameManager.instance.PlaySFX(clip);
+            }
+
             NoteManager.Instance.RefreshItems();
 
             BagManager.Instance.CheckItem(9);

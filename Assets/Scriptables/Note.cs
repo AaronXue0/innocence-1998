@@ -27,6 +27,11 @@ namespace Innocence
             inStoreageNoteItems.Add(item);
         }
 
+        public NoteItem GetNote(int id)
+        {
+            return noteInfoList.GetNoteWithID(id);
+        }
+
         public List<int> GetNotesID()
         {
             List<int> items = new List<int>();
