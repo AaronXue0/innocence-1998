@@ -2740,7 +2740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1268884693
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2846,7 +2846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 37
   isGameplayItem: 0
-  isObtainedItem: 0
+  isObtainedItem: 1
   obtainedItemAndSetStates: []
   item:
     sprite: {fileID: 0}
