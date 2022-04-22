@@ -39,6 +39,20 @@ namespace Innocence
             // SetPosition(GameManager.instance.GetPlayerPos());
         }
 
+        public void FaceToTarget(Transform targetTransform)
+        {
+            float x = Mathf.Abs(transform.localScale.x);
+            float y = transform.localScale.y;
+            if (targetTransform.position.x > transform.position.x)
+            {
+                transform.localScale = new Vector2(x, y);
+            }
+            else if (targetTransform.position.x < transform.position.x)
+            {
+                transform.localScale = new Vector2(-x, y);
+            }
+        }
+
         public void SetScale(Vector2 scale)
         {
             float x = transform.localScale.x;

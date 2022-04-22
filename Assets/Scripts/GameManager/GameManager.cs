@@ -171,7 +171,6 @@ namespace Innocence
         {
             Debug.Log("Scene loaded: " + scene.name);
             currentScene = scene.name;
-            audioPlayer.ChangeMusicDectector(scene.name);
             gameData.SetAllStatesInScene();
 
             BagManager.Instance.OnSceneLoadeed(currentScene);
@@ -189,12 +188,15 @@ namespace Innocence
                 // Scene that player ables to move
                 case "01_00 小吃部":
                     index = 0;
+                    audioPlayer.ChangeMusicDectector(scene.name);
                     break;
                 case "01_50 電話亭過場":
                     index = 1;
+                    audioPlayer.ChangeMusicDectector(scene.name);
                     break;
                 case "02_00 騎樓":
                     index = 2;
+                    audioPlayer.ChangeMusicDectector(scene.name);
                     break;
             }
 

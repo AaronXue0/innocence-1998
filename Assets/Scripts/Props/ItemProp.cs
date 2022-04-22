@@ -95,9 +95,7 @@ namespace Innocence
 
             if (ableToClick || isObtainedItem)
             {
-                if (Movement.instance != null)
-                    Movement.instance.SetScale(new Vector2(transform.position.x < Movement.instance.transform.position.x ? -1 : 1, 1));
-
+                Movement.instance.FaceToTarget(transform);
                 ClickEvent();
             }
             else if (Movement.instance != null)
@@ -155,7 +153,9 @@ namespace Innocence
                 yield return null;
                 _distance = Vector2.Distance(transform.position, Movement.instance.transform.position);
             }
-            Movement.instance.SetScale(new Vector2(transform.position.x < Movement.instance.transform.position.x ? -1 : 1, 1));
+
+            Movement.instance.FaceToTarget(transform);
+
             ClickEvent();
         }
     }
