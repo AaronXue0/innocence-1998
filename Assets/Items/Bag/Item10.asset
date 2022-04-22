@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 10
   canDrag: 1
   onBagSprite: {fileID: 21300000, guid: 3d8d9d17a0e00fe4bb1c77ccc2c25b3f, type: 3}
-  onCheckSprite: {fileID: 21300000, guid: 5ecefc191534f234f9d27613bdc45f57, type: 3}
+  onCheckSprite: {fileID: 21300000, guid: c6c994442d42da14c93a98bcd3afa7af, type: 3}
   onGetSprite: {fileID: 21300000, guid: 3d8d9d17a0e00fe4bb1c77ccc2c25b3f, type: 3}
   onGetSound: {fileID: 0}
   onUsedSound: {fileID: 0}
