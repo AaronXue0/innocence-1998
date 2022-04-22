@@ -95,7 +95,9 @@ namespace Innocence
 
             if (ableToClick || isObtainedItem)
             {
-                Movement.instance.FaceToTarget(transform);
+                if (Movement.instance != null)
+                    Movement.instance.FaceToTarget(transform);
+
                 ClickEvent();
             }
             else if (Movement.instance != null)
@@ -153,7 +155,8 @@ namespace Innocence
                 _distance = Vector2.Distance(transform.position, Movement.instance.transform.position);
             }
 
-            Movement.instance.FaceToTarget(transform);
+            if (Movement.instance != null)
+                Movement.instance.FaceToTarget(transform);
 
             ClickEvent();
         }

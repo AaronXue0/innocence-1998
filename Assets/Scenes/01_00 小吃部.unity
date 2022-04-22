@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -150,7 +150,7 @@ PlayableDirector:
   m_GameObject: {fileID: 5832162}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 787d8ce772966498ba802947d84f5450, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: e131c3e4248aa4299836f2658f37b785, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -222,6 +222,10 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -1241869669435985815, guid: 167ae206b114b4177ab86754302df58c, type: 2}
     value: {fileID: 1108346797}
+  - key: {fileID: 8654622302872245763, guid: e131c3e4248aa4299836f2658f37b785, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7546879338197585990, guid: e131c3e4248aa4299836f2658f37b785, type: 2}
+    value: {fileID: 5832166}
   m_ExposedReferences:
     m_References:
     - 149f97ce81026fc4abfa7e71cc268883: {fileID: 1177466223}
@@ -263,6 +267,9 @@ MonoBehaviour:
     conition: 0
   - requiredProgress: 6
     asset: {fileID: 11400000, guid: 787d8ce772966498ba802947d84f5450, type: 2}
+    conition: 0
+  - requiredProgress: 10
+    asset: {fileID: 11400000, guid: e131c3e4248aa4299836f2658f37b785, type: 2}
     conition: 0
   - requiredProgress: 30
     asset: {fileID: 11400000, guid: badf3d58f819e4d7aa299e9d05cc90b3, type: 2}
@@ -683,6 +690,7 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
@@ -982,7 +990,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.118852, y: 1.3384795, z: -10}
+  m_LocalPosition: {x: 8.118849, y: 1.3384733, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -1545,6 +1553,7 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
@@ -2657,6 +2666,7 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
@@ -3073,6 +3083,7 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
@@ -3248,7 +3259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.000056266785, y: -0.122852564, z: 0}
+  m_LocalPosition: {x: 0.000059127808, y: -0.122846365, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -3430,6 +3441,7 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
@@ -3790,6 +3802,7 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
@@ -4318,6 +4331,7 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
@@ -4768,6 +4782,7 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
@@ -4860,6 +4875,7 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}

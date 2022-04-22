@@ -2113,7 +2113,7 @@ MonoBehaviour:
     requiredProgress: 0
     clip: {fileID: 8300000, guid: 9b575b7dfd1dec4459ba3ff41ca4cd84, type: 3}
   - requiredScene: "01_00 \u5C0F\u5403\u90E8"
-    requiredProgress: 9
+    requiredProgress: 10
     clip: {fileID: 8300000, guid: a648c18617a68a84cbeb3d1f8350ec38, type: 3}
   - requiredScene: "02_01\u6416\u6416\u99AC\u4E92\u52D5"
     requiredProgress: 23

@@ -190,13 +190,15 @@ namespace Innocence
             GameItem item = GetGameItem(id);
             int[] nestItems = item.GetContent.nestItemsID;
             SetItemStateContent[] afterGetAllNestItemsAndSetItemsState = item.GetContent.afterGetAllNestItemsAndSetItemsState;
+            int newProgress = item.GetContent.afterGetAllNestItemsSetProgress;
 
             item.GetContent.completed = true;
             item.AddCurrentState();
             SetItemState(id, item.currentState);
             item.GetContent.completed = true;
 
-            CheckNestItemsObtained(nestItems, afterGetAllNestItemsAndSetItemsState);
+
+            CheckNestItemsObtained(nestItems, afterGetAllNestItemsAndSetItemsState, newProgress);
 
             bag.StoreItem(item);
             bagManager.ObtainedItem(id, doseCheckItem);
@@ -207,7 +209,7 @@ namespace Innocence
             bag.StoreItem(item);
             bagManager.ObtainedItem(id, doseCheckItem);
         }
-        public void CheckNestItemsObtained(int[] nestItems, SetItemStateContent[] afterGetAllNestItemsAndSetItemsState)
+        public void CheckNestItemsObtained(int[] nestItems, SetItemStateContent[] afterGetAllNestItemsAndSetItemsState, int newProgress)
         {
             bool allItemsGet = true;
             foreach (int id in nestItems)
@@ -228,7 +230,11 @@ namespace Innocence
                 {
                     GetGameItem(s.id).currentState = s.newState;
                 }
-                gameDatas.progress++;
+
+                if (newProgress > 0)
+                    gameDatas.progress = newProgress;
+                else
+                    gameDatas.progress++;
             }
         }
         public void ItemUsage(int id)
