@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Cassette
   m_EditorClassIdentifier: 
   id: 25
-  currentState: 0
+  currentState: 1
   stateContents:
   - sprite: {fileID: 0}
     animtorTriggerName: 
-    isActive: 1
+    isActive: 0
     isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 3
@@ -26,7 +26,21 @@ MonoBehaviour:
     afterGetAllNestItemsAndSetItemsState:
     - id: 12
       newState: 3
-    afterGetAllNestItemsSetProgress: 10
+    targetSceneName: 
+    hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
+    completed: 1
+  - sprite: {fileID: 0}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 3
+    setItemsState: []
+    nestItemsID: 1000000011000000
+    afterGetAllNestItemsAndSetItemsState:
+    - id: 12
+      newState: 3
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
@@ -38,10 +52,11 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 0
     setItemsState: []
-    nestItemsID: 
-    afterGetAllNestItemsAndSetItemsState: []
-    afterGetAllNestItemsSetProgress: 0
+    nestItemsID: 1000000011000000
+    afterGetAllNestItemsAndSetItemsState:
+    - id: 12
+      newState: 3
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 0
+    completed: 1

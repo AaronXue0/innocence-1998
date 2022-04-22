@@ -17,6 +17,19 @@ MonoBehaviour:
   stateContents:
   - sprite: {fileID: 0}
     animtorTriggerName: 
+    isActive: 0
+    isClickAble: 0
+    dialogues: {fileID: 0}
+    finishedResult: 5
+    setItemsState: []
+    nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: 
+    hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
+    completed: 0
+  - sprite: {fileID: 0}
+    animtorTriggerName: 
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
@@ -33,7 +46,7 @@ MonoBehaviour:
     isActive: 0
     isClickAble: 0
     dialogues: {fileID: 0}
-    finishedResult: 0
+    finishedResult: 5
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []

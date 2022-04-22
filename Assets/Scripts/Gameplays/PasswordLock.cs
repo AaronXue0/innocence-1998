@@ -23,7 +23,7 @@ namespace Innocence
             Debug.Log("Solved");
             CloseGameplay();
             BagManager.Instance.SwitchBtnActive(true);
-            TimelineProp.instance.Invoke(completeProgress);
+            // TimelineProp.instance.Invoke(completeProgress);
         }
         #endregion
 

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0db39359815e8439a984a7c2eb22bd76, type: 3}
-  m_Name: HouseBox
+  m_Name: OpenedHouse
   m_EditorClassIdentifier: 
-  id: 15
+  id: 41
   currentState: 0
   stateContents:
   - sprite: {fileID: 0}
     animtorTriggerName: 
-    isActive: 1
+    isActive: 0
     isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
     completed: 0
   - sprite: {fileID: 0}
     animtorTriggerName: 
-    isActive: 0
+    isActive: 1
     isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 0
