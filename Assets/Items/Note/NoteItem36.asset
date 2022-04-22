@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152933f14c9ad49dd96ae995b3b11dad, type: 3}
   m_Name: NoteItem36
   m_EditorClassIdentifier: 
-  id: 0
+  id: 36
   currentState: 0
-  stateContents: []
+  stateContents:
+  - sprite: {fileID: 21300000, guid: be4f49dbbb31b244a9ccd7a65f3f5ccc, type: 3}

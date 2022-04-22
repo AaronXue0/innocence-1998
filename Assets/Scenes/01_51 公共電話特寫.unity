@@ -1838,7 +1838,7 @@ MonoBehaviour:
   - id: 29
     state: 1
   setLights: []
-  password: 0000000000000000000000000800000004000000070000000100000003000000
+  password: 000000000800000004000000070000000100000003000000
   phoneDialDisplay: {fileID: 1830613418}
   returnButton: {fileID: 1308933917}
   dialFailedAnimationDuration: 1
