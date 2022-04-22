@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2213e0624f073b243af294fa542b559d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: 3
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: GenYoMin TW TTF
+  fontNames:
+  - GenYoMin TW TTF
+  fallbackFontReferences: []
+  customCharacters: "\u4E00\u628A\u9470\u5319\uFF0C\u639B\u8457\u300A\u672A\u4F86\u6A5F\u5668\u72D7\u300B\u5361\u901A\u540A\u98FE\u3002\u662F\u8CB7\u5DE7\u514B\u529B\u9905\u4E7E\u9644\u8D08\u7684\u6709\u7A7F\u6E05\u6DBC\u5973\u4EBA\u5716\u7247\u6253\u706B\u82B1\u540D\u5BEB\u300E\u746A\u96C5\u300F\u96FB\u8A71\u90E8\u5206\u88AB\u5857\u6539\u904E.\u5728\u6AC3\u5B50\u88E1\u627E\u5230\u786C\u5E63\u6D17\u9AEE\u7CBE\u5EE3\u544A\u5DF2\u7D93\u7528\u5E7E\u6B21\u75D5\u8DE1\u5ABD\u751F\u65E5\u6708\u4EFD\u548C\u671F\u5F88\u5409\u7965\u6578\u5B57\u6C92\u8CBC\u5C01\u9762\u6848\u9304\u97F3\u5E36\u61C9\u8A72\u81EA\u5DF1\u7A7A\u767D\u8DDF\u7DF4\u7FD2\u7D19\u689D\u4E0A\u50CF"
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

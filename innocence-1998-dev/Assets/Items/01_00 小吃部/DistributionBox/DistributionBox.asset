@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db39359815e8439a984a7c2eb22bd76, type: 3}
+  m_Name: DistributionBox
+  m_EditorClassIdentifier: 
+  id: 4
+  currentState: 3
+  stateContents:
+  - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 11400000, guid: 0e1fd682afec7d64d80c1c31f62c7ae0, type: 2}
+    finishedResult: 0
+    setItemsState: []
+    nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: 
+    hintSprite: {fileID: 0}
+    soundClip: {fileID: 0}
+    completed: 0
+  - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 11400000, guid: 0e1fd682afec7d64d80c1c31f62c7ae0, type: 2}
+    finishedResult: 4
+    setItemsState:
+    - id: 4
+      newState: 2
+    - id: 2
+      newState: 2
+    nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: "01_01 \u914D\u96FB\u7BB1\u5167\u90E8"
+    hintSprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
+    soundClip: {fileID: 0}
+    completed: 1
+  - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 11400000, guid: 0e1fd682afec7d64d80c1c31f62c7ae0, type: 2}
+    finishedResult: 0
+    setItemsState: []
+    nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: 
+    hintSprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
+    soundClip: {fileID: 0}
+    completed: 0
+  - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 1
+    setItemsState: []
+    nestItemsID: 02000000
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: 
+    hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
+    soundClip: {fileID: 0}
+    completed: 1
+  - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 1
+    dialogues: {fileID: 0}
+    finishedResult: 2
+    setItemsState: []
+    nestItemsID: 02000000
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: "01_01 \u914D\u96FB\u7BB1\u5167\u90E8"
+    hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
+    soundClip: {fileID: 0}
+    completed: 0
+  - sprite: {fileID: 21300000, guid: 7ab03754fc8355543a169f3ef9f00792, type: 3}
+    animtorTriggerName: 
+    isActive: 1
+    isClickAble: 0
+    dialogues: {fileID: 0}
+    finishedResult: 0
+    setItemsState: []
+    nestItemsID: 02000000
+    afterGetAllNestItemsAndSetItemsState: []
+    targetSceneName: "01_01 \u914D\u96FB\u7BB1\u5167\u90E8"
+    hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
+    soundClip: {fileID: 0}
+    completed: 0
