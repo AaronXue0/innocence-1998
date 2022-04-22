@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -794,7 +794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &722246519
 Transform:
   m_ObjectHideFlags: 0
@@ -802,13 +802,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722246518}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.07871998, w: 0.99689674}
   m_LocalPosition: {x: -0.67413616, y: 8.351753, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1501226942}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.03}
 --- !u!199 &722246520
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -2320,8 +2320,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: d9612d901a2633141b5d0a7706a88015, type: 3}
-    - sprite: {fileID: 21300000, guid: b713989c53714774ca1b451aafa3360c, type: 3}
+    - sprite: {fileID: 21300000, guid: c6149e3a848d0a24d859ce4d2c0d469c, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -6060,7 +6059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994911711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.085642, y: -1.178247, z: 0}
+  m_LocalPosition: {x: 4.494771, y: -1.178247, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1185023566}
@@ -6366,6 +6365,7 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
@@ -6978,7 +6978,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501226937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.383266, y: -0.15175295, z: -10}
+  m_LocalPosition: {x: 9.974137, y: -0.15175295, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 994911712}
@@ -7031,6 +7031,7 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
