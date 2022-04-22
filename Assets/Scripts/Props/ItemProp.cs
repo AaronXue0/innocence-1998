@@ -127,7 +127,6 @@ namespace Innocence
                     }
                     break;
                 case FinishedResult.GetNote:
-                    Debug.Log("aslfmaspfm");
                     GameManager.instance.ObtainNote(id);
                     break;
                 case FinishedResult.None:

@@ -6060,7 +6060,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994911711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.494771, y: -1.178247, z: 0}
+  m_LocalPosition: {x: 5.085642, y: -1.178247, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1185023566}
@@ -6978,7 +6978,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501226937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.974137, y: -0.15175295, z: -10}
+  m_LocalPosition: {x: 9.383266, y: -0.15175295, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 994911712}
@@ -7036,7 +7036,7 @@ MonoBehaviour:
     soundClip: {fileID: 0}
     completed: 0
   hintSR: {fileID: 1219269299}
-  distance: 7
+  distance: 4
 --- !u!61 &1561415814
 BoxCollider2D:
   m_ObjectHideFlags: 0

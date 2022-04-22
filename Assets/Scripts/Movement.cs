@@ -24,6 +24,11 @@ namespace Innocence
 
         private void Awake()
         {
+            if (instance != null)
+            {
+                instance = null;
+            }
+
             instance = this;
 
             animWalk = GetComponent<Animator>();
