@@ -1992,7 +1992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTestMode: 1
-  timeSpeed: 1
+  timeSpeed: 3
   bagObject: {fileID: 4388146642601719207}
   resetPanel: {fileID: 1610490096}
   pauseGO: {fileID: 1938817275}

@@ -21,10 +21,12 @@ MonoBehaviour:
     isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 3
+    setItemsState: []
     nestItemsID: 1000000011000000
     afterGetAllNestItemsAndSetItemsState:
     - id: 12
       newState: 3
+    afterGetAllNestItemsSetProgress: 10
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
@@ -35,8 +37,10 @@ MonoBehaviour:
     isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: 0
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
