@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NamePracticeNote
   m_EditorClassIdentifier: 
   id: 37
-  currentState: 0
+  currentState: 2
   stateContents:
   - sprite: {fileID: 0}
     animtorTriggerName: 
@@ -33,14 +33,14 @@ MonoBehaviour:
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
-    finishedResult: 3
+    finishedResult: 5
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 0
+    completed: 1
   - sprite: {fileID: 21300000, guid: fd47fe9447f2b7046a34471037c717d6, type: 3}
     animtorTriggerName: 
     isActive: 0
@@ -53,4 +53,4 @@ MonoBehaviour:
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 0
+    completed: 1

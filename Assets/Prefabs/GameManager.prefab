@@ -59,7 +59,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 60
+  m_SortingOrder: 101
   m_TargetDisplay: 0
 --- !u!114 &27885981
 MonoBehaviour:
@@ -2046,6 +2046,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fdd560d9308364c669195236a1156b2a, type: 2}
   itemProps: []
   bag: {fileID: 11400000, guid: 5d8bf7f1c5ebf4461aebbcb0730169d8, type: 2}
+  note: {fileID: 11400000, guid: 8d0e314e5417d467f94892aec1c37865, type: 2}
   lightProps: []
   playerData: {fileID: 11400000, guid: 5cca9b0cb3b9e45f49344b9af43a3a65, type: 2}
 --- !u!114 &1464018917162359124
@@ -2131,6 +2132,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &133110967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6270328534037503670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90bdc2113a88469eadaf22d46785df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &252374027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2154,6 +2167,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1464018917162359126}
     m_Modifications:
+    - target: {fileID: 756236600455223198, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 792291860603150491, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: flipLeft
+      value: 
+      objectReference: {fileID: 7832113779106509839}
+    - target: {fileID: 792291860603150491, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: flipRight
+      value: 
+      objectReference: {fileID: 1719601266117069207}
+    - target: {fileID: 1719601267685699692, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_Name
+      value: PanelRight
+      objectReference: {fileID: 0}
     - target: {fileID: 2358967255702604531, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -2384,6 +2417,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: BagSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 7832113778527964660, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_Name
+      value: PanelLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347341305941128850, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352194744166944950, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: noteSelector
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8971196719517932320, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
       propertyPath: m_IsActive
@@ -2412,6 +2460,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6c701faa41e240519b42481e00937a6, type: 3}
+--- !u!1 &1719601266117069207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1719601267685699692, guid: b6c701faa41e240519b42481e00937a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1703934459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6270328534037503670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6270328535739721549, guid: b6c701faa41e240519b42481e00937a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1703934459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7832113779106509839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7832113778527964660, guid: b6c701faa41e240519b42481e00937a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1703934459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8971196721053557467 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8971196719517932320, guid: b6c701faa41e240519b42481e00937a6,

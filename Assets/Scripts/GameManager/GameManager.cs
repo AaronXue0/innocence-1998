@@ -17,6 +17,7 @@ namespace Innocence
 
         [HideInInspector]
         public string currentScene;
+        private string prevScene;
 
         private GameDataManager gameData;
         private TimelinePlayer timeplyer;
@@ -68,7 +69,7 @@ namespace Innocence
                 audioPlayer.bgmSource.clip = null;
                 timeplyer.StopPlaying();
                 textPlayer.StopTextPlaying();
-                gameData.Reset(() => sceneTransition.ChangeScene("01_00 小吃部", () => resetPanel.SetActive(false)));
+                gameData.Reset(() => sceneTransition.ChangeScene("PVScene", () => resetPanel.SetActive(false)));
             }
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -84,7 +85,7 @@ namespace Innocence
         #region PauseUI
         public void GamePause()
         {
-            if (currentScene == "MainMenu" || currentScene == "GameOver")
+            if (currentScene == "MainMenu" || currentScene == "GameOver" || currentScene == "PVScene" || currentScene == "EVScene")
                 return;
 
             if (pauseGO.activeSelf == false)
@@ -134,7 +135,7 @@ namespace Innocence
 
             if (newProgress == 50)
             {
-                sceneTransition.ChangeScene("GameOver");
+                sceneTransition.ChangeScene("EVScene");
             }
 
             audioPlayer.ChangeMusicDectector(newProgress);
@@ -144,8 +145,11 @@ namespace Innocence
         }
         private void BeforeSceneChanging(string scene)
         {
+            prevScene = scene;
             switch (scene)
             {
+                case "EVScene":
+                case "PVScene":
                 case "MainMenu":
                     pauseGO.SetActive(false);
                     break;
@@ -171,25 +175,47 @@ namespace Innocence
             gameData.SetAllStatesInScene();
 
             BagManager.Instance.OnSceneLoadeed(currentScene);
+            MouseCursor.Instance.OnSceneLoaded(currentScene);
+
+            int index = -1;
 
             switch (currentScene)
             {
+                case "PVScene":
+                case "EVScene":
                 case "MainMenu":
                     audioPlayer.StopPlaying();
                     break;
                 // Scene that player ables to move
                 case "01_00 小吃部":
-                    if (Movement.instance)
-                        Movement.instance.SetPosition(gameData.GetPlayerPos(0));
+                    index = 0;
                     break;
                 case "01_50 電話亭過場":
-                    if (Movement.instance)
-                        Movement.instance.SetPosition(gameData.GetPlayerPos(1));
+                    index = 1;
                     break;
                 case "02_00 騎樓":
-                    if (Movement.instance)
-                        Movement.instance.SetPosition(gameData.GetPlayerPos(2));
+                    index = 2;
                     break;
+            }
+
+            if (index != -1)
+            {
+                if (Movement.instance)
+                {
+                    if (prevScene == currentScene)
+                    {
+                        Movement.instance.SetPosition(gameData.GetPlayerPos(index), new Vector2(1, 1));
+                    }
+                    else if (prevScene != "01_00 小吃部" && prevScene != "01_50 電話亭過場" && prevScene != "02_00 騎樓")
+                    {
+                        Movement.instance.SetPosition(gameData.GetPlayerPos(index), new Vector2(1, 1));
+                    }
+                    else
+                    {
+                        var (pos, scale) = gameData.GetPlayerVectors(currentScene, prevScene);
+                        Movement.instance.SetPosition(pos, scale);
+                    }
+                }
             }
         }
         #endregion
@@ -206,7 +232,7 @@ namespace Innocence
         public void NewGame()
         {
             gameData.Reset();
-            sceneTransition.ChangeScene("01_00 小吃部");
+            sceneTransition.ChangeScene("PVScene");
         }
         public void ExitGame()
         {
@@ -219,6 +245,7 @@ namespace Innocence
 
         public bool IsItemComplete(int id) => gameData.IsItemComplete(id);
 
+        public void StopAllItemPropCoroutines() => gameData.StopAllItemPropCoroutines();
         public void SetProgress(int progress) => gameData.progress = progress;
         public void SetItemState(int id, int state) => gameData.SetItemState(id, state);
         public void ItemDialoguesFinished(int id) => gameData.ItemDialoguesFinished(id);
@@ -229,6 +256,9 @@ namespace Innocence
         public void UsaItem(int id) => gameData.ItemUsage(id);
 
         public Bag GetBag { get { return gameData.GetBag(); } }
+
+        public Note GetNote { get { return gameData.GetNote(); } }
+        public void ObtainNote(int id) => gameData.ObtainNote(id);
 
         // public Vector2 GetPlayerPos() => gameData.GetPlayerPos();
         public PlayerData GetPlayerData() => gameData.GetPlayerData();

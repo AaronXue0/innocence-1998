@@ -17,3 +17,25 @@ MonoBehaviour:
   - firstPos: {x: 8.63, y: -0.12}
   - firstPos: {x: -15.95489, y: -3.53}
   - firstPos: {x: -27.03, y: -3.71}
+  sceneEntrances:
+  - currentScene: "01_00 \u5C0F\u5403\u90E8"
+    sceneContents:
+    - pos: {x: 16.34, y: -1.104}
+      localScale: {x: -1, y: 1}
+      fromWhatScene: "01_50 \u96FB\u8A71\u4EAD\u904E\u5834"
+    - pos: {x: 16.34, y: -1.104}
+      localScale: {x: -1, y: 1}
+      fromWhatScene: "02_00 \u9A0E\u6A13"
+  - currentScene: "01_50 \u96FB\u8A71\u4EAD\u904E\u5834"
+    sceneContents:
+    - pos: {x: -16.04, y: -3.53}
+      localScale: {x: 1, y: 1}
+      fromWhatScene: "01_00 \u5C0F\u5403\u90E8"
+    - pos: {x: 16.1, y: -3.53}
+      localScale: {x: -1, y: 1}
+      fromWhatScene: "02_00 \u9A0E\u6A13"
+  - currentScene: "02_00 \u9A0E\u6A13"
+    sceneContents:
+    - pos: {x: -27.03, y: -3.71}
+      localScale: {x: 1, y: 1}
+      fromWhatScene: "01_50 \u96FB\u8A71\u4EAD\u904E\u5834"

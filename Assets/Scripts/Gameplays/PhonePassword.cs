@@ -63,7 +63,7 @@ namespace Innocence
                 return;
 
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Vector2.zero, targetLayer);
-            if (hit && Input.GetMouseButtonDown(0) && isPickedUp)
+            if (hit && Input.GetMouseButtonDown(0) && isPickedUp && UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() == false)
             {
                 if (hit.collider.name == gameObject.name)
                     return;

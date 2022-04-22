@@ -150,7 +150,7 @@ PlayableDirector:
   m_GameObject: {fileID: 5832162}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 167ae206b114b4177ab86754302df58c, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 787d8ce772966498ba802947d84f5450, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -982,7 +982,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315606183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.618851, y: 1.3384278, z: -10}
+  m_LocalPosition: {x: -1.5412488, y: 1.3337944, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177466224}
@@ -2699,7 +2699,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1004533496}
   - component: {fileID: 1004533497}
-  - component: {fileID: 1004533498}
   m_Layer: 0
   m_Name: Hint
   m_TagString: Untagged
@@ -2771,25 +2770,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1004533498
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1004533495}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f5cef4c4cb481814ab359b0af88669a3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1092093055
 GameObject:
   m_ObjectHideFlags: 0
@@ -3268,7 +3248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177466222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00005722046, y: -0.12280083, z: 0}
+  m_LocalPosition: {x: 0.00015687943, y: -0.32379436, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 920960421}
@@ -4595,20 +4575,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2358967257091628972, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 2358967257387856648, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4497792401271053074, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+    - target: {fileID: 8347341307460390761, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170025829998482489, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -267
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8971196721053557469, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
@@ -4710,7 +4690,6 @@ GameObject:
   - component: {fileID: 1856178087}
   - component: {fileID: 1856178090}
   - component: {fileID: 1856178089}
-  - component: {fileID: 1856178091}
   m_Layer: 0
   m_Name: "\u6642\u9418"
   m_TagString: GameItem
@@ -4841,25 +4820,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.05, y: 1.06}
   m_EdgeRadius: 0
---- !u!95 &1856178091
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856178086}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f5cef4c4cb481814ab359b0af88669a3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1860479353
 GameObject:
   m_ObjectHideFlags: 0
@@ -5467,7 +5427,7 @@ PrefabInstance:
     - target: {fileID: 232233079568065086, guid: 3ff9772071037cc46ba3b29e452ed7f5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.62
+      value: 8.12
       objectReference: {fileID: 0}
     - target: {fileID: 232233079568065086, guid: 3ff9772071037cc46ba3b29e452ed7f5,
         type: 3}

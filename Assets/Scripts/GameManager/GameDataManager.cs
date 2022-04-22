@@ -12,6 +12,7 @@ namespace Innocence
         [HideInInspector]
         [SerializeField] ItemProp[] itemProps;
         [SerializeField] Bag bag;
+        [SerializeField] Note note;
         [HideInInspector]
         [SerializeField] LightProp[] lightProps;
         [SerializeField] PlayerData playerData;
@@ -40,6 +41,7 @@ namespace Innocence
         #region PlayerData
         public PlayerData GetPlayerData() => playerData;
         public Vector2 GetPlayerPos(int index) => playerData.sceneSpwanPos[index].currentSpwanPos;
+        public (Vector2, Vector2) GetPlayerVectors(string to, string from) => playerData.GetPlayerVectors(to, from);
         public void SavePlayerPos(int index, Vector2 pos)
         {
             playerData.sceneSpwanPos[index].currentSpwanPos = pos;
@@ -52,6 +54,13 @@ namespace Innocence
         public GameItem GetGameItem(int id) => gameItems.ToList().Find(x => x.id == id);
         public ItemContent GetItemContent(int id) => gameItems.ToList().Find(x => x.id == id).GetContent;
         public Dialogues GetDialogues(int id) => gameItems.ToList().Find(x => x.id == id).GetContent.dialogues;
+        public void StopAllItemPropCoroutines()
+        {
+            foreach (ItemProp itemProp in itemProps)
+            {
+                itemProp.StopAllCoroutines();
+            }
+        }
         #endregion
 
         #region Light
@@ -103,6 +112,9 @@ namespace Innocence
             bag.Reset();
             BagManager.Instance.RefreshItems();
 
+            note.Reset();
+            NoteManager.Instance.RefreshItems();
+
             yield return new WaitForSeconds(1.5f);
 
             if (callback != null)
@@ -130,6 +142,29 @@ namespace Innocence
             gameDatas.chapter = 0;
 
             bag.Reset();
+        }
+        #endregion
+
+        #region Note
+        public Note GetNote()
+        {
+            return note;
+        }
+        public void ObtainNote(int id)
+        {
+            GameItem item = GetGameItem(id);
+            ItemContent itemContent = item.GetContent;
+
+            itemContent.completed = true;
+            item.AddCurrentState();
+            SetItemState(id, item.currentState);
+            item.GetContent.completed = true;
+
+            note.StoreItem(item.id);
+            note.SelectLastestNote();
+            NoteManager.Instance.RefreshItems();
+
+            BagManager.Instance.CheckItem(9);
         }
         #endregion
 

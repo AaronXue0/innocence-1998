@@ -11,10 +11,14 @@ namespace Innocence
         public static Movement instance;
         public static bool isLocked = false;
 
-        Vector2 targetPos;
         public float speed = 2.5f;
-        bool moving;
+
+        Vector2 targetPos;
         Animator animWalk;
+
+        private bool moving;
+
+        private ItemProp targetItem;
 
         private PlayerData playerData;
 
@@ -35,9 +39,15 @@ namespace Innocence
             // SetPosition(GameManager.instance.GetPlayerPos());
         }
 
-        public void SetPosition(Vector2 position)
+        public void SetScale(Vector2 scale)
+        {
+            transform.localScale = scale;
+        }
+
+        public void SetPosition(Vector2 position, Vector2 scale)
         {
             transform.position = position;
+            transform.localScale = scale;
         }
 
         public void SetTrigger(string name)
@@ -52,7 +62,6 @@ namespace Innocence
             targetPos = transform.position;
             animWalk.SetBool("move", false);
         }
-
 
         /// <summary>
         /// Call by singnals
@@ -87,6 +96,28 @@ namespace Innocence
 
             if (Input.GetMouseButtonDown(0))
             {
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Vector2.zero);
+                if (hit && hit.collider.tag == "GameItem")
+                {
+                    ItemProp prop = hit.collider.GetComponent<ItemProp>();
+                    if (targetItem == null)
+                    {
+                        targetItem = prop;
+                    }
+                    else if (targetItem != prop)
+                    {
+                        prop.StopAllCoroutines();
+                        targetItem = prop;
+                    }
+                }
+                else
+                {
+                    if (targetItem != null)
+                    {
+                        targetItem.StopAllCoroutines();
+                        targetItem = null;
+                    }
+                }
 
                 Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
                 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

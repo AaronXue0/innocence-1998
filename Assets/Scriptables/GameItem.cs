@@ -38,5 +38,5 @@ namespace Innocence
         [Header("Game Storage")]
         public bool completed = false;
     }
-    public enum FinishedResult { None, CheckForTimeline, ChangeScene, GetItem, SetItemState }
+    public enum FinishedResult { None, CheckForTimeline, ChangeScene, GetItem, SetItemState, GetNote }
 }
