@@ -2187,6 +2187,46 @@ PrefabInstance:
       propertyPath: flipRight
       value: 
       objectReference: {fileID: 1719601266117069207}
+    - target: {fileID: 1605116373884885627, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605116373884885627, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605116373884885627, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605116373884885627, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605116373884885627, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 3508
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605116373884885627, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 489.33325
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605116373884885627, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605116373884885627, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -244.66663
+      objectReference: {fileID: 0}
     - target: {fileID: 1719601267685699692, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
       propertyPath: m_Name
@@ -2422,6 +2462,52 @@ PrefabInstance:
       propertyPath: m_Name
       value: BagSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 5448403288788463251, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: flipSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 85bc54b807f8de845a24adc11a4ce32b,
+        type: 3}
+    - target: {fileID: 5918952324472041839, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5918952324472041839, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5918952324472041839, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5918952324472041839, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5918952324472041839, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 3508
+      objectReference: {fileID: 0}
+    - target: {fileID: 5918952324472041839, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 466.80823
+      objectReference: {fileID: 0}
+    - target: {fileID: 5918952324472041839, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5918952324472041839, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 233
+      objectReference: {fileID: 0}
     - target: {fileID: 7832113778527964660, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
       propertyPath: m_Name
@@ -2432,6 +2518,12 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8352194744166944950, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: flipSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 85bc54b807f8de845a24adc11a4ce32b,
+        type: 3}
     - target: {fileID: 8352194744166944950, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
       propertyPath: noteSelector
