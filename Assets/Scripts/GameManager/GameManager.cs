@@ -138,7 +138,16 @@ namespace Innocence
                 sceneTransition.ChangeScene("EVScene");
             }
 
-            audioPlayer.ChangeMusicDectector(newProgress);
+            switch (currentScene)
+            {
+                case "EVScene":
+                case "PVScene":
+                case "MainMenu":
+                    break;
+                default:
+                    audioPlayer.ChangeMusicDectector(newProgress);
+                    break;
+            }
 
             if (TimelineProp.instance != null)
                 TimelineProp.instance.Invoke(newProgress);

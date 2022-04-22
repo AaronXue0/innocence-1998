@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   msg:
   - "\u96E8\u8B8A\u5C0F\u4E86\uFF0E\uFF0E\uFF0E    \u25BC"
-  - "\u6211\u8981\u51FA\u9580\u627E\u5ABD\u5ABD\uFF0E\uFF0E\uFF0E    \u25BC"
+  - "\u6211\u8981\u51FA\u53BB\u627E\u5ABD\u5ABD\uFF0E\uFF0E\uFF0E    \u25BC"
   appaerGap: 0.1
   displaySecs: 1
   fadeoutDuration: 0.5
