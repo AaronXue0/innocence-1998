@@ -668,6 +668,8 @@ MonoBehaviour:
       setNewState: 1
     - targetData: {fileID: 11400000, guid: d9effe6f4de3d40648f6f80a9380c2db, type: 2}
       setNewState: 1
+    - targetData: {fileID: 11400000, guid: 040c105c5cc4b4ed68359348802992b0, type: 2}
+      setNewState: 1
     lightClipContents: []
     hasToPause: 0
 --- !u!114 &6316939117212250999
