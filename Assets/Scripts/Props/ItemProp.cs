@@ -95,10 +95,12 @@ namespace Innocence
 
             if (ableToClick || isObtainedItem)
             {
-                Movement.instance.SetScale(new Vector2(transform.position.x < Movement.instance.transform.position.x ? -1 : 1, 1));
+                if (Movement.instance != null)
+                    Movement.instance.SetScale(new Vector2(transform.position.x < Movement.instance.transform.position.x ? -1 : 1, 1));
+
                 ClickEvent();
             }
-            else
+            else if (Movement.instance != null)
             {
                 GameManager.instance.StopAllItemPropCoroutines();
                 StartCoroutine(WaitForPlayer());
@@ -153,7 +155,6 @@ namespace Innocence
                 yield return null;
                 _distance = Vector2.Distance(transform.position, Movement.instance.transform.position);
             }
-
             Movement.instance.SetScale(new Vector2(transform.position.x < Movement.instance.transform.position.x ? -1 : 1, 1));
             ClickEvent();
         }

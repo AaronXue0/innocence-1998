@@ -202,13 +202,16 @@ namespace Innocence
             {
                 if (Movement.instance)
                 {
-                    if (prevScene != "01_00 小吃部" && prevScene != "01_50 電話亭過場" && prevScene != "02_00 騎樓")
+                    if (prevScene == currentScene)
+                    {
+                        Movement.instance.SetPosition(gameData.GetPlayerPos(index), new Vector2(1, 1));
+                    }
+                    else if (prevScene != "01_00 小吃部" && prevScene != "01_50 電話亭過場" && prevScene != "02_00 騎樓")
                     {
                         Movement.instance.SetPosition(gameData.GetPlayerPos(index), new Vector2(1, 1));
                     }
                     else
                     {
-                        Debug.Log("asfomaspf");
                         var (pos, scale) = gameData.GetPlayerVectors(currentScene, prevScene);
                         Movement.instance.SetPosition(pos, scale);
                     }
