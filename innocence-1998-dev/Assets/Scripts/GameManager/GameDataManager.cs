@@ -160,6 +160,11 @@ namespace Innocence
             SetItemState(id, item.currentState);
             item.GetContent.completed = true;
 
+            int[] nestItems = item.GetContent.nestItemsID;
+            SetItemStateContent[] afterGetAllNestItemsAndSetItemsState = item.GetContent.afterGetAllNestItemsAndSetItemsState;
+            int newProgress = item.GetContent.afterGetAllNestItemsSetProgress;
+            CheckNestItemsObtained(nestItems, afterGetAllNestItemsAndSetItemsState, newProgress);
+
             note.StoreItem(item.id);
             note.SelectLastestNote();
 
