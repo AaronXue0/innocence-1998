@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: PayTenDollarDialogues
   m_EditorClassIdentifier: 
   msg:
-  - "\u518D\u7D66\u6416\u6416\u99AC\u5341\u5143\u8B93\u5B83\u591A\u6416\u4E45\u4E00\u9EDE\uFF0E\uFF0E\uFF0E   
+  - "\u300C\u6416\u6416\u99AC\u7368\u81EA\u5728\u9A0E\u6A13\u5531\u8457\u6B4C\uFF0C\u300D
     \u25BC"
+  - "\u300C\u89BA\u5F97\u5F88\u5BC2\u5BDE\u3002\u300D  \u25BC"
+  - "\u300C\u5B83\u8CE3\u529B\u5730\u6416\uFF0C\u300D\u25BC"
   appaerGap: 0.1
   displaySecs: 1
   fadeoutDuration: 0.5
