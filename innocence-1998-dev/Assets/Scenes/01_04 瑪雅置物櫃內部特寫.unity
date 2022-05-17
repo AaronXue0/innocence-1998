@@ -2736,11 +2736,11 @@ GameObject:
   - component: {fileID: 1268884696}
   m_Layer: 0
   m_Name: "\u7DF4\u5B57\u7D19\u689D"
-  m_TagString: Untagged
+  m_TagString: GameItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1268884693
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2781,7 +2781,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fd47fe9447f2b7046a34471037c717d6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8018868, g: 0.78297436, b: 0.78297436, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2846,7 +2846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 37
   isGameplayItem: 0
-  isObtainedItem: 0
+  isObtainedItem: 1
   obtainedItemAndSetStates: []
   item:
     sprite: {fileID: 0}
