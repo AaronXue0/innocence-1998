@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4867d570212304ed68b1b9077fe79069, type: 3}
+  m_Name: KaraokeDialogues1
+  m_EditorClassIdentifier: 
+  msg:
+  - "\u53EF\u4EE5\u64AD\u653E\u5361\u5E36\u7684\u4F34\u5531\u6A5F\uFF0C   \u25BC"
+  - "\u90A3\u662F\u963F\u59E8\u3001   \u25BC"
+  - "\u59CA\u59CA\u5011\u7528\u4F86\u7092\u71B1\u6C23\u6C1B\u7684\u5DE5\u5177\u3002  
+    \u25BC"
+  appaerGap: 0.1
+  displaySecs: 1
+  fadeoutDuration: 0.5
+  animationSelector: 0

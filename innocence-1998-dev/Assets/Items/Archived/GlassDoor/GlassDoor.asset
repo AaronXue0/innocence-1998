@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553cee5813060414a82a345879a43457, type: 3}
+  m_Name: GlassDoor
+  m_EditorClassIdentifier: 
+  id: 3
+  currentState: 0
+  states:
+  - playOnce: 0
+    sprite: {fileID: 0}
+    isActive: 1
+    dialogues: {fileID: 11400000, guid: fe4e9bffc527746ca9e52154071bfa83, type: 2}
+    targetTimelineID: 1
+    finishedResult: 1
+    nestItems: 0000000001000000
+    currentDialogueIndex: 0
+    missionFinished: 0
+  - playOnce: 0
+    sprite: {fileID: 0}
+    isActive: 1
+    dialogues: {fileID: 11400000, guid: fe4e9bffc527746ca9e52154071bfa83, type: 2}
+    targetTimelineID: 1
+    finishedResult: 0
+    nestItems: 
+    currentDialogueIndex: 0
+    missionFinished: 0

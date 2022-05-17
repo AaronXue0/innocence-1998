@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4867d570212304ed68b1b9077fe79069, type: 3}
+  m_Name: AwakeDialogue
+  m_EditorClassIdentifier: 
+  msg:
+  - "\u9019\u88E1\u662F\uFF0E\uFF0E\uFF0E\uFF1F    \u25BC"
+  - "\uFF0E\uFF0E\uFF0E    \u25BC"
+  - "\u597D\u50CF\u662F\u5ABD\u5ABD\u5DE5\u4F5C\u7684\u5C0F\u5403\u90E8\u3002   
+    \u25BC"
+  appaerGap: 0.1
+  displaySecs: 0.1
+  fadeoutDuration: 0.1
+  animationSelector: 0

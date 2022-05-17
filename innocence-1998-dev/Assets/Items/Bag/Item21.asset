@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd095d4f5b07d694dad028ed78c22e00, type: 3}
+  m_Name: Item21
+  m_EditorClassIdentifier: 
+  id: 21
+  canDrag: 0
+  onBagSprite: {fileID: 21300000, guid: 90e1acf7d1adab044b76c27fabb65091, type: 3}
+  onCheckSprite: {fileID: 21300000, guid: 1090ad71617c5d94097a9c5c08d62e6b, type: 3}
+  onGetSprite: {fileID: 21300000, guid: 90e1acf7d1adab044b76c27fabb65091, type: 3}
+  onGetSound: {fileID: 8300000, guid: d74e29961d73c73458f99ecfa72ede76, type: 3}
+  onUsedSound: {fileID: 0}
