@@ -407,7 +407,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     newProgress: 21
-    dataClipContents: []
+    dataClipContents:
+    - targetData: {fileID: 11400000, guid: b39e4fcbe4139304bbf22773ebe9a40e, type: 2}
+      setNewState: 1
     lightClipContents: []
     hasToPause: 0
 --- !u!114 &2802945990083923971
