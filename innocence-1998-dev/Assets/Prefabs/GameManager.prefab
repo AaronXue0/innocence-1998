@@ -2173,10 +2173,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1464018917162359126}
     m_Modifications:
+    - target: {fileID: 375691151715987458, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 375691151715987458, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 375691151715987458, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 375691151715987458, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 756236600455223198, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 792291860603150491, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
@@ -2530,6 +2550,12 @@ PrefabInstance:
       propertyPath: noteSelector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8712840334402850016, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 21148f5817289c2448bec60ef479f0a1,
+        type: 3}
     - target: {fileID: 8971196719517932320, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
       propertyPath: m_IsActive
