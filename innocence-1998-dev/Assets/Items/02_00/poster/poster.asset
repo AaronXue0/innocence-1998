@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: poster
   m_EditorClassIdentifier: 
   id: 40
-  currentState: 0
+  currentState: 1
   stateContents:
   - sprite: {fileID: 0}
     animtorTriggerName: 
@@ -22,13 +22,15 @@ MonoBehaviour:
     dialogues: {fileID: 0}
     finishedResult: 5
     setItemsState: []
-    nestItemsID: 
-    afterGetAllNestItemsAndSetItemsState: []
-    afterGetAllNestItemsSetProgress: 0
+    nestItemsID: 2200000028000000
+    afterGetAllNestItemsAndSetItemsState:
+    - id: 33
+      newState: 1
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 0
+    completed: 1
   - sprite: {fileID: 0}
     animtorTriggerName: 
     isActive: 0
@@ -42,4 +44,4 @@ MonoBehaviour:
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 0
+    completed: 1
