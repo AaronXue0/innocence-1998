@@ -556,6 +556,7 @@ MonoBehaviour:
   id: 10
   isGameplayItem: 0
   isObtainedItem: 1
+  obtainImmed: 0
   obtainedItemAndSetStates: []
   item:
     sprite: {fileID: 0}
@@ -567,6 +568,7 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
@@ -730,6 +732,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438740485112909402, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.5234959
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438740485112909402, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.5234959
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438740485112909402, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.6415094
       objectReference: {fileID: 0}
     - target: {fileID: 8347341307460390761, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
@@ -1619,6 +1636,7 @@ MonoBehaviour:
   id: 9
   isGameplayItem: 0
   isObtainedItem: 1
+  obtainImmed: 0
   obtainedItemAndSetStates: []
   item:
     sprite: {fileID: 0}
@@ -1630,6 +1648,7 @@ MonoBehaviour:
     setItemsState: []
     nestItemsID: 
     afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
