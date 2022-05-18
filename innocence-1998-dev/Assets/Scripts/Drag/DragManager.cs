@@ -127,15 +127,15 @@ namespace CustomDrag
                 // 零錢投幣 17, 31, 32
                 case "Item17":
                     itemID = 17;
-                    GameManager.instance.SetProgress(23);
+                    GameManager.instance.SetProgress(26);
                     break;
                 case "Item31":
                     itemID = 31;
-                    GameManager.instance.SetProgress(25);
+                    GameManager.instance.SetProgress(28);
                     break;
                 case "Item32":
                     itemID = 32;
-                    GameManager.instance.SetProgress(27);
+                    GameManager.instance.SetProgress(30);
                     break;
                 case "Item25":
                     itemID = 25;
