@@ -13,29 +13,33 @@ MonoBehaviour:
   m_Name: LockerKey
   m_EditorClassIdentifier: 
   id: 13
-  currentState: 1
+  currentState: 0
   stateContents:
-  - sprite: {fileID: 21300000, guid: 7260530f5b4656e49a35f7dbc6142fe8, type: 3}
+  - sprite: {fileID: 21300000, guid: 2ff4df73cc523a043bea8f42a1afb6b3, type: 3}
     animtorTriggerName: 
     isActive: 1
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 3
+    setItemsState: []
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
-    awardItemsID: 0d000000
-    hintSprite: {fileID: 0}
+    hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
     soundClip: {fileID: 0}
-    completed: 1
-  - sprite: {fileID: 21300000, guid: 7260530f5b4656e49a35f7dbc6142fe8, type: 3}
+    completed: 0
+  - sprite: {fileID: 21300000, guid: 2ff4df73cc523a043bea8f42a1afb6b3, type: 3}
     animtorTriggerName: 
     isActive: 0
     isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
-    awardItemsID: 
-    hintSprite: {fileID: 0}
+    hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
     soundClip: {fileID: 0}
-    completed: 1
+    completed: 0

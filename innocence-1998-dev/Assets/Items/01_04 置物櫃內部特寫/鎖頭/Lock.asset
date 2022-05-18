@@ -21,9 +21,11 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
@@ -33,21 +35,25 @@ MonoBehaviour:
     isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
     animtorTriggerName: 
     isActive: 0
     isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0

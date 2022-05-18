@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -176,8 +176,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -831960729
-  m_SortingLayer: 4
+  m_SortingLayerID: 2041513077
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6bf2991db82e0c346a73832da5875f4f, type: 3}
   m_Color: {r: 0.66442686, g: 0.7048549, b: 0.745283, a: 1}
@@ -792,7 +792,7 @@ PrefabInstance:
     - target: {fileID: 232233079568065086, guid: 3ff9772071037cc46ba3b29e452ed7f5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.97
+      value: -26.33
       objectReference: {fileID: 0}
     - target: {fileID: 232233079568065086, guid: 3ff9772071037cc46ba3b29e452ed7f5,
         type: 3}
@@ -1582,7 +1582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618178856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.969995, y: 0.04740858, z: -10}
+  m_LocalPosition: {x: -19.529247, y: 0.04766655, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1726466976}
@@ -3618,7 +3618,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836295220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0000038146973, y: -0.0274086, z: 0}
+  m_LocalPosition: {x: -6.8007526, y: -0.027666569, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1290997190}

@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 19
   currentState: 0
   stateContents:
-  - sprite: {fileID: 21300000, guid: ee08b2cde22bf4a4381ded0428c1994d, type: 3}
+  - sprite: {fileID: 21300000, guid: e3930e4d09170fb4caae167a345407c0, type: 3}
   onGetSound: {fileID: 8300000, guid: d74e29961d73c73458f99ecfa72ede76, type: 3}
