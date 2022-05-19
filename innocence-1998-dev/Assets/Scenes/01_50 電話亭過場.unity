@@ -6057,8 +6057,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987163875}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11, y: 0.1, z: 10}
-  m_LocalScale: {x: 0.93287057, y: 0.93287057, z: 0.93287057}
+  m_LocalPosition: {x: 0.013, y: -0.023, z: 10}
+  m_LocalScale: {x: 0.9488928, y: 0.96136, z: 0.93287057}
   m_Children: []
   m_Father: {fileID: 1501226942}
   m_RootOrder: 0
@@ -6140,7 +6140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994911711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.4939337, y: -1.178247, z: 0}
+  m_LocalPosition: {x: 4.494771, y: -1.178247, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1185023566}
@@ -6453,7 +6453,7 @@ MonoBehaviour:
     soundClip: {fileID: 0}
     completed: 0
   hintSR: {fileID: 595876170}
-  distance: 5
+  distance: 4
 --- !u!61 &1170509824
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6467,7 +6467,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.68265104, y: -0.5267267}
+  m_Offset: {x: 1.3252249, y: -0.5267267}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6478,7 +6478,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.0036592, y: 9.388582}
+  m_Size: {x: 2.7185116, y: 9.388582}
   m_EdgeRadius: 0
 --- !u!4 &1170509825
 Transform:
@@ -7060,7 +7060,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501226937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.97728, y: -0.15175295, z: -10}
+  m_LocalPosition: {x: 9.974137, y: -0.15175295, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 987163876}
@@ -7121,7 +7121,7 @@ MonoBehaviour:
     soundClip: {fileID: 0}
     completed: 0
   hintSR: {fileID: 1219269299}
-  distance: 4
+  distance: 3
 --- !u!61 &1561415814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7790,6 +7790,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464018917162359130, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: timeSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2358967255974437091, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
