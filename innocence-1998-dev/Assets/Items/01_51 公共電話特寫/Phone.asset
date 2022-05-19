@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Phone
   m_EditorClassIdentifier: 
   id: 20
-  currentState: 0
+  currentState: 1
   stateContents:
   - sprite: {fileID: 0}
     animtorTriggerName: 
@@ -21,10 +21,12 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 11400000, guid: 703fbe952a3074644a1e746971a0b01f, type: 2}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
-    awardItemsID: 
-    hintSprite: {fileID: 0}
+    hintSprite: {fileID: 21300000, guid: 15ac39a399eb58b45b78fd217bab16fd, type: 3}
     soundClip: {fileID: 0}
     completed: 0
   - sprite: {fileID: 0}
@@ -33,21 +35,25 @@ MonoBehaviour:
     isClickAble: 1
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
-    completed: 0
+    completed: 1
   - sprite: {fileID: 0}
     animtorTriggerName: 
     isActive: 1
     isClickAble: 0
     dialogues: {fileID: 0}
     finishedResult: 0
+    setItemsState: []
     nestItemsID: 
+    afterGetAllNestItemsAndSetItemsState: []
+    afterGetAllNestItemsSetProgress: -1
     targetSceneName: 
-    awardItemsID: 
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0

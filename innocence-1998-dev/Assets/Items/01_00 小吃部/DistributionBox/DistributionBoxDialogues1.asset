@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4867d570212304ed68b1b9077fe79069, type: 3}
-  m_Name: PayTenDollarDialogues2
+  m_Name: DistributionBoxDialogues1
   m_EditorClassIdentifier: 
   msg:
-  - "\u5B83\u8CE3\u529B\u5730\u6416\uFF0C\u25BC"
-  - "\u70BA\u4E86\u6211\u53E3\u888B\u88E1\u7684\u5341\u584A\u9322\u786C\u5E63\uFF0E\uFF0E\uFF0E\u25BC"
+  - "\u5BB6\u88E1\u505C\u96FB\u7684\u6642\u5019\uFF0C\u25BC"
+  - "\u5ABD\u5ABD\u90FD\u6703\u91CD\u958B\u7BB1\u5B50\u88E1\u7684\u958B\u95DC\u3002   
+    \u25BC"
   appaerGap: 0.1
   displaySecs: 1
   fadeoutDuration: 0.5
