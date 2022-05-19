@@ -26,5 +26,18 @@ namespace Innocence
             audioSource.clip = clips[n];
             audioSource.Play();
         }
+        public void StopClip()
+        {
+            StartCoroutine(StopCoroutine());
+        }
+        IEnumerator StopCoroutine()
+        {
+            while (audioSource.volume > 0)
+            {
+                audioSource.volume -= Time.deltaTime;
+                yield return null;
+            }
+            audioSource.Stop();
+        }
     }
 }

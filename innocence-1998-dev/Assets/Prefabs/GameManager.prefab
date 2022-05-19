@@ -2119,6 +2119,9 @@ MonoBehaviour:
   - requiredScene: "02_01\u6416\u6416\u99AC\u4E92\u52D5"
     requiredProgress: 26
     clip: {fileID: 8300000, guid: 022d26204a8196f48a84e91f916c44d6, type: 3}
+  - requiredScene: "02_01\u6416\u6416\u99AC\u4E92\u52D5"
+    requiredProgress: 31
+    clip: {fileID: 0}
 --- !u!95 &1859662143
 Animator:
   serializedVersion: 3
@@ -2150,6 +2153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90bdc2113a88469eadaf22d46785df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitSprite: {fileID: 21300000, guid: d1236d5b4f45b5747941b41a1d826c0a, type: 3}
 --- !u!114 &252374027
 MonoBehaviour:
   m_ObjectHideFlags: 0

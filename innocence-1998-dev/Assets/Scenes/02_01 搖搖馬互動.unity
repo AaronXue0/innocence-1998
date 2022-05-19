@@ -652,6 +652,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 756236598936841829, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1464018917162359126, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_RootOrder
@@ -712,19 +717,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2358967255974437091, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2358967257387856648, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8347341307460390761, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1906,6 +1901,87 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1128938420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1128938422}
+  - component: {fileID: 1128938421}
+  m_Layer: 0
+  m_Name: "\u67E5\u770B (1)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1128938421
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128938420}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1751820643
+  m_SortingLayer: 2
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 10fd81a4832ab0d43a9f210295555aae, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1128938422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128938420}
+  m_LocalRotation: {x: -0, y: -0, z: 0.12134961, w: 0.99260986}
+  m_LocalPosition: {x: -0.06, y: 1.8, z: -4}
+  m_LocalScale: {x: 1.1140927, y: 1.1140927, z: 0.44563708}
+  m_Children: []
+  m_Father: {fileID: 1812586430}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1243617037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,7 +2008,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1243617037}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: d96e217e282ae4f10aa944f5889e8921, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: a820c318067174373a7f3303ad40acc6, type: 2}
   m_InitialState: 0
   m_WrapMode: 1
   m_DirectorUpdateMode: 1
@@ -2327,10 +2403,6 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 8612367294161318435, guid: 9c67a1767fe5e374d8a8a9bb4e4a4708, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 6724738645377111018, guid: f3a5a85fb4f62db48a21d10a8e83976f, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -1477944983167337960, guid: f3a5a85fb4f62db48a21d10a8e83976f, type: 2}
-    value: {fileID: 0}
   - key: {fileID: -4322258010473453715, guid: a820c318067174373a7f3303ad40acc6, type: 2}
     value: {fileID: 0}
   - key: {fileID: 2622563304012079840, guid: f3a5a85fb4f62db48a21d10a8e83976f, type: 2}
@@ -2349,6 +2421,14 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 5136981220440345144, guid: a95324f7bbc25473788474b2afdac80c, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 4397089949708572065, guid: f3a5a85fb4f62db48a21d10a8e83976f, type: 2}
+    value: {fileID: 878157635}
+  - key: {fileID: -53983201910033346, guid: f3a5a85fb4f62db48a21d10a8e83976f, type: 2}
+    value: {fileID: 1763197797}
+  - key: {fileID: -4992031182424925608, guid: f3a5a85fb4f62db48a21d10a8e83976f, type: 2}
+    value: {fileID: 100391597}
+  - key: {fileID: -6185077112339810165, guid: f3a5a85fb4f62db48a21d10a8e83976f, type: 2}
+    value: {fileID: 1243617037}
   m_ExposedReferences:
     m_References:
     - 175f3e3d0f29e4eecaad79a382c151a7: {fileID: 1243617037}
@@ -2498,7 +2578,7 @@ GameObject:
   - component: {fileID: 1812586426}
   m_Layer: 0
   m_Name: RefundCoin
-  m_TagString: Untagged
+  m_TagString: GameItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2558,7 +2638,7 @@ MonoBehaviour:
     hintSprite: {fileID: 0}
     soundClip: {fileID: 0}
     completed: 0
-  hintSR: {fileID: 0}
+  hintSR: {fileID: 1128938421}
   distance: 0
 --- !u!61 &1812586428
 BoxCollider2D:
@@ -2646,7 +2726,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.09, y: 2.65, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1128938422}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

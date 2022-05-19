@@ -140,7 +140,7 @@ namespace CustomDrag
                 case "Item25":
                     itemID = 25;
                     GameManager.instance.SetItemState(7, 2);
-                    GameManager.instance.SetProgress(30);
+                    GameManager.instance.SetProgress(32);
                     break;
             }
 
