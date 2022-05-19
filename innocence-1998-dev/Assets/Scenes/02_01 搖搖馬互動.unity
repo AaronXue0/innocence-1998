@@ -212,6 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100391599}
   - component: {fileID: 100391598}
+  - component: {fileID: 100391600}
   m_Layer: 0
   m_Name: Global Light 2D (1)
   m_TagString: Untagged
@@ -274,6 +275,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &100391600
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100391597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &121957364
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,35 +672,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1610490096, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 375691152311323129, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1644.0037
-      objectReference: {fileID: 0}
-    - target: {fileID: 375691152311323129, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1122.833
-      objectReference: {fileID: 0}
-    - target: {fileID: 375691152311323129, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.000015259
-      objectReference: {fileID: 0}
-    - target: {fileID: 375691152311323129, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 756236598936841829, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1464018917162359126, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
       propertyPath: m_RootOrder
@@ -740,11 +731,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 1464018917162359130, guid: 02b0ce89b9fa44f289a05a6accc895f3,
-        type: 3}
-      propertyPath: timeSpeed
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2358967255974437091, guid: 02b0ce89b9fa44f289a05a6accc895f3,
         type: 3}
@@ -2380,7 +2366,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1758663392}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: f3a5a85fb4f62db48a21d10a8e83976f, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 9c67a1767fe5e374d8a8a9bb4e4a4708, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -2468,11 +2454,20 @@ PlayableDirector:
     value: {fileID: 100391597}
   - key: {fileID: -6185077112339810165, guid: f3a5a85fb4f62db48a21d10a8e83976f, type: 2}
     value: {fileID: 1243617037}
+  - key: {fileID: 2725727047215566768, guid: f3a5a85fb4f62db48a21d10a8e83976f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 6590402792819545870, guid: f3a5a85fb4f62db48a21d10a8e83976f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -2623924914648611367, guid: f3a5a85fb4f62db48a21d10a8e83976f, type: 2}
+    value: {fileID: 100391600}
+  - key: {fileID: 5502258561560439230, guid: 9c67a1767fe5e374d8a8a9bb4e4a4708, type: 2}
+    value: {fileID: 100391600}
   m_ExposedReferences:
     m_References:
     - 175f3e3d0f29e4eecaad79a382c151a7: {fileID: 1243617037}
     - 39f61c847ca9f4055ae234b43e79346a: {fileID: 1243617037}
     - 722affd220a6f4ab1b0bd97e2c743b1c: {fileID: 1243617037}
+    - a4c1625ffb8fb4024b0339c9ce00803f: {fileID: 1243617037}
 --- !u!4 &1758663394
 Transform:
   m_ObjectHideFlags: 0

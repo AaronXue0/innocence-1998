@@ -1992,7 +1992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTestMode: 1
-  timeSpeed: 3
+  timeSpeed: 1
   bagObject: {fileID: 4388146642601719207}
   resetPanel: {fileID: 1610490096}
   pauseGO: {fileID: 1938817275}
@@ -2180,12 +2180,12 @@ PrefabInstance:
     - target: {fileID: 375691151715987458, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1523
+      value: 1644.0037
       objectReference: {fileID: 0}
     - target: {fileID: 375691151715987458, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1080
+      value: 1122.833
       objectReference: {fileID: 0}
     - target: {fileID: 375691151715987458, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
@@ -2196,6 +2196,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 375691151715987458, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000015259
+      objectReference: {fileID: 0}
+    - target: {fileID: 375691151715987458, guid: b6c701faa41e240519b42481e00937a6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 756236600455223198, guid: b6c701faa41e240519b42481e00937a6,
         type: 3}
