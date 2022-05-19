@@ -41,7 +41,10 @@ namespace Innocence
             if (content != null)
             {
                 Debug.Log("Change audio by progress");
-                ChangeBGM(content.clip);
+                if (content.clip == null)
+                    StopPlaying();
+                else
+                    ChangeBGM(content.clip);
             }
         }
         public void ChangeMusicDectector(string sceneName)
