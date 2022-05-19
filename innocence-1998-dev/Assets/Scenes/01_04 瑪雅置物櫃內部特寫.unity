@@ -1071,6 +1071,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8347341307460390761, guid: 02b0ce89b9fa44f289a05a6accc895f3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b0ce89b9fa44f289a05a6accc895f3, type: 3}
 --- !u!1 &627966184
@@ -2730,7 +2735,7 @@ GameObject:
   - component: {fileID: 1268884696}
   m_Layer: 0
   m_Name: "\u7DF4\u5B57\u7D19\u689D"
-  m_TagString: Untagged
+  m_TagString: GameItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2840,7 +2845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 37
   isGameplayItem: 0
-  isObtainedItem: 0
+  isObtainedItem: 1
   obtainImmed: 0
   obtainedItemAndSetStates: []
   item:
